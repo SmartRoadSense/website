@@ -1,0 +1,188 @@
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$brand-primary:             #2a69ff;
+$brand-success:             $green;
+$brand-info:                #bcd0ff;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-inverse:             $gray-dark;
+
+$enable-rounded:            false;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+
+// General stuff
+$font-family-base:       'Open Sans', $font-family-sans-serif;
+$font-size-h1: 3rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2rem;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$lead-font-weight: 400;
+
+a {
+    text-decoration-skip: ink;
+}
+
+// Navbar
+nav.navbar {
+    transition: background .35s ease-out;
+
+    background: linear-gradient(to bottom, rgba($gray-dark, 0.7), rgba($gray-dark, 0.0) 90%);
+}
+nav.navbar.scrolled, nav.navbar.expanded {
+    background-color: $brand-primary;
+}
+
+@include media-breakpoint-down(xs) {
+    // Bugfix for container on extra-small in navbar
+    nav.navbar .container {
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+}
+
+// Jumbotron
+$jumbotron-bg: transparent;
+
+// Header
+header {
+    position: relative;
+
+    .bottom-aligner {
+        position: absolute;
+        bottom: 2em;
+        width: 100%;
+    }
+}
+header.hero {
+    height: 600px;
+
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    color: $white;
+
+    .occluder {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to bottom right, transparent 0, transparent 50%, $white 50%, $white 100%);
+    }
+
+    h1 {
+        color: $white;
+        font-weight: 600;
+        text-shadow: $black 1px 1px 3px;
+        margin-bottom: 0.25em;
+
+        @include media-breakpoint-down(sm) {
+            font-size: 3rem;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 3.6rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+        }
+    }
+
+    .logo {
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 250px;
+        }
+    }
+
+    p {
+        line-height: 1.7;
+
+        span {
+            background: $brand-primary;
+            padding: 0.5rem 1rem;
+            box-decoration-break: clone;
+        }
+    }
+}
+
+// Footer
+$footer-background: $gray-lightest;
+$footer-text-color: lighten($gray, 20%);
+$footer-gutter-color: darken($gray-lightest, 12%);
+
+footer {
+    background: $footer-background;
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-bottom: 4em;
+    font-size: $small-font-size;
+    color: $footer-text-color;
+
+    a {
+        text-decoration: underline;
+        color: $gray;
+    }
+    a:hover {
+        color: $brand-primary;
+    }
+
+    h6 {
+        color: $brand-primary;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        // 3 columns variant
+        .row > div {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-right: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-right: none;
+        }
+    }
+    @include media-breakpoint-only(sm) {
+        // 2 columns variant
+        .row > div:first-child {
+            border-right: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: solid 1px $footer-gutter-color;
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        // Stacked variant
+        .row > div {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-bottom: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
