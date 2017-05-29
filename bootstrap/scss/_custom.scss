@@ -52,35 +52,21 @@ $jumbotron-bg: transparent;
 // Header
 header {
     position: relative;
+    height: 220px;
+    margin-bottom: 2em;
+
+    background-color: $brand-primary;
+    color: $white;
 
     .bottom-aligner {
         position: absolute;
         bottom: 2em;
         width: 100%;
     }
-}
-header.hero {
-    height: 600px;
-
-    background-image: url('../img/header.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-
-    color: $white;
-
-    .occluder {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        height: 200px;
-        background: linear-gradient(to bottom right, transparent 0, transparent 50%, $white 50%, $white 100%);
-    }
 
     h1 {
-        color: $white;
         font-weight: 600;
-        text-shadow: $black 1px 1px 3px;
+
         margin-bottom: 0.25em;
 
         @include media-breakpoint-down(xs) {
@@ -95,6 +81,27 @@ header.hero {
         @include media-breakpoint-up(lg) {
             font-size: 4rem;
         }
+    }
+}
+header.hero {
+    height: 600px;
+    margin-bottom: 1em;
+
+    background-image: url('../img/header.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .occluder {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to bottom right, transparent 0, transparent 50%, $white 50%, $white 100%);
+    }
+
+    h1 {
+        text-shadow: $black 1px 1px 3px;
     }
 
     .logo {
