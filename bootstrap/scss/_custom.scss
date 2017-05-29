@@ -190,6 +190,40 @@ header.hero {
     height: auto;
 }
 
+.card {
+    .card-counter {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: -25px;
+        border-radius: 50% 50%;
+        border: solid 3px white;
+        background: $brand-primary;
+        text-align: center;
+        color: white;
+        box-shadow: $gray-light 1px 1px 3px;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    .card-img-top {
+        object-fit: cover;
+    }
+}
+.cards-sequence {
+    margin-top: 1em;
+
+    @include media-breakpoint-down(xs) {
+        > div {
+            margin-top: 1em;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
 // Footer
 $footer-background: $gray-lightest;
 $footer-text-color: lighten($gray, 20%);
