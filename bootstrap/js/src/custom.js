@@ -29,6 +29,14 @@ $(document).ready(function() {
         }
     });
 
+    // When/if window resizes, execute all animations since positions are not guaranteed anymore
+    $(window).resize(function() {
+        for(var i = 0; i < listOfScrollableElements.length; ++i) {
+            $(listOfScrollableElements[i].element).removeClass('scroll-in');
+        }
+        listOfScrollableElements = [];
+    });
+
     // Navbar collapse/expand
     $('nav.navbar').on('show.bs.collapse', function () {
         $('nav.navbar').addClass('expanded');
