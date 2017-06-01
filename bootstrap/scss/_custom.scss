@@ -178,7 +178,7 @@ header.hero {
 
     span {
         color: $white;
-        background: $brand-primary;
+        background: $brand-primary url(../img/stripe_blue.png) repeat;
         padding: 0.15em 0.35em;
     }
 }
@@ -254,7 +254,11 @@ header.hero {
         font-weight: 600;
     }
     .card-img-top {
+        width: 100%;
+        height: auto;
         object-fit: cover;
+        background-image: url(../img/stripe_gray.png);
+        background-repeat: repeat;
     }
 }
 
