@@ -144,13 +144,14 @@ header.hero {
             top: -0.3em;
             right: 100%;
             bottom: -0.3em;
-            width: 0.3em;
+            width: 0.5em;
         }
 
         > span {
             position: relative;
             z-index: 1;
-            padding-right: 0.3em;
+            padding-right: 0.5em;
+            box-decoration-break: clone;
         }
     }
 }
