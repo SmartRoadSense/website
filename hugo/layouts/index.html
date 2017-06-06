@@ -1,0 +1,23 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+        <header class="hero">
+            <div class="occluder"></div>
+            <div class="bottom-aligner">
+                <div class="container">
+                    <div class="row align-items-end">
+                        <div class="col-md-3 push-md-8 offset-md-1 logo">
+                            <img src="img/srs_logo_1120.png" width="1120" height="1120" srcset="img/srs_logo_840.png 840w, img/srs_logo_560.png 560w, img/srs_logo_280.png 280w" alt="SmartRoadSense Logo" title="SmartRoadSense" />
+                        </div>
+                        <div class="col-md-8 pull-md-4">
+                            <h1>SmartRoadSense</h1>
+                            <p class="lead"><span>{{ i18n "srsTagLine" }}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        {{ .Content }}
+
+{{ partial "footer.html" . }}

@@ -143,13 +143,13 @@ module.exports = function (grunt) {
         expand: true,
         cwd: 'dist/js/',
         src: [ 'bootstrap.min.js' ],
-        dest: '../showcase/resources/'
+        dest: '../hugo/static/resources/'
       },
       css: {
         expand: true,
         cwd: 'dist/css/',
         src: [ 'bootstrap.min.css' ],
-        dest: '../showcase/resources/'
+        dest: '../hugo/static/resources/'
       }
     },
 
