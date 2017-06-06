@@ -1,3 +1,4 @@
 **/dist/*
 bootstrap/docs
 bootstrap/nuget
+hugo/public/

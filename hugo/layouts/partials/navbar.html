@@ -1,0 +1,50 @@
+        <nav class="navbar fixed-top navbar-toggleable-sm navbar-inverse">
+            <div class="container">
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a class="navbar-brand" href="{{ $.Site.BaseURL }}">SmartRoadSense</a>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">News</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarProjectLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Project
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarProjectLink">
+                                <a class="dropdown-item" href="#">About</a>
+                                <a class="dropdown-item" href="#">How does it work</a>
+                                <a class="dropdown-item" href="#">People</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarResultsLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Data
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarResultsLink">
+                                <a class="dropdown-item" href="{{ ref . "data/road_quality_map.md" }}">Road quality map</a>
+                                <a class="dropdown-item" href="{{ ref . "data/open_data.md" }}">Open Data</a>
+                                <a class="dropdown-item" href="{{ ref . "data/privacy.md" }}">Privacy</a>
+                                <a class="dropdown-item" href="{{ ref . "data/developers.md" }}">For developers</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ ref . "apps/index.md" }}">Apps</a>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav hidden-sm-down">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item active" href="#">English</a>
+                                <a class="dropdown-item" href="#">Italian</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
