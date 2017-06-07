@@ -3,3 +3,36 @@ other = "A crowd-sensing application for the continued monitoring of road qualit
 
 [languageTitle]
 other = "Language"
+
+[menuNews]
+other = "News"
+
+[menuProject]
+other = "Project"
+
+[menuProjectAbout]
+other = "About"
+
+[menuProjectHow]
+other = "How does it work?"
+
+[menuProjectPeople]
+other = "People"
+
+[menuData]
+other = "Data"
+
+[menuDataMap]
+other = "Road quality map"
+
+[menuDataOpen]
+other = "Open Data"
+
+[menuDataPrivacy]
+other = "Privacy"
+
+[menuDataDevelopers]
+other = "For developers"
+
+[menuApps]
+other = "Apps"

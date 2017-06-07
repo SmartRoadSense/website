@@ -1,10 +1,10 @@
 baseurl = "http://localhost:1313/"
 title = "SmartRoadSense"
 defaultContentLanguage = "en"
+enableMissingTranslationPlaceholders = true
 
-#permalinks:
-#  news: /:year/:month/:slug/
-
+[permalinks]
+news = "/:year/:month/:slug/"
 
 [Languages]
 
@@ -12,14 +12,8 @@ defaultContentLanguage = "en"
 languageName = "English"
 languageCode = "en-us"
 weight = 1
-[Languages.en.params]
-linkedin = "english-link"
 
 [Languages.it]
 languageName = "Italiano"
 languageCode = "it"
 weight = 2
-[Languages.it.params]
-linkedin = "lien-francais"
-[Languages.it.navigation]
-help  = "Aide"
