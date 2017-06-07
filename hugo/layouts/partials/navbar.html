@@ -3,7 +3,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand" href="{{ $.Site.BaseURL }}">SmartRoadSense</a>
+                <a class="navbar-brand" href="{{ "" | absLangURL }}">SmartRoadSense</a>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
@@ -38,10 +38,14 @@
 
                     <ul class="navbar-nav hidden-sm-down">
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ i18n "languageTitle" }}</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item active" href="#">English</a>
-                                <a class="dropdown-item" href="#">Italian</a>
+                                <a class="dropdown-item
+                                    {{- if eq .LanguagePrefix "" }} active{{ end -}}
+                                    " href="{{ range where .AllTranslations "Lang" "en" | first 1 }}{{ .Permalink }}{{ end }}">English</a>
+                                <a class="dropdown-item
+                                    {{- if eq .LanguagePrefix "/it" }} active{{ end -}}
+                                    " href="{{ range where .AllTranslations "Lang" "it" | first 1 }}{{ .Permalink }}{{ end }}">Italiano</a>
                             </div>
                         </li>
                     </ul>
