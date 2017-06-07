@@ -1,5 +1,5 @@
 +++
-title = "How does SmartRoadSense work?"
+title = "How does it work?"
 type = "page"
 +++
 
