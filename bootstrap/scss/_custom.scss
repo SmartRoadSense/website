@@ -66,7 +66,7 @@ $jumbotron-bg: transparent;
 // Header
 header {
     position: relative;
-    height: 220px;
+    height: 260px;
     margin-bottom: 2em;
 
     background-color: $brand-primary;
@@ -80,8 +80,7 @@ header {
 
     h1 {
         font-weight: 600;
-
-        margin-bottom: 0.25em;
+        margin-bottom: 0.2em;
 
         @include media-breakpoint-down(xs) {
             font-size: 2.4rem;
@@ -94,6 +93,13 @@ header {
         }
         @include media-breakpoint-up(lg) {
             font-size: 4rem;
+        }
+
+        span {
+            background: #ffffff;
+            color: $brand-primary;
+            padding: .1em .5em;
+            box-decoration-break: clone;
         }
     }
 }
@@ -114,16 +120,16 @@ header.hero {
         background: linear-gradient(to bottom right, transparent 0, transparent 50%, $white 50%, $white 100%);
     }
 
-    h1 {
-        text-shadow: $black 1px 1px 3px;
-    }
-
     .logo {
         img {
             width: 100%;
             height: auto;
             max-width: 200px;
         }
+    }
+
+    h1 {
+        text-shadow: $black 1px 1px 3px;
     }
 
     p {
