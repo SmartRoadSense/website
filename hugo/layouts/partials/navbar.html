@@ -8,16 +8,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">News</a>
+                            <a class="nav-link" href="{{ "news" | absLangURL }}">News</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarProjectLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Project
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarProjectLink">
-                                <a class="dropdown-item" href="#">About</a>
-                                <a class="dropdown-item" href="#">How does it work</a>
-                                <a class="dropdown-item" href="#">People</a>
+                                <a class="dropdown-item" href="{{ relref . "project/about.md" | absLangURL }}">About</a>
+                                <a class="dropdown-item" href="{{ relref . "project/how_does_it_work.md" | absLangURL }}">How does it work</a>
+                                <a class="dropdown-item" href="{{ relref . "project/people.md" | absLangURL }}">People</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -25,14 +25,14 @@
                             Data
                             </a>
                             <div class="dropdown-menu" aria-labelledby="navbarResultsLink">
-                                <a class="dropdown-item" href="{{ ref . "data/road_quality_map.md" }}">Road quality map</a>
-                                <a class="dropdown-item" href="{{ ref . "data/open_data.md" }}">Open Data</a>
-                                <a class="dropdown-item" href="{{ ref . "data/privacy.md" }}">Privacy</a>
-                                <a class="dropdown-item" href="{{ ref . "data/developers.md" }}">For developers</a>
+                                <a class="dropdown-item" href="{{ relref . "data/road_quality_map.md" | absLangURL }}">Road quality map</a>
+                                <a class="dropdown-item" href="{{ relref . "data/open_data.md" | absLangURL }}">Open Data</a>
+                                <a class="dropdown-item" href="{{ relref . "data/privacy.md" | absLangURL }}">Privacy</a>
+                                <a class="dropdown-item" href="{{ relref . "data/developers.md" | absLangURL }}">For developers</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ ref . "apps/index.md" }}">Apps</a>
+                            <a class="nav-link" href="{{ relref . "apps.md" | absLangURL }}">Apps</a>
                         </li>
                     </ul>
 
