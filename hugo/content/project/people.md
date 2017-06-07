@@ -1,5 +1,5 @@
 +++
-title = "Privacy"
+title = "People"
 type = "page"
 +++
 

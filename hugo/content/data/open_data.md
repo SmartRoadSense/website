@@ -1,5 +1,6 @@
 +++
-title = "Open data"
+title = "Open Data"
+type = "page"
 +++
 
 ENG.
