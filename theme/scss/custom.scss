@@ -1,0 +1,346 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Bootstrap overrides
+//
+// Copy variables from `_variables.scss` to this file to override default values
+// without modifying source files.
+
+$brand-primary:             #2a69ff;
+$brand-success:             $green;
+$brand-info:                #bcd0ff;
+$brand-warning:             $orange;
+$brand-danger:              $red;
+$brand-inverse:             $gray-600;
+
+$enable-rounded:            false;
+$enable-shadows:            true;
+$enable-gradients:          true;
+$enable-transitions:        true;
+
+// General stuff
+$font-family-base:       'Open Sans', $font-family-sans-serif;
+$font-size-h1: 3rem;
+$font-size-h2: 2.5rem;
+$font-size-h3: 2rem;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$lead-font-weight: 400;
+
+a {
+    text-decoration-skip: ink;
+}
+
+// Transition offsets
+.trans-offset-1 {
+    transition-delay: 0ms !important;
+}
+.trans-offset-2 {
+    transition-delay: 500ms !important;
+}
+.trans-offset-3 {
+    transition-delay: 1000ms !important;
+}
+.trans-offset-4 {
+    transition-delay: 1500ms !important;
+}
+
+// Navbar
+nav.navbar {
+    transition: background .35s ease-out;
+
+    background: linear-gradient(to bottom, rgba($gray-600, 0.7), rgba($gray-600, 0.0) 90%);
+}
+nav.navbar.scrolled, nav.navbar.expanded {
+    background: $brand-primary;
+}
+
+@include media-breakpoint-down(xs) {
+    // Bugfix for container on extra-small in navbar
+    nav.navbar .container {
+        margin-left: inherit;
+        margin-right: inherit;
+    }
+}
+
+// Jumbotron
+$jumbotron-bg: transparent;
+
+// Header
+header {
+    position: relative;
+    height: 260px;
+    margin-bottom: 2em;
+
+    background-color: $brand-primary;
+    color: $white;
+
+    .bottom-aligner {
+        position: absolute;
+        bottom: 2em;
+        width: 100%;
+    }
+
+    h1 {
+        font-weight: 600;
+        margin-bottom: 0.2em;
+
+        @include media-breakpoint-down(xs) {
+            font-size: 2.4rem;
+        }
+        @include media-breakpoint-only(sm) {
+            font-size: 3rem;
+        }
+        @include media-breakpoint-only(md) {
+            font-size: 3.6rem;
+        }
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+        }
+
+        span {
+            background: #ffffff;
+            color: $brand-primary;
+            padding: .1em .5em;
+            box-decoration-break: clone;
+        }
+    }
+}
+header.hero {
+    height: 600px;
+    margin-bottom: 1em;
+
+    background-image: url('../images/header_2400.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .occluder {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 200px;
+        background: linear-gradient(to bottom right, transparent 0, transparent 50%, $white 50%, $white 100%);
+    }
+
+    .logo {
+        img {
+            width: 100%;
+            height: auto;
+            max-width: 200px;
+        }
+    }
+
+    h1 {
+        text-shadow: $black 1px 1px 3px;
+    }
+
+    p {
+        display: inline;
+        position: relative;
+
+        white-space: pre-wrap;
+        line-height: 1.7;
+        border: 0 solid $brand-primary;
+        border-width: 0.3em 0;
+
+        &, &:after {
+            background: $brand-primary;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: -0.3em;
+            right: 100%;
+            bottom: -0.3em;
+            width: 0.5em;
+        }
+
+        > span {
+            position: relative;
+            z-index: 1;
+            padding-right: 0.5em;
+            box-decoration-break: clone;
+        }
+    }
+}
+
+.section-title {
+    margin-top: 3em;
+    margin-bottom: 0;
+    margin-left: -0.35em;
+
+    white-space: nowrap;
+    @include media-breakpoint-down(sm) {
+        font-size: 1.75rem;
+    }
+
+    transform: rotateZ(-3deg);
+    transform-origin: left center;
+
+    &.scroll-in {
+        transform: rotateZ(-10deg);
+        opacity: 0;
+    }
+
+    opacity: 1;
+    transition: transform 1.5s ease-out, opacity 0.6s linear;
+
+    span {
+        color: $white;
+        background: $brand-primary url(../images/stripe_blue.png) repeat;
+        padding: 0.15em 0.35em;
+    }
+}
+
+.video-player {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+
+    div {
+        position: relative;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+        padding-bottom: 56.25%;
+    }
+
+    iframe, object, embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.badge img {
+    width: 80%;
+    height: auto;
+}
+
+.cards-sequence {
+    margin-top: 1em;
+
+    @include media-breakpoint-down(xs) {
+        > div {
+            margin-top: 1em;
+
+            &:first-child {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .card, .not-card {
+        opacity: 1;
+        transform: translateY(0px);
+        transition: transform 1.5s ease-out, opacity 0.6s linear;
+    }
+    &.scroll-in {
+        .card, .not-card {
+            opacity: 0;
+            transform: translateY(-50px);
+        }
+    }
+}
+.card {
+    .card-counter {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: -25px;
+        left: -25px;
+        border-radius: 50% 50%;
+        border: solid 3px white;
+        background: $brand-primary;
+        text-align: center;
+        color: white;
+        box-shadow: $gray-300 1px 1px 3px;
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    .card-img-top {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        background-image: url(../images/stripe_gray.png);
+        background-repeat: repeat;
+    }
+}
+
+// Footer
+$footer-background: $gray-100;
+$footer-text-color: lighten($gray-500, 20%);
+$footer-gutter-color: darken($gray-100, 12%);
+
+footer {
+    background: $footer-background;
+    margin-top: 4em;
+    padding-top: 2em;
+    padding-bottom: 3em;
+    font-size: $small-font-size;
+    color: $footer-text-color;
+
+    a {
+        text-decoration: underline;
+        color: $gray-500;
+    }
+    a:hover {
+        color: $brand-primary;
+    }
+
+    h6 {
+        color: $brand-primary;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        // 3 columns variant
+        .row > div {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-right: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-right: none;
+        }
+    }
+    @include media-breakpoint-only(sm) {
+        // 2 columns variant
+        .row > div:first-child {
+            border-right: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-top: 1em;
+            padding-top: 1em;
+            border-top: solid 1px $footer-gutter-color;
+        }
+    }
+    @include media-breakpoint-down(xs) {
+        // Stacked variant
+        .row > div {
+            margin-bottom: 1em;
+            padding-bottom: 1em;
+            border-bottom: solid 1px $footer-gutter-color;
+        }
+        .row > div:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+    }
+}
