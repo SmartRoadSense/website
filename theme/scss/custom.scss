@@ -5,25 +5,34 @@
 // Copy variables from `_variables.scss` to this file to override default values
 // without modifying source files.
 
-$brand-primary:             #2a69ff;
-$brand-success:             $green;
-$brand-info:                #bcd0ff;
-$brand-warning:             $orange;
-$brand-danger:              $red;
-$brand-inverse:             $gray-600;
+$primary:                   #2a69ff;
+$success:                   $green;
+$info:                      #bcd0ff;
+$warning:                   $orange;
+$danger:                    $red;
+$secondary:                 $gray-600;
 
 $enable-rounded:            false;
 $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
 
-// General stuff
+$dropdown-link-color:           $primary;
+$dropdown-link-hover-color:     $white;
+$dropdown-link-hover-bg:        $primary;
+$dropdown-link-active-color:    $white;
+$dropdown-link-active-bg:       $primary;
+
+// General font stuff
 $font-family-base:       'Open Sans', $font-family-sans-serif;
-$font-size-h1: 3rem;
-$font-size-h2: 2.5rem;
-$font-size-h3: 2rem;
+
+$font-size-h1: $font-size-base * 3;
+$font-size-h2: $font-size-base * 2.5;
+$font-size-h3: $font-size-base * 2;
+
 $font-weight-normal: 400;
 $font-weight-bold: 600;
+
 $lead-font-weight: 400;
 
 a {
@@ -49,16 +58,25 @@ nav.navbar {
     transition: background .35s ease-out;
 
     background: linear-gradient(to bottom, rgba($gray-600, 0.7), rgba($gray-600, 0.0) 90%);
-}
-nav.navbar.scrolled, nav.navbar.expanded {
-    background: $brand-primary;
-}
 
-@include media-breakpoint-down(xs) {
-    // Bugfix for container on extra-small in navbar
-    nav.navbar .container {
-        margin-left: inherit;
-        margin-right: inherit;
+    a.navbar-brand {
+        color: $gray-100;
+        text-shadow: 1px 1px 3px $gray-800;
+    }
+    a.navbar-brand:hover {
+        color: $white;
+    }
+
+    a.nav-link {
+        color: $gray-200;
+        text-shadow: 1px 1px 3px $gray-800;
+    }
+    a.nav-link:hover {
+        color: $white;
+    }
+
+    &.scrolled, &.expanded {
+        background: $primary;
     }
 }
 
@@ -71,7 +89,7 @@ header {
     height: 260px;
     margin-bottom: 2em;
 
-    background-color: $brand-primary;
+    background-color: $primary;
     color: $white;
 
     .bottom-aligner {
@@ -99,7 +117,7 @@ header {
 
         span {
             background: #ffffff;
-            color: $brand-primary;
+            color: $primary;
             padding: .1em .5em;
             box-decoration-break: clone;
         }
@@ -109,7 +127,7 @@ header.hero {
     height: 600px;
     margin-bottom: 1em;
 
-    background-image: url('../images/header_2400.jpg');
+    background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -124,9 +142,13 @@ header.hero {
 
     .logo {
         img {
+            @include media-breakpoint-up(md) {
+                position: relative;
+                top: 20px;
+            }
+
             width: 100%;
             height: auto;
-            max-width: 200px;
         }
     }
 
@@ -140,11 +162,11 @@ header.hero {
 
         white-space: pre-wrap;
         line-height: 1.7;
-        border: 0 solid $brand-primary;
+        border: 0 solid $primary;
         border-width: 0.3em 0;
 
         &, &:after {
-            background: $brand-primary;
+            background: $primary;
         }
         &:after {
             content: "";
@@ -187,7 +209,7 @@ header.hero {
 
     span {
         color: $white;
-        background: $brand-primary url(../images/stripe_blue.png) repeat;
+        background: $primary url(../img/stripe_blue.png) repeat;
         padding: 0.15em 0.35em;
     }
 }
@@ -221,8 +243,17 @@ header.hero {
     height: auto;
 }
 
+// Cards
+$card-border-radius: 0;
+
 .cards-sequence {
     margin-top: 1em;
+
+    @include media-breakpoint-down(md) {
+        > div {
+            margin-bottom: 1em;
+        }
+    }
 
     @include media-breakpoint-down(xs) {
         > div {
@@ -255,7 +286,7 @@ header.hero {
         left: -25px;
         border-radius: 50% 50%;
         border: solid 3px white;
-        background: $brand-primary;
+        background: $primary;
         text-align: center;
         color: white;
         box-shadow: $gray-300 1px 1px 3px;
@@ -266,34 +297,34 @@ header.hero {
         width: 100%;
         height: auto;
         object-fit: cover;
-        background-image: url(../images/stripe_gray.png);
+        background-image: url(../img/stripe_gray.png);
         background-repeat: repeat;
     }
 }
 
 // Footer
-$footer-background: $gray-100;
-$footer-text-color: lighten($gray-500, 20%);
-$footer-gutter-color: darken($gray-100, 12%);
+$footer-background: $gray-200;
+$footer-text-color: $gray-600;
+$footer-gutter-color: $gray-600;
 
 footer {
     background: $footer-background;
     margin-top: 4em;
     padding-top: 2em;
-    padding-bottom: 3em;
+    padding-bottom: 2em;
     font-size: $small-font-size;
     color: $footer-text-color;
 
     a {
         text-decoration: underline;
-        color: $gray-500;
+        color: $gray-700;
     }
     a:hover {
-        color: $brand-primary;
+        color: $primary;
     }
 
-    h6 {
-        color: $brand-primary;
+    h5, h6 {
+        color: $primary;
     }
 
     ul {
@@ -309,13 +340,9 @@ footer {
     @include media-breakpoint-up(md) {
         // 3 columns variant
         .row > div {
-            margin-bottom: 1em;
-            padding-bottom: 1em;
             border-right: solid 1px $footer-gutter-color;
         }
         .row > div:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
             border-right: none;
         }
     }
