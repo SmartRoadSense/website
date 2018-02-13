@@ -57,7 +57,7 @@ a {
 nav.navbar {
     transition: background .35s ease-out;
 
-    background: linear-gradient(to bottom, rgba($gray-600, 0.7), rgba($gray-600, 0.0) 90%);
+    background: linear-gradient(to bottom, rgba($black, 0.22), rgba($black, 0.0) 90%);
 
     a.navbar-brand {
         color: $gray-100;
@@ -89,8 +89,25 @@ header {
     height: 260px;
     margin-bottom: 2em;
 
-    background-color: $primary;
+    background: $primary;
     color: $white;
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+
+        background-color: $primary;
+
+        > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center center;
+        }
+    }
 
     .bottom-aligner {
         position: absolute;
@@ -100,13 +117,14 @@ header {
 
     h1 {
         font-weight: 600;
-        margin-bottom: 0.2em;
+        white-space: nowrap;
 
-        @include media-breakpoint-down(xs) {
-            font-size: 2.4rem;
-        }
+        margin-left: -0.35em;
+        margin-bottom: -0.8em;
+
+        font-size: 2.8rem;
         @include media-breakpoint-only(sm) {
-            font-size: 3rem;
+            font-size: 3.2rem;
         }
         @include media-breakpoint-only(md) {
             font-size: 3.6rem;
@@ -115,11 +133,24 @@ header {
             font-size: 4rem;
         }
 
+        transform: rotateZ(-3deg);
+        transform-origin: left center;
+
         span {
-            background: #ffffff;
+            color: $white;
+            background: $primary url(../img/stripe_blue.png) repeat;
+            padding: 0.15em 0.35em;
+
+            /*background: #ffffff;
             color: $primary;
             padding: .1em .5em;
-            box-decoration-break: clone;
+            box-decoration-break: clone;*/
+        }
+    }
+
+    .lead {
+        @include media-breakpoint-up(md) {
+            font-size: ($font-size-base * 1.5);
         }
     }
 }
@@ -127,6 +158,7 @@ header.hero {
     height: 600px;
     margin-bottom: 1em;
 
+    background-color: $primary;
     background-image: url('../img/header.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -153,7 +185,22 @@ header.hero {
     }
 
     h1 {
+        white-space: unset;
         text-shadow: $black 1px 1px 3px;
+
+        margin-left: 0;
+        margin-bottom: 0.15em;
+
+        transform: unset;
+
+        span {
+            padding: 0;
+            background: none;
+            /*background: #ffffff;
+            color: $primary;
+            padding: .1em .5em;
+            box-decoration-break: clone;*/
+        }
     }
 
     p {
@@ -192,8 +239,9 @@ header.hero {
     margin-left: -0.35em;
 
     white-space: nowrap;
-    @include media-breakpoint-down(sm) {
-        font-size: 1.75rem;
+    font-size: $h2-font-size;
+    @include media-breakpoint-up(md) {
+        font-size: ($h2-font-size * 1.25);
     }
 
     transform: rotateZ(-3deg);
@@ -305,7 +353,7 @@ $card-border-radius: 0;
 // Footer
 $footer-background: $gray-200;
 $footer-text-color: $gray-600;
-$footer-gutter-color: $gray-600;
+$footer-gutter-color: $gray-400;
 
 footer {
     background: $footer-background;
@@ -335,6 +383,10 @@ footer {
             padding: 0;
             margin: 0;
         }
+    }
+
+    p:last-child {
+        margin-bottom: 0;
     }
 
     @include media-breakpoint-up(md) {
