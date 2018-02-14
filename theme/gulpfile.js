@@ -22,7 +22,6 @@ gulp.task('build-theme', function() {
       'Opera >= 12']})]))
     .pipe(sourcemaps.write())
     .pipe(rename({basename: 'smartroadsense'}))
-    //.pipe(gulp.dest('css/'))
     .pipe(cleanCss())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('../hugo/static/resources/'))

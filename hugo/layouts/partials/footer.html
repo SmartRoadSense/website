@@ -8,17 +8,19 @@
                     <div class="col-sm-6 col-md-4">
                         <h6>SmartRoadSense</h6>
                         <ul>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Something</a></li>
-                            <li><a href="#">Something</a></li>
+                            <li><a href="{{ "news" | absLangURL }}">{{ i18n "menuNews" }}</a></li>
+                            <li><a href="{{ relref . "project/about.md" | absLangURL }}">{{ i18n "menuProjectAbout" }}</a></li>
+                            <li><a href="{{ relref . "data/road_quality_map.md" | absLangURL }}">{{ i18n "menuDataMap" }}</a></li>
+                            <li><a href="{{ relref . "data/open_data.md" | absLangURL }}">{{ i18n "menuDataOpen" }}</a></li>
+                            <li><a href="{{ relref . "data/developers.md" | absLangURL }}">{{ i18n "menuDataDevelopers" }}</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-4">
-                        <h6>Legal</h6>
-                        <p>Laboris <a href="#">sint duis ea</a> incididunt ad irure veniam.</p>
-                        <p>Nostrud nisi sint <a href="#">proident cupidatat</a> ex consequat dolore deserunt esse pariatur non amet id.</p>
+                        <h6>{{ i18n "menuLegalSubtitle" }}</h6>
+                        <p>
+                            Something something something. Something.
+                            <a href="{{ relref . "data/privacy.md" | absLangURL }}">{{ i18n "menuDataPrivacy" }}</a>.
+                        </p>
                     </div>
                     <div class="col-sm-12 col-md-4">
                         Contact stuff.
@@ -30,6 +32,7 @@
         <!-- Scripts -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="{{ "resources/bootstrap.min.js" | absURL }}" ></script>
     </body>
 </html>
