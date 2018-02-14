@@ -89,7 +89,7 @@ header {
     height: 260px;
     margin-bottom: 2em;
 
-    background: $primary;
+    background-color: $primary;
     color: $white;
 
     .background {
@@ -138,13 +138,10 @@ header {
 
         span {
             color: $white;
-            background: $primary url(../img/stripe_blue.png) repeat;
-            padding: 0.15em 0.35em;
-
-            /*background: #ffffff;
-            color: $primary;
+            background: $primary url(../images/stripe_blue.png) repeat;
+            //padding: 0.15em 0.35em;
             padding: .1em .5em;
-            box-decoration-break: clone;*/
+            box-decoration-break: clone;
         }
     }
 
@@ -159,10 +156,6 @@ header.hero {
     margin-bottom: 1em;
 
     background-color: $primary;
-    background-image: url('../img/header.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
 
     .occluder {
         position: absolute;
@@ -196,10 +189,6 @@ header.hero {
         span {
             padding: 0;
             background: none;
-            /*background: #ffffff;
-            color: $primary;
-            padding: .1em .5em;
-            box-decoration-break: clone;*/
         }
     }
 
@@ -257,7 +246,7 @@ header.hero {
 
     span {
         color: $white;
-        background: $primary url(../img/stripe_blue.png) repeat;
+        background: $primary url(../images/stripe_blue.png) repeat;
         padding: 0.15em 0.35em;
     }
 }
@@ -345,7 +334,7 @@ $card-border-radius: 0;
         width: 100%;
         height: auto;
         object-fit: cover;
-        background-image: url(../img/stripe_gray.png);
+        background-image: url(../images/stripe_gray.png);
         background-repeat: repeat;
     }
 }
