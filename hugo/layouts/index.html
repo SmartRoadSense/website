@@ -2,9 +2,7 @@
 {{ partial "navbar.html" . }}
 
         <header class="hero">
-            <div class="background">
-                    <img src="{{ "images/header_1200.jpg" | absURL }}" srcset="{{ "images/header_600.jpg" | absURL }} 600w, {{ "images/header_1200.jpg" | absURL }} 1200w, {{ "images/header_2400.jpg" | absURL }} 2400w" alt="SmartRoadSense running on an Android smartphone" />
-            </div>
+            {{ partial "cover.html" . }}
             <div class="occluder"></div>
             <div class="bottom-aligner">
                 <div class="container">
