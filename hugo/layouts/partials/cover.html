@@ -1,0 +1,7 @@
+{{ if .Params.cover }}
+    <div class="background">
+    {{ with .Resources.GetMatch (printf "%s*" .Params.cover) }}
+        <img src="{{ (.Resize "640x").RelPermalink }}" alt="" srcset="{{ (.Resize "640x").RelPermalink }} 640w, {{ (.Resize "1024x").RelPermalink }} 1024w, {{ (.Resize "1600x").RelPermalink }} 1600w, {{ .RelPermalink }} {{ .Width }}w" />
+    {{ end }}
+    </div>
+{{ end }}
