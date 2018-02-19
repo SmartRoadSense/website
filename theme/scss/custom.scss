@@ -39,6 +39,22 @@ a {
     text-decoration-skip: ink;
 }
 
+// Sticky footer
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+
+    > .content {
+        flex: 1 0 auto;
+    }
+}
+footer {
+    flex-shrink: 0;
+}
+
 // Transition offsets
 .trans-offset-1 {
     transition-delay: 0ms !important;
