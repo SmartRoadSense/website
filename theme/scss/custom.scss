@@ -75,8 +75,13 @@ nav.navbar {
         color: $white;
     }
 
-    &.scrolled, &.expanded {
+    &.scrolled {
         background: $primary;
+    }
+    &.expanded {
+        @include media-breakpoint-down(sm) {
+            background: $primary;
+        }
     }
 }
 
@@ -139,7 +144,6 @@ header {
         span {
             color: $white;
             background: $primary url(../images/stripe_blue.png) repeat;
-            //padding: 0.15em 0.35em;
             padding: .1em .5em;
             box-decoration-break: clone;
         }
