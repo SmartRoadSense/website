@@ -1,4 +1,18 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Ripped out from Bootstrap variables
+
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black:    #000 !default;
+
+$font-size-base: 1rem;
 
 // Bootstrap overrides
 //
@@ -6,16 +20,18 @@
 // without modifying source files.
 
 $primary:                   #2a69ff;
-$success:                   $green;
 $info:                      #bcd0ff;
-$warning:                   $orange;
-$danger:                    $red;
-$secondary:                 $gray-600;
 
 $enable-rounded:            false;
 $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
+
+$navbar-dark-color:             $gray-200;
+$navbar-dark-hover-color:       $white;
+$navbar-dark-active-color:      lighten($primary, 30%);
+$navbar-dark-disabled-color:    $gray-400;
+$navbar-dark-toggler-border-color: rgba($white, .4);
 
 $dropdown-link-color:           $primary;
 $dropdown-link-hover-color:     $white;
@@ -24,16 +40,19 @@ $dropdown-link-active-color:    $white;
 $dropdown-link-active-bg:       $primary;
 
 // General font stuff
-$font-family-base:       'Open Sans', $font-family-sans-serif;
+$font-family-base:              'Open Sans', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-$font-size-h1: $font-size-base * 3;
-$font-size-h2: $font-size-base * 2.5;
-$font-size-h3: $font-size-base * 2;
+$font-size-h1:                  $font-size-base * 3;
+$font-size-h2:                  $font-size-base * 2.5;
+$font-size-h3:                  $font-size-base * 2;
 
 $font-weight-normal: 400;
 $font-weight-bold: 600;
-
 $lead-font-weight: 400;
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Additional CSS
 
 a {
     text-decoration-skip: ink;
@@ -88,11 +107,7 @@ nav.navbar {
     }
 
     a.nav-link {
-        color: $gray-200;
         text-shadow: 1px 1px 3px $gray-800;
-    }
-    a.nav-link:hover {
-        color: $white;
     }
 
     &.scrolled {
@@ -155,7 +170,7 @@ header {
         margin-left: -0.35em;
         margin-bottom: -0.1em;
 
-        font-size: 2.8rem;
+        font-size: 3rem;
         @include media-breakpoint-only(sm) {
             font-size: 3.2rem;
         }
