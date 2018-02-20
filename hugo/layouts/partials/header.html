@@ -9,7 +9,7 @@
 
         <link rel="canonical" href="{{ .Permalink }}" />
 
-        <title>SmartRoadSense</title>
+        <title>SmartRoadSense {{- if .Page.Title }} | {{ .Page.Title }}{{ end }}</title>
     </head>
 
     <body>

@@ -1,0 +1,19 @@
+{{ $root := . }}
+
+{{- with .Page.Resources.GetMatch (printf "%s*" (.Get "src")) -}}
+    {{- $res := . -}}
+    {{- range (slice 480 780 1280 1600) -}}
+        {{- if lt . $res.Width -}}
+            {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx" .)).RelPermalink -}}
+            {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $root.Scratch.Add "srcset" .RelPermalink -}}
+    {{- $root.Scratch.Add "srcset" (printf " %dw" .Width) -}}
+    <img src="{{ (.Resize "480x").RelPermalink }}" width="{{ $res.Width }}" height="{{ $res.Height }}"
+        {{- if $root.Get "class" }} class="{{ $root.Get "class" }}" {{ end -}}
+        {{- if $root.Get "alt" }} alt="{{ $root.Get "alt" }}" {{ end -}}
+        {{- printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }} />
+{{ else }}
+    {{ errorf "Resource '%s' not found" (.Get "src") }}
+{{- end }}
