@@ -1,7 +1,20 @@
 {{ if .Params.cover }}
     <div class="background">
-    {{ with .Resources.GetMatch (printf "%s*" .Params.cover) }}
-        <img src="{{ (.Resize "640x").RelPermalink }}" alt="" srcset="{{ (.Resize "640x").RelPermalink }} 640w, {{ (.Resize "1024x").RelPermalink }} 1024w, {{ (.Resize "1600x").RelPermalink }} 1600w, {{ .RelPermalink }} {{ .Width }}w" />
-    {{ end }}
+    {{ with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+        {{- $res := . -}}
+        {{- range (slice 580 780 1280 1600 2048) -}}
+            {{- if lt . $res.Width -}}
+                {{- $.Scratch.Add "srcset" ($res.Resize (printf "%dx" .)).RelPermalink -}}
+                {{- $.Scratch.Add "srcset" (printf " %dw, " .) -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $.Scratch.Add "srcset" .RelPermalink -}}
+        {{- $.Scratch.Add "srcset" (printf " %dw" .Width) -}}
+        <img
+            src="{{ (.Resize "580x").RelPermalink }}"
+            alt=""
+            {{ printf "srcset=\"%s\"" ($.Scratch.Get "srcset") | safeHTMLAttr }}
+            />
+    {{- end }}
     </div>
-{{ end }}
+{{- end }}

@@ -2,6 +2,8 @@
 {{ partial "navbar.html" . }}
 
         <header>
+            {{ partial "cover.html" . }}
+            <div class="occluder"></div>
             <div class="bottom-aligner">
                 <div class="container">
                     <h1><span>{{ .Params.title }}</span></h1>
