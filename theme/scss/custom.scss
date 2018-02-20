@@ -332,6 +332,12 @@ header.hero {
     height: auto;
 }
 
+.data-counter {
+    font-family: $font-family-monospace;
+    font-weight: bold;
+    font-size: ($font-size-base * 1.2);
+}
+
 // Cards
 $card-border-radius: 0;
 
