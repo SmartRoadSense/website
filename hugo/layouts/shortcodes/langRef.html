@@ -1,1 +1,5 @@
+{{ if .Site.GetPage "page" (.Get 0) }}
 {{ relref .Page (.Get 0) | absLangURL }}
+{{ else }}
+{{ (.Get 0) | absLangURL }}
+{{ end }}
