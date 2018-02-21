@@ -12,7 +12,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
 
 {{< section "How does it work?" >}}
 
-<div class="row align-items-start cards-sequence scroll-in">
+<div class="row cards-sequence scroll-in">
     <div class="col-sm-6 col-lg-3">
         <div class="card trans-offset-1">
             <div class="card-counter">1</div>
@@ -51,13 +51,29 @@ Data is collected anonymously and transmitted to a centralized service that aggr
     </div>
 </div>
 
-{{< section "Stats and data" >}}
+<div class="row">
+    <div class="col-md-6 col-lg-8">
+        {{< section "Stats and data" >}}
 
-<span class="data-counter data-accel-values">—</span> acceleration values collected,<br />
-<span class="data-counter data-points">—</span> data points received,<br />
-<span class="data-counter data-roads">—</span>&nbsp;kms of roads analyzed… and counting!
+        <span class="data-counter data-accel-values">—</span> acceleration values collected,<br />
+        <span class="data-counter data-points">—</span> data points received,<br />
+        <span class="data-counter data-roads">—</span>&nbsp;kms of roads analyzed… and counting!
 
-Take a look at the [real-time map of collected data]({{< langRef "data/map/index.md" >}})!
+        Take a look at the <a href="{{< langRef "data/map/index.md" >}}">real-time map of collected data</a>!
+    </div>
+    <div class="col-md-6 col-lg-4">
+        <div class="note">
+            <h2>Latest news</h2>
+            <div class="content">
+                <ul>
+                    <li><a href="#">Ciao</a></li>
+                    <li><a href="#">Ciao</a></li>
+                </ul>
+                <p><a href="{{< langRef "news" >}}">More news…</a></p>
+            </div>
+        </div>
+    </div>
+</div>
 
 {{< section "Ready to hit the road?" >}}
 
@@ -65,13 +81,13 @@ If you’re interested in the project and would like to help out monitoring road
 
 The SmartRoadSense service is currently available in Italy, the United Kingdom, Romania, and Greece.
 
-<div class="row align-items-center">
-    <div class="col-6 badge">
+<div class="row align-items-center justify-content-center">
+    <div class="col-6 col-lg-4 badge">
         <a href="https://itunes.apple.com/app/id1063716780">
             <img src="/images/badge_app_store.png" width="650" height="192" alt="Get SmartRoadSense on the Apple App Store" />
         </a>
     </div>
-    <div class="col-6 badge">
+    <div class="col-6 col-lg-4 badge">
         <a href="https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense">
             <img src="/images/badge_google_play.png" width="646" height="250" alt="Get SmartRoadSense for Android from Google Play" />
         </a>
