@@ -94,9 +94,11 @@ footer {
 
 // Navbar
 nav.navbar {
-    transition: background .35s ease-out;
+    transition: background-color .35s linear, background-position .35s ease-out;
 
     background: linear-gradient(to bottom, rgba($black, 0.22), rgba($black, 0.0) 90%);
+    background-color: transparent;
+    background-repeat: no-repeat;
 
     a.navbar-brand {
         color: $gray-100;
@@ -111,7 +113,8 @@ nav.navbar {
     }
 
     &.scrolled {
-        background: $primary;
+        background-color: $primary;
+        background-position: 0 -60px;
     }
     &.expanded {
         @include media-breakpoint-down(sm) {
