@@ -55,6 +55,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
     <div class="col-md-6 col-lg-8">
         {{< section "Stats and data" >}}
 
+        <span class="data-counter">4</span> countries,<br />
         <span class="data-counter data-accel-values">—</span> acceleration values collected,<br />
         <span class="data-counter data-points">—</span> data points received,<br />
         <span class="data-counter data-roads">—</span>&nbsp;kms of roads analyzed… and counting!
