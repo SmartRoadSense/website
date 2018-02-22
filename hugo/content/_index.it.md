@@ -55,6 +55,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
     <div class="col-md-6 col-lg-8">
         {{< section "Statistiche" >}}
 
+        <span class="data-counter">4</span> nazioni in cui il servizio è attivo,<br />
         <span class="data-counter data-accel-values">—</span> valori di accelerazione,<br />
         <span class="data-counter data-points">—</span> campioni ricevuti,<br />
         <span class="data-counter data-roads">—</span>&nbsp;kms di strade monitorate… per ora!
