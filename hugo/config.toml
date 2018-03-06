@@ -4,7 +4,7 @@ defaultContentLanguage = "en"
 enableMissingTranslationPlaceholders = true
 
 [permalinks]
-news = "/:year/:month/:day/:slug/"
+news = "/:section/:year/:month/:slug/"
 
 [Languages]
 
