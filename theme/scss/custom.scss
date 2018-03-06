@@ -50,6 +50,22 @@ $font-weight-normal: 400;
 $font-weight-bold: 600;
 $lead-font-weight: 400;
 
+// Code
+$code-font-size:                    100%;
+$code-color:                        $gray-700;
+$code-background:                   $gray-100;
+$pre-color:                         $gray-700;
+$pre-scrollable-max-height:         340px;
+
+code {
+    border: solid 1px $gray-500;
+    border-radius: 2px;
+    padding: 2px;
+}
+code, pre {
+    background-color: $code-background;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Additional CSS
