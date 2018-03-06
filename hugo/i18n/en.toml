@@ -39,3 +39,15 @@ other = "For developers"
 
 [menuApps]
 other = "Apps"
+
+[permalink]
+other = "Permalink"
+
+[readMore]
+other = "Read more…"
+
+[bibtexCodeHeader]
+other = "BibTeX code"
+
+[bibtexCodeConfirmation]
+other = "Code copied to your clipboard."

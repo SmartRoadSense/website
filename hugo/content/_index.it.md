@@ -1,7 +1,6 @@
 +++
 date = "2017-05-29"
-
-cover = "index_srs_cover"
+cover = "index_srs_cover.jpg"
 +++
 
 SmartRoadSense è un’applicazione mobile che sfrutta gli accelerometri ed il sensore GPS di un comune smartphone per rilevare e classificare le irregolarità nel manto stradale sul quale si sta guidando.
@@ -19,7 +18,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
             {{< imgset src="srs_how_1" class="card-img-top" alt="Raccolta dati" >}}
             <div class="card-body">
                 <h4 class="card-title">Raccolta dati</h4>
-                <p class="card-text">Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app SmartRoadSense rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
+                <p>Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app SmartRoadSense rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
             </div>
         </div>
     </div>
@@ -29,7 +28,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
             {{< imgset src="srs_how_2" class="card-img-top" alt="Aggregazione dei dati" >}}
             <div class="card-body">
                 <h4 class="card-title">Aggregazione</h4>
-                <p class="card-text">I dati raccolti ed anonimizzati vengono trasmessi al servizio SmartRoadSense, che li aggrega insieme a quelli degli altri utenti.</p>
+                <p>I dati raccolti ed anonimizzati vengono trasmessi al servizio SmartRoadSense, che li aggrega insieme a quelli degli altri utenti.</p>
             </div>
         </div>
     </div>
@@ -39,7 +38,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
             {{< imgset src="srs_how_3" class="card-img-top" alt="Visualizzazione dei dati finali" >}}
             <div class="card-body">
                 <h4 class="card-title">Visualizzazione</h4>
-                <p class="card-text">I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map/index.md" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data/index.md" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers/index.md" >}}">API</a>.</p>
+                <p>I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map/index.md" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data/index.md" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers/index.md" >}}">API</a>.</p>
             </div>
         </div>
     </div>
@@ -66,10 +65,8 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
         <div class="note">
             <h2>Ultime notizie</h2>
             <div class="content">
-                <ul>
-                    <li><a href="#">Ciao</a></li>
-                    <li><a href="#">Ciao</a></li>
-                </ul>
+                {{< newsLatest >}}
+
                 <p><a href="{{< langRef "news" >}}">Altre notizie…</a></p>
             </div>
         </div>
@@ -86,12 +83,14 @@ Il servizio di SmartRoadSense è al momento attivo in Italia, in Regno Unito, in
 <div class="row align-items-center justify-content-center">
     <div class="col-6 col-lg-4 badge">
         <a href="https://itunes.apple.com/app/id1063716780">
-            <img src="/images/badge_app_store.png" width="650" height="192" alt="SmartRoadSense per iOS" />
+            {{< imgset src="badge_app_store" alt="SmartRoadSense per iOS" >}}
         </a>
     </div>
     <div class="col-6 col-lg-4 badge">
         <a href="https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense">
-            <img src="/images/badge_google_play.png" width="646" height="250" alt="SmartRoadSense per Android" />
+            {{< imgset src="badge_google_play" alt="SmartRoadSense per Android" >}}
         </a>
     </div>
 </div>
+
+Domande? Dai un’occhiata a [come funziona il servizio]({{< langRef "project/how" >}}) in dettaglio.

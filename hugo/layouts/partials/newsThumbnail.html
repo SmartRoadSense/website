@@ -1,0 +1,25 @@
+{{- $root := . -}}
+
+{{- if .Params.cover -}}
+    {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+        {{- $res := . -}}
+        {{- $root.Scratch.Set "srcset" "" -}}
+        {{- range (slice 512 1024 1280) -}}
+            {{- if lt . $res.Width -}}
+                {{- $root.Scratch.Add "srcset" ($res.Fill (printf "%dx%d q50" . .)).RelPermalink -}}
+                {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+            {{- end -}}
+        {{- end -}}
+        {{- $root.Scratch.Add "srcset" ($res.Fill "1600x1600 q50").RelPermalink -}}
+        {{- $root.Scratch.Add "srcset" " 1600w" -}}
+
+        <div class="thumbnail">
+            <img
+                src="{{ ($res.Fill "256x256 q50").RelPermalink }}"
+                alt=""
+                width="256" height="256"
+                {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+                />
+        </div>
+    {{ end -}}
+{{- end }}

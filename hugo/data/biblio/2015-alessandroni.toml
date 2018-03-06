@@ -1,0 +1,7 @@
+author = "G.&nbsp;Alessandroni et&nbsp;al."
+title = "Demo: Mobile Crowdsensing of Road Surface Roughness"
+publication = "MobiSys 2015"
+url = "http://dl.acm.org/citation.cfm?id=2745925"
+year = 2015
+sortkey = "2015-1"
+bibtex = "@inproceedings{alessandroni2015demo,\n  title={Demo: Mobile Crowdsensing of Road Surface Roughness},\n  author={Alessandroni, Giacomo and Bogliolo, Alessandro and Carini, Alberto and Delpriori, Saverio and Freschi, Valerio and Klopfenstein, Lorenz Cuno and Lattanzi, Emanuele and Luchetti, Gioele and Paolini, Brendan Dominic and Seraghiti, Andrea},\n  booktitle={Proceedings of the 13th Annual International Conference on Mobile Systems, Applications, and Services},\n  pages={439},\n  numpages = {1},\n  url = {http://doi.acm.org/10.1145/2742647.2745925},\n  doi = {10.1145/2742647.2745925},\n  acmid = {2745925},\n  year={2015},\n  isbn = {978-1-4503-3494-5},\n  location = {Florence, Italy},\n  organization={ACM}\n}"

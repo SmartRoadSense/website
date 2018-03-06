@@ -1,12 +1,11 @@
 +++
 date = "2017-05-29"
-
-cover = "index_srs_cover"
+cover = "index_srs_cover.jpg"
 +++
 
 SmartRoadSense is a mobile application that uses your smartphone’s accelerometers and GPS sensor to detect and classify irregularities of the road surface while you are driving.
 
-Data is collected anonymously and transmitted to a centralized service that aggregates contributions from all users, thus collecting a continously updated snapshot of the quality of road infrastructure.
+Data is collected anonymously and transmitted to a centralized service that aggregates contributions from all users, thus computing a continously updated snapshot of the quality of road infrastructure.
 
 {{< youtube "hbHNDG4NK1s" >}}
 
@@ -19,7 +18,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
             {{< imgset src="srs_how_1" class="card-img-top" alt="SmartRoadSense sensing" >}}
             <div class="card-body">
                 <h4 class="card-title">Sensing</h4>
-                <p class="card-text">By processing the input from your smartphone’s sensors (accelerometers and GPS), the SmartRoadSense app detects the bumpiness of the road and computes its “roughness index”.</p>
+                <p>By processing the input from your smartphone’s sensors (accelerometers and GPS), the SmartRoadSense app detects the bumpiness of the road and computes its “roughness index”.</p>
             </div>
         </div>
     </div>
@@ -29,7 +28,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
             {{< imgset src="srs_how_2" class="card-img-top" alt="Data aggregation" >}}
             <div class="card-body">
                 <h4 class="card-title">Aggregation</h4>
-                <p class="card-text">Collected data is anonymized an your device and transmitted to the SmartRoadSense service, which aggregates the data from multiple users.</p>
+                <p>Collected data is anonymized an your device and transmitted to the SmartRoadSense service, which aggregates the data from multiple users.</p>
             </div>
         </div>
     </div>
@@ -39,7 +38,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
             {{< imgset src="srs_how_3" class="card-img-top" alt="Final data display" >}}
             <div class="card-body">
                 <h4 class="card-title">Display</h4>
-                <p class="card-text">Aggregated data is mapped on a geographical map and is then made available <a href="{{< langRef "data/map/index.md" >}}">online</a>, as <a href="{{< langRef "data/open-data/index.md" >}}">open data</a>, and through <a href="{{< langRef "data/developers/index.md" >}}">APIs</a>.</p>
+                <p>Aggregated data is mapped on a geographical map and is then made available <a href="{{< langRef "data/map/index.md" >}}">online</a>, as <a href="{{< langRef "data/open-data/index.md" >}}">open data</a>, and through <a href="{{< langRef "data/developers/index.md" >}}">APIs</a>.</p>
             </div>
         </div>
     </div>
@@ -55,7 +54,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
     <div class="col-md-6 col-lg-8">
         {{< section "Stats and data" >}}
 
-        <span class="data-counter">4</span> countries,<br />
+        <span class="data-counter">4</span> countries active,<br />
         <span class="data-counter data-accel-values">—</span> acceleration values collected,<br />
         <span class="data-counter data-points">—</span> data points received,<br />
         <span class="data-counter data-roads">—</span>&nbsp;kms of roads analyzed… and counting!
@@ -66,10 +65,8 @@ Data is collected anonymously and transmitted to a centralized service that aggr
         <div class="note">
             <h2>Latest news</h2>
             <div class="content">
-                <ul>
-                    <li><a href="#">Ciao</a></li>
-                    <li><a href="#">Ciao</a></li>
-                </ul>
+                {{< newsLatest >}}
+
                 <p><a href="{{< langRef "news" >}}">More news…</a></p>
             </div>
         </div>
@@ -85,12 +82,14 @@ The SmartRoadSense service is currently available in Italy, the United Kingdom, 
 <div class="row align-items-center justify-content-center">
     <div class="col-6 col-lg-4 badge">
         <a href="https://itunes.apple.com/app/id1063716780">
-            <img src="/images/badge_app_store.png" width="650" height="192" alt="Get SmartRoadSense on the Apple App Store" />
+            {{< imgset src="badge_app_store" alt="SmartRoadSense for iOS" >}}
         </a>
     </div>
     <div class="col-6 col-lg-4 badge">
         <a href="https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense">
-            <img src="/images/badge_google_play.png" width="646" height="250" alt="Get SmartRoadSense for Android from Google Play" />
+            {{< imgset src="badge_google_play" alt="SmartRoadSense for Android" >}}
         </a>
     </div>
 </div>
+
+Questions? Check out [how the service works]({{< langRef "project/how" >}}) in detail.
