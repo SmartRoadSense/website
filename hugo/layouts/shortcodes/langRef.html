@@ -1,5 +1,10 @@
-{{ if .Site.GetPage "page" (.Get 0) }}
-{{ relref .Page (.Get 0) | absLangURL }}
-{{ else }}
-{{ (.Get 0) | absLangURL }}
-{{ end }}
+{{- $page := .Site.GetPage "page" (.Get 0) -}}
+{{- if $page -}}
+    {{- if $page.IsTranslated -}}
+        {{- range where $page.AllTranslations "Lang" .Site.Language.Lang | first 1 }}{{ .Permalink }}{{ end -}}
+    {{- else -}}
+        {{- $page.Permalink -}}
+    {{- end -}}
+{{- else -}}
+    {{- (.Get 0) | absLangURL -}}
+{{- end -}}

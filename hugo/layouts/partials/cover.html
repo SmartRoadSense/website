@@ -1,20 +1,30 @@
-{{ if .Params.cover }}
-    <div class="background">
-    {{ with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
-        {{- $res := . -}}
-        {{- range (slice 580 780 1280 1600 2048) -}}
-            {{- if lt . $res.Width -}}
-                {{- $.Scratch.Add "srcset" ($res.Resize (printf "%dx" .)).RelPermalink -}}
-                {{- $.Scratch.Add "srcset" (printf " %dw, " .) -}}
-            {{- end -}}
-        {{- end -}}
-        {{- $.Scratch.Add "srcset" .RelPermalink -}}
-        {{- $.Scratch.Add "srcset" (printf " %dw" .Width) -}}
-        <img
-            src="{{ (.Resize "580x").RelPermalink }}"
-            alt=""
-            {{ printf "srcset=\"%s\"" ($.Scratch.Get "srcset") | safeHTMLAttr }}
-            />
-    {{- end }}
-    </div>
-{{- end }}
+{{- $root := . -}}
+
+{{- if .Params.cover -}}
+    {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+        {{- $root.Scratch.Set "resource" . -}}
+    {{- end -}}
+{{- else -}}
+    {{- $cover_page := .Site.GetPage "page" "library/covers/index.md" -}}
+    {{- $covers := $cover_page.Resources.ByType "image" }}
+    {{- $root.Scratch.Set "resource" (index (shuffle $covers) 0) -}}
+{{- end -}}
+
+{{- $res := $root.Scratch.Get "resource" -}}
+{{- $root.Scratch.Set "srcset" "" -}}
+{{- range (slice 580 780 1280 1600 2048) -}}
+    {{- if lt . $res.Width -}}
+        {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
+        {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+    {{- end -}}
+{{- end -}}
+{{- $root.Scratch.Add "srcset" $res.RelPermalink -}}
+{{- $root.Scratch.Add "srcset" (printf " %dw" $res.Width) -}}
+
+<div class="background">
+    <img
+        src="{{ ($res.Resize "580x q50").RelPermalink }}"
+        alt=""
+        {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+        />
+</div>

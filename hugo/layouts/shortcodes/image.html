@@ -1,0 +1,38 @@
+{{- $root := . -}}
+
+{{ ($.Get "bundle") }}
+
+{{- if $.Get "bundle" -}}
+    {{- $root.Scratch.Set "bundle" ($.Site.GetPage "page" ($.Get "bundle")) -}}
+{{- else -}}
+    {{- $root.Scratch.Set "bundle" $root.Page -}}
+{{- end -}}
+
+{{ ($root.Scratch.Get "bundle") }}
+
+{{- with ($root.Scratch.Get "bundle").Resources.GetMatch (.Get "src") -}}
+    {{- $res := . -}}
+    {{- $root.Scratch.Set "srcset" "" -}}
+    {{- range (slice 580 780 1280) -}}
+        {{- if lt . $res.Width -}}
+            {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
+            {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+        {{- end -}}
+    {{- end -}}
+    {{- $root.Scratch.Add "srcset" ($res.Resize "1600x q50").RelPermalink -}}
+    {{- $root.Scratch.Add "srcset" " 1600w" -}}
+
+<div class="picture">
+    <a href="{{ $res.RelPermalink }}">
+        <img src="{{ ($res.Resize "580x q50").RelPermalink }}"
+            {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+            {{ if $root.Get "class "}}class="{{ $root.Get "class" }}"{{ end -}}
+            />
+    </a>
+    {{ if $root.Get "didascaly" }}
+    <div class="didascaly">{{ $root.Get "didascaly" | safeHTML }}</div>
+    {{ else if .Params.didascaly }}
+    <div class="didascaly">{{ .Params.didascaly | safeHTML }}</div>
+    {{ end }}
+</div>
+{{- end -}}

@@ -27,8 +27,8 @@ $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
 
-$navbar-dark-color:             $gray-200;
-$navbar-dark-hover-color:       $white;
+$navbar-dark-color:             $white;
+$navbar-dark-hover-color:       lighten($primary, 30%);
 $navbar-dark-active-color:      lighten($primary, 30%);
 $navbar-dark-disabled-color:    $gray-400;
 $navbar-dark-toggler-border-color: rgba($white, .4);
@@ -118,14 +118,14 @@ nav.navbar {
 
     a.navbar-brand {
         color: $gray-100;
-        text-shadow: 1px 1px 3px $gray-800;
+        text-shadow: 1px 1px 4px $gray-900;
     }
     a.navbar-brand:hover {
         color: $white;
     }
 
     a.nav-link {
-        text-shadow: 1px 1px 3px $gray-800;
+        text-shadow: 1px 1px 2px $gray-900;
     }
 
     &.scrolled {
@@ -322,10 +322,51 @@ header.hero {
     }
 }
 
-.video-player {
+.gallery {
+    overflow: hidden;
+
+    margin-bottom: 0;
+    &:last-child {
+        margin-bottom: -($font-size-base); /* compensates margins of inner items */
+    }
+
+    .item {
+        margin-bottom: $font-size-base;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.picture {
+    margin-bottom: $font-size-base;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+.gallery, .picture {
+    .didascaly {
+        font-size: $small-font-size;
+        font-style: italic;
+        text-align: center;
+    }
+}
+
+.video-player, .slideshare {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
+
+    margin-bottom: $font-size-base;
+    &:last-child {
+        margin-bottom: 0;
+    }
 
     div {
         position: relative;
@@ -361,20 +402,11 @@ header.hero {
 $card-border-radius: 0;
 
 .cards-sequence {
-    @include media-breakpoint-down(md) {
-        > div {
-            margin-bottom: 1em;
-        }
-    }
+    margin-top: ($font-size-base * 2);
+    margin-bottom: -$font-size-base;
 
-    @include media-breakpoint-down(xs) {
-        > div {
-            margin-top: 1em;
-
-            &:first-child {
-                margin-top: 0;
-            }
-        }
+    > div {
+        margin-bottom: $font-size-base;
     }
 
     .card, .not-card {
@@ -441,17 +473,164 @@ $card-border-radius: 0;
 
     ul {
         list-style: none;
-        margin: 0 0 1em 0;
+        margin: 0 0 $font-size-base 0;
         padding: 0;
 
         li {
-            margin: 0;
+            margin: 0 0 ($font-size-base / 2) 0;
             padding: 0;
+        }
+        li:last-child {
+            margin-bottom: 0;
         }
     }
 
     p:last-child {
         margin-bottom: 0;
+    }
+
+    .publish-date {
+        display: block;
+        font-size: $small-font-size;
+        color: $gray-600;
+    }
+}
+
+// News and articles
+article {
+    overflow: hidden;
+
+    .metadata {
+        font-size: ($font-size-base * 0.9);
+        color: $gray-500;
+
+        a {
+            color: $gray-500;
+            text-decoration: underline;
+        }
+        a:hover {
+            color: $gray-700;
+            text-decoration: underline;
+        }
+
+        > div {
+            display: inline;
+            margin-right: $font-size-base;
+
+            &.sidebar {
+                /* Column ordering in sidebar mode */
+                @include media-breakpoint-up(md) {
+                    display: block;
+                    margin-right: 0;
+                }
+            }
+        }
+
+        margin-bottom: 1em;
+        @include media-breakpoint-up(md) {
+            margin-bottom: 0;
+        }
+
+        .thumbnail {
+            display: block;
+            margin-bottom: $font-size-base;
+
+            width: 50%;
+            @include media-breakpoint-up(md) {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                box-shadow: $gray-300 4px 4px 8px;
+            }
+        }
+    }
+}
+
+.divider {
+    height: ($font-size-base * 1.5);
+    margin: ($font-size-base * 3) 0;
+    background: url(../images/stripe_gray.png) repeat;
+
+    &:last-of-type {
+        display: none;
+    }
+}
+
+nav.intra-section {
+    margin-top: ($font-size-base * 3);
+}
+
+.bibliography {
+    ul {
+        list-style-type: square;
+
+        li {
+            margin-bottom: ($font-size-base * 0.25);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .author {
+            &:after {
+                content: ",";
+            }
+        }
+        .title {
+            &:before {
+                content: "“";
+            }
+            &:after {
+                content: "”.";
+            }
+        }
+        .publication {
+            font-size: $small-font-size;
+            font-style: italic;
+
+            &:after {
+                content: ".";
+            }
+        }
+        .bibtex-link {
+            font-size: $small-font-size;
+
+            &:before {
+                content: "(";
+            }
+            &:after {
+                content: ")";
+            }
+        }
+    }
+
+    .bibtex {
+        display: none;
+        background-color: $code-background;
+        color: $code-color;
+        border: dashed 1px $gray-500;
+        padding: $font-size-base;
+
+        h5 {
+            text-align: center;
+        }
+
+        .output {
+            font-family: $font-family-monospace;
+            white-space: pre;
+            overflow-x: scroll;
+        }
+
+        .copy-confirmation {
+            margin-top: $font-size-base;
+            padding-top: $font-size-base;
+            font-size: $small-font-size;
+            color: $code-color;
+            border-top: dashed 1px $gray-500;
+        }
     }
 }
 
@@ -462,9 +641,9 @@ $footer-gutter-color: $gray-400;
 
 footer {
     background: $footer-background;
-    margin-top: 4em;
-    padding-top: 2em;
-    padding-bottom: 2em;
+    margin-top: ($font-size-base * 3);
+    padding-top: ($font-size-base * 1.5);
+    padding-bottom: ($font-size-base * 1.5);
     font-size: $small-font-size;
     color: $footer-text-color;
 
@@ -509,16 +688,16 @@ footer {
             border-right: solid 1px $footer-gutter-color;
         }
         .row > div:last-child {
-            margin-top: 1em;
-            padding-top: 1em;
+            margin-top: $font-size-base;
+            padding-top: $font-size-base;
             border-top: solid 1px $footer-gutter-color;
         }
     }
     @include media-breakpoint-down(xs) {
         // Stacked variant
         .row > div {
-            margin-bottom: 1em;
-            padding-bottom: 1em;
+            margin-bottom: $font-size-base;
+            padding-bottom: $font-size-base;
             border-bottom: solid 1px $footer-gutter-color;
         }
         .row > div:last-child {

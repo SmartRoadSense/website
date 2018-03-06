@@ -1,0 +1,36 @@
+<article id="news-{{ .UniqueID }}">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 order-md-last metadata sidebar">
+                {{ partial "newsThumbnail" . }}
+
+                <div class="date">
+                    <span class="oi" data-glyph="calendar"></span>
+                    {{ .PublishDate.Format "2 January 2006" }}
+                </div>
+
+                <div class="permalink">
+                    <span class="oi" data-glyph="link-intact"></span>
+                    <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2>{{ .Title }}</h2>
+
+                <div class="content">
+                    {{ if .Params.truncate }}
+                        {{ .Summary }}
+                    {{ else }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
+
+                {{ if .Params.truncate }}
+                <p><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ i18n "readMore" }}</a></p>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</article>
+
+<div class="divider"></div>

@@ -12,6 +12,32 @@ function thousands_commas(nStr) {
     return x1 + x2;
 }
 
+// Taken from https://stackoverflow.com/a/33928558/3118
+function copy_to_clipboard(text) {
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", text);
+    }
+    else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = text;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        }
+        catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return false;
+        }
+        finally {
+            document.body.removeChild(textarea);
+        }
+    }
+}
+
 function update_stats() {
     $.getJSON("http://www.smartroadsense.it/ws/count.php", function(json) {
         var raw = json.count_raw;
@@ -86,4 +112,15 @@ $(document).ready(function() {
         update_stats();
         setTimeout(update_stats, 60000);
     }
+
+    // BibTeX loading
+    $('.bibliography .bibtex-link a').click(function(event) {
+        var bib = $(this).data('bibtex');
+        $('.bibliography .bibtex').fadeIn().find('.output').text(bib);
+
+        if(copy_to_clipboard(bib))
+            $('.bibliography .bibtex .copy-confirmation').show();
+        else
+            $('.bibliography .bibtex .copy-confirmation').hide();
+    });
 });

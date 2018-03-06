@@ -1,0 +1,19 @@
+<div class="bibliography">
+    <ul>
+    {{ range (sort $.Site.Data.biblio "sortkey" "asc") }}
+        <li>
+            <span class="author">{{ .author | safeHTML }}</span>
+            <span class="title"><a href="{{ .url }}">{{ .title | safeHTML }}</a></span>
+            <span class="publication">{{ .publication | safeHTML }}</span>
+            <span class="bibtex-link"><a href="#bibliography-output" data-bibtex="{{ .bibtex }}">BibTeX</a></span>
+        </li>
+    {{ end }}
+    </ul>
+
+    <div class="bibtex" id="bibliography-output">
+        <h5><span class="oi" data-glyph="code"></span> {{ i18n "bibtexCodeHeader" }}</h5>
+
+        <div class="output"></div>
+        <div class="copy-confirmation"><span class="oi" data-glyph="clipboard"></span> {{ i18n "bibtexCodeConfirmation" }}</div>
+    </div>
+</div>

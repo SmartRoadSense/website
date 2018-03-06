@@ -1,0 +1,51 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+        <header>
+            {{ partial "cover.html" . }}
+            <div class="occluder"></div>
+            <div class="bottom-aligner">
+                <div class="container">
+                    <h1><span>{{ i18n "menuNews" }}</span></h1>
+                </div>
+            </div>
+        </header>
+
+        <article id="news-{{ .UniqueID }}">
+            <div class="container">
+                <div class="metadata">
+                    <div class="date">
+                        <span class="oi" data-glyph="calendar"></span>
+                        {{ .PublishDate.Format "2 January 2006" }}
+                    </div>
+
+                    <div class="permalink">
+                        <span class="oi" data-glyph="link-intact"></span>
+                        <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
+                    </div>
+                </div>
+
+                <h2>{{ .Title }}</h2>
+
+                <div class="content">
+                    {{ .Content }}
+                </div>
+
+                <nav class="intra-section">
+                    <div class="row">
+                        <div class="col-6">
+                            {{ if .PrevInSection }}
+                            <span class="oi" data-glyph="arrow-thick-left"></span>&nbsp;<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="col-6 text-right">
+                            {{ if .NextInSection }}
+                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>&nbsp;<span class="oi" data-glyph="arrow-thick-right"></span>
+                            {{ end }}
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </article>
+
+{{ partial "footer.html" . }}

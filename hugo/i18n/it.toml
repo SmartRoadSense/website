@@ -39,3 +39,15 @@ other = "Sviluppatori"
 
 [menuApps]
 other = "Applicazioni"
+
+[permalink]
+other = "Permalink"
+
+[readMore]
+other = "Leggi il resto…"
+
+[bibtexCodeHeader]
+other = "Codice BibTeX"
+
+[bibtexCodeConfirmation]
+other = "Codice copiato negli appunti."

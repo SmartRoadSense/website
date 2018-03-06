@@ -1,0 +1,7 @@
+author = "V.&nbsp;Freschi et&nbsp;al."
+title = "Geospatial data aggregation and reduction in vehicular sensing applications: the case of road surface monitoring"
+publication = "IEEE ICCVE 2014"
+url = "http://www.researchgate.net/publication/271699882_Geospatial_Data_Aggregation_and_Reduction_in_Vehicular_Sensing_Applications_the_Case_of_Road_Surface_Monitoring"
+year = 2014
+sortkey = "2014-2"
+bibtex = "@inproceedings{freschi2014geospatial,\n  title={Geospatial Data Aggregation and Reduction in Vehicular Sensing Applications: the Case of Road Surface Monitoring},\n  author={Freschi, Valerio and Delpriori, Saverio and Klopfenstein, Lorenz Cuno and Lattanzi, Emanuele and Luchetti, Gioele and Bogliolo, Alessandro},\n  booktitle={Proceedings of the 3rd International Conference on Connected Vehicles and Expo},\n  organization={IEEE},\n  year={2014}\n}"
