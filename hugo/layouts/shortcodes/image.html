@@ -1,16 +1,15 @@
 {{- $root := . -}}
+{{- $src := .Get "src" -}}
+{{- $bundle := .Get "bundle" -}}
 
-{{ ($.Get "bundle") }}
-
-{{- if $.Get "bundle" -}}
-    {{- $root.Scratch.Set "bundle" ($.Site.GetPage "page" ($.Get "bundle")) -}}
+{{- if $bundle -}}
+    {{- $bundle := .Site.GetPage "page" $bundle -}}
+    {{- $root.Scratch.Set "res" ($bundle.Resources.GetMatch $src) -}}
 {{- else -}}
-    {{- $root.Scratch.Set "bundle" $root.Page -}}
+    {{- $root.Scratch.Set "res" ($root.Page.Resources.GetMatch $src) -}}
 {{- end -}}
 
-{{ ($root.Scratch.Get "bundle") }}
-
-{{- with ($root.Scratch.Get "bundle").Resources.GetMatch (.Get "src") -}}
+{{- with $root.Scratch.Get "res" -}}
     {{- $res := . -}}
     {{- $root.Scratch.Set "srcset" "" -}}
     {{- range (slice 580 780 1280) -}}
