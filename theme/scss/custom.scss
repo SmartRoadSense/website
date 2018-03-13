@@ -69,13 +69,17 @@ code, pre {
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Additional CSS
-
 a {
     text-decoration-skip: ink;
 }
 
 .no-trans {
     transition: unset !important;
+}
+
+img.icon {
+    width: auto;
+    height: 1em;
 }
 
 // Sticky footer
@@ -513,6 +517,10 @@ article {
             text-decoration: underline;
         }
 
+        .icon {
+            opacity: 0.5;
+        }
+
         > div {
             display: inline;
             margin-right: $font-size-base;
@@ -628,8 +636,12 @@ nav.intra-section {
             margin-top: $font-size-base;
             padding-top: $font-size-base;
             font-size: $small-font-size;
-            color: $code-color;
+            color: $gray-600;
             border-top: dashed 1px $gray-500;
+
+            .icon {
+                opacity: 0.5;
+            }
         }
     }
 }

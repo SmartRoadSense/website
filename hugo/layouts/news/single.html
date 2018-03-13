@@ -15,12 +15,12 @@
             <div class="container">
                 <div class="metadata">
                     <div class="date">
-                        <span class="oi" data-glyph="calendar"></span>
+                        <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
                         {{ .PublishDate.Format "2 January 2006" }}
                     </div>
 
                     <div class="permalink">
-                        <span class="oi" data-glyph="link-intact"></span>
+                        <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Öink icon" />
                         <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
                     </div>
                 </div>
@@ -35,12 +35,12 @@
                     <div class="row">
                         <div class="col-6">
                             {{ if .PrevInSection }}
-                            <span class="oi" data-glyph="arrow-thick-left"></span>&nbsp;<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+                            <img src="{{ "icons/arrow-thick-left.svg" | absURL }}" class="icon" alt="" />&nbsp;<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
                             {{ end }}
                         </div>
                         <div class="col-6 text-right">
                             {{ if .NextInSection }}
-                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>&nbsp;<span class="oi" data-glyph="arrow-thick-right"></span>
+                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>&nbsp;<img src="{{ "icons/arrow-thick-right.svg" | absURL }}" class="icon" alt="" />
                             {{ end }}
                         </div>
                     </div>
