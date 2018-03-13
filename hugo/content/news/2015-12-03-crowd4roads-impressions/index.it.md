@@ -30,6 +30,6 @@ didascaly = "Gianluca&nbsp;Cecchetti, BlaBlaCar."
 
 Qualche foto scattata durante la conferenza stampa di presentazione del progetto Europeo CROWD4ROADS a Urbino ed il video-messaggio da parte di Gianluca Cecchetti&nbsp;(BlaBlaCar).
 
-{{< image src="srs_team.jpg" didascaly="Il team di SmartRoadSense: Alessandro Bogliolo, Antonio Esposito, Andrea Seraghiti, Lorenz Cuno Klopfenstein, Michele Sorcinelli, Brendan Paolini, Saverio Delpriori, Alberto Carini, Valerio Freschi, Emanuele Lattanzi." >}}
+{{< image bundle="library/media" src="srs_team.jpg" didascaly="Il team di SmartRoadSense: Alessandro Bogliolo, Antonio Esposito, Andrea Seraghiti, Lorenz Cuno Klopfenstein, Michele Sorcinelli, Brendan Paolini, Saverio Delpriori, Alberto Carini, Valerio Freschi, Emanuele Lattanzi." >}}
 
 {{< gallery nameroot="c4rs_kickoff" >}}
