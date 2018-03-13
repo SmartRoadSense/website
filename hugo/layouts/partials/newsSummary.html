@@ -5,12 +5,12 @@
                 {{ partial "newsThumbnail" . }}
 
                 <div class="date">
-                    <span class="oi" data-glyph="calendar"></span>
+                    <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
                     {{ .PublishDate.Format "2 January 2006" }}
                 </div>
 
                 <div class="permalink">
-                    <span class="oi" data-glyph="link-intact"></span>
+                    <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
                     <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
                 </div>
             </div>
