@@ -1,0 +1,16 @@
+<ul class="team-roster">
+    {{ range (sort $.Site.Data.people "last_name" "asc") }}
+    <li>
+        <div class="name">{{ .first_name }} {{ .last_name }}</div>
+        <div class="role">{{ .role }}</div>
+        <div class="info">
+            {{ if .twitter }}
+            <span class="twitter"><img src="{{ "icons/twitter.svg" | absURL }}" class="icon" alt="" /><a href="https://twitter.com/{{ .twitter }}">@{{ .twitter }}</a></span>
+            {{ end }}
+            {{ if .website }}
+            <span class="web"><img src="{{ "icons/browser.svg" | absURL }}" class="icon" alt="" /><a href="{{ .website }}">Web</a></span>
+            {{ end }}
+        </div>
+    </li>
+    {{ end }}
+</ul>

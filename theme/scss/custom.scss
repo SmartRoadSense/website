@@ -646,6 +646,48 @@ nav.intra-section {
     }
 }
 
+.team-roster {
+    list-style: none;
+
+    @include media-breakpoint-up(sm) {
+        columns: 2;
+    }
+
+    li {
+        margin: 0 0 1rem 0;
+
+        -webkit-column-break-inside: avoid;
+        -moz-column-break-inside: avoid;
+        -o-column-break-inside: avoid;
+        -ms-column-break-inside: avoid;
+        column-break-inside: avoid;
+    }
+
+    .name {
+        font-size: $lead-font-size;
+        font-weight: $lead-font-weight;
+    }
+    .role {
+        color: $gray-700;
+    }
+    .twitter, .web {
+        font-size: $font-size-sm;
+        color: $gray-500;
+        margin-right: $font-size-base;
+
+        .icon {
+            margin-right: 2px;
+            opacity: 0.6;
+        }
+        a {
+            color: $gray-500;
+        }
+        a:hover {
+            color: $gray-600;
+        }
+    }
+}
+
 // Footer
 $footer-background: $gray-200;
 $footer-text-color: $gray-600;
