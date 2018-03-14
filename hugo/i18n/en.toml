@@ -10,6 +10,12 @@ other = "Language"
 [menuLegalSubtitle]
 other = "Legal & Privacy"
 
+[menuLegalIntro]
+other = "All data collected by <i>SmartRoadSense</i> is anonymous and respects the strict limitations of our privacy policy."
+
+[menuLegalPrivacy]
+other = "Privacy policy"
+
 [menuNews]
 other = "News"
 
@@ -48,6 +54,9 @@ other = "Permalink"
 
 [readMore]
 other = "Read more…"
+
+[readMoreClean]
+other = "Read more"
 
 [bibtexCodeHeader]
 other = "BibTeX code"

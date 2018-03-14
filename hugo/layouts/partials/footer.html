@@ -19,13 +19,18 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h6>{{ i18n "menuLegalSubtitle" }}</h6>
-                        <p>
-                            Something something something. Something.
-                            <a href="{{ relref . "data/privacy/index.md" | absLangURL }}">{{ i18n "menuDataPrivacy" }}</a>.
-                        </p>
+                        <p>{{ i18n "menuLegalIntro" | safeHTML }} {{ i18n "readMoreClean" }}:&nbsp;<a href="{{ relref . "data/privacy/index.md" | absLangURL }}">{{ i18n "menuLegalPrivacy" }}</a>.</p>
+                        <p>This project has received funding from the European&nbsp;Union’s Horizon&nbsp;2020 research and innovation programme under grant agreement No&nbsp;687959.</p>
                     </div>
                     <div class="col-sm-12 col-md-4">
-                        Contact stuff.
+                        <p class="social-links">
+                            {{ with .Site.GetPage "section" "news" -}}
+                            <a href="{{ .RSSLink }}"><img src="{{ "icons/feed-icon.svg" | absURL }}" class="icon" alt="RSS Feed icon" /></a>
+                            {{- end }}
+                            <a href="https://www.facebook.com/smartroadsense/" target="_blank"><img src="{{ "icons/facebook.svg" | absURL }}" class="icon" alt="Facebook logo" /></a>
+                            <a href="https://twitter.com/smartroadsense"><img src="{{ "icons/twitter.svg" | absURL }}" class="icon" alt="Twitter logo" /></a>
+                        </p>
+                        <p><i>SmartRoadSense</i> has been developed at the <a href="http://www.uniurb.it" target="_blank">University of Urbino</a> and is part of the <a href="http://www.c4rs.eu" target="_blank">CROWD4ROADS</a> project.</p>
                     </div>
                 </div>
             </div>
@@ -36,6 +41,12 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"></script>
         <script src="{{ "resources/smartroadsense.js" | absURL }}" ></script>
+
+        {{ if .Params.js -}}
+            {{- range .Params.js -}}
+        <script src="{{ . | absURL }}"></script>
+            {{- end -}}
+        {{- end }}
     </body>
 </html>
 <!-- Goodbye! -->
