@@ -1,0 +1,7 @@
+author = "V.&nbsp;Freschi et&nbsp;al."
+title = "Bootstrap based Uncertainty Propagation for Data Quality Estimation in Crowdsensing Systems"
+publication = "IEEE&nbsp;Access"
+url = "http://hdl.handle.net/11576/2641872"
+year = 2017
+sortkey = "2017-2"
+bibtex = "@article{freschi2017bootstrap,\n  author = {Freschi, Valerio and Delpriori, Saverio and Lattanzi, Emanuele and Bogliolo, Alessandro},\n  title = {Bootstrap based Uncertainty Propagation for Data Quality Estimation in Crowdsensing Systems},\n  journal = {IEEE Access},\n  volume = {5},\n  year = {2017},\n  pages = {1146--1155},\n  publisher = {IEEE}\n}"
