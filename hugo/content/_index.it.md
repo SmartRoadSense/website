@@ -1,15 +1,38 @@
 +++
 date = "2017-05-29"
 cover = "index_srs_cover.jpg"
+
+css = [
+    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"
+]
+js = [
+    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+    "resources/map.js"
+]
 +++
 
-SmartRoadSense è un’applicazione mobile che sfrutta gli accelerometri ed il sensore GPS di un comune smartphone per rilevare e classificare le irregolarità nel manto stradale sul quale si sta guidando.
+<div class="row">
+<div class="col-md-6 col-lg-5 col-xl-4">
 
-I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centralizzato che aggrega i contributi di tutti gli utenti, in modo da calcolare una mappa complessiva e continuamente aggiornata della qualità dell’infrastruttura stradale.
+<p><i>SmartRoadSense</i> è un’<b>applicazione mobile</b> che sfrutta gli accelerometri ed il sensore GPS di un comune smartphone per <b>rilevare e classificare le irregolarità</b> nel manto stradale sul quale si sta guidando.</p>
 
-{{< youtube "hbHNDG4NK1s" >}}
+<p>I dati sono <b>raccolti in maniera anonima</b> e vengono trasmessi ad un servizio centralizzato che <b>aggrega i contributi</b> di tutti gli utenti, in modo da calcolare una mappa complessiva e continuamente aggiornata della <b>qualità dell’infrastruttura stradale</b>.</p>
+
+<p>La raccolta dei dati rispetta la nostra <a href="{{< langRef "data/privacy" >}}">linea di condotta sulla privacy</a> e tutti i dati vengono resi disponibili liberamente come <a href="{{< langRef "data/map" >}}">mappa online</a> o come dataset <a href="{{< langRef "data/open-data" >}}">Open Data</a>.</p>
+
+</div>
+<div class="col-md-6 col-lg-7 col-xl-8">
+
+<div id="mapdiv" class="small"></div>
+
+<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Troppo piccolo? Vai alla <a href="{{< langRef "data/map" >}}">mappa più grande</a>.</small></p>
+
+</div>
+</div>
 
 {{< section "Come funziona?" >}}
+
+{{< youtube "hbHNDG4NK1s" >}}
 
 <div class="row cards-sequence scroll-in">
     <div class="col-sm-6 col-lg-3">
@@ -18,7 +41,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
             {{< imgset src="srs_how_1" class="card-img-top" alt="Raccolta dati" >}}
             <div class="card-body">
                 <h4 class="card-title">Raccolta dati</h4>
-                <p>Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app SmartRoadSense rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
+                <p>Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app <i>SmartRoadSense</i> rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
             </div>
         </div>
     </div>
@@ -28,7 +51,7 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
             {{< imgset src="srs_how_2" class="card-img-top" alt="Aggregazione dei dati" >}}
             <div class="card-body">
                 <h4 class="card-title">Aggregazione</h4>
-                <p>I dati raccolti ed anonimizzati vengono trasmessi al servizio SmartRoadSense, che li aggrega insieme a quelli degli altri utenti.</p>
+                <p>I dati raccolti ed anonimizzati vengono trasmessi al servizio <i>SmartRoadSense</i>, che li aggrega insieme a quelli degli altri utenti.</p>
             </div>
         </div>
     </div>
@@ -76,9 +99,9 @@ I dati sono raccolti in maniera anonima e vengono trasmessi ad un servizio centr
 {{< section "Ci dai una mano?" >}}
 
 Ti interessa il progetto e vuoi darci una mano a monitorare la qualità delle strade?
-Clicca sui collegamenti qui sotto per installare l’applicazione SmartRoadSense per il tuo smartphone: ci vorrà soltanto un minuto!
+Clicca sui collegamenti qui sotto per installare l’applicazione *SmartRoadSense* per il tuo smartphone: ci vorrà soltanto un minuto!
 
-Il servizio di SmartRoadSense è al momento attivo in Italia, in Regno Unito, in Romania ed in Grecia.
+{{< i18n "srsActivationLine" >}}
 
 <div class="row align-items-center justify-content-center">
     <div class="col-6 col-lg-4 badge">

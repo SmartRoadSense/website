@@ -1,6 +1,9 @@
 [srsTagLine]
 other = "Applicazione di crowd-sensing per il monitoraggio continuo della qualità della strada tramite smartphone."
 
+[srsActivationLine]
+other = "Il servizio di *SmartRoadSense* è al momento attivo in Italia, in Regno Unito, in Romania ed in Grecia."
+
 [languageTitle]
 other = "Lingua"
 
