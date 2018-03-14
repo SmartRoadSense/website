@@ -15,7 +15,9 @@ Like in the case of <a href="{{< langRef "data/open-data" >}}">Open Data</a> pro
 
 <pre>GET http://smartroadsense.it/bb/&lt;xmin&gt;/&lt;ymin&gt;/&lt;xmax&gt;/&lt;ymax&gt;/</pre>
 
-<p>Retrieves a list of aggregated data points from a geographical region. The path includes 4 parameters: <code>xmin</code> and <code>ymin</code>, coordinates of the region’s bottom-left corner, <code>xmax</code> and <code>ymax</code> coordinates of the region’s top-right corner. The end-point is constrained to regions no larger than 2.000 km<sup>2</sup>.</p>
+<p>Retrieves a list of aggregated data points from a geographical region.
+The path includes 4 parameters: <code>xmin</code> and <code>ymin</code>, coordinates of the region’s bottom-left corner, <code>xmax</code> and <code>ymax</code> coordinates of the region’s top-right corner.
+The end-point is constrained to regions no larger than 2.000&nbsp;km<sup>2</sup>.</p>
 
 <p>Sample results:</p>
 
