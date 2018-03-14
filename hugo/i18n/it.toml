@@ -11,10 +11,10 @@ other = "Lingua"
 other = "Note legali & privacy"
 
 [menuLegalIntro]
-other = ""
+other = "Tutti i dati raccolti da <i>SmartRoadSense</i> vengono trattati in maniera anonima e rispettano le condizioni della nostra linea di condotta sulla privacy."
 
-[menuLegalPrivacy]
-other = ""
+[menuLegalEuFunding]
+other = "Questo progetto ha ricevuto finanziamenti dal programma di ricerca e innovazione Horizon&nbsp;2020 dell’Unione&nbsp;Europea nell’ambito della convenzione di finanziamento &#8470;&nbsp;687959."
 
 [menuNews]
 other = "Novità"
@@ -48,6 +48,9 @@ other = "Sviluppatori"
 
 [menuApps]
 other = "Applicazioni"
+
+[footerOwnership]
+other = "<i>SmartRoadSense</i> è stato sviluppato presso l’<a href=\"http://www.uniurb.it\" target=\"_blank\">Università degli Studi di Urbino</a> e fa parte del progetto <a href=\"http://www.c4rs.eu\" target=\"_blank\">CROWD4ROADS</a>."
 
 [permalink]
 other = "Permalink"

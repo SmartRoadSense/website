@@ -13,8 +13,8 @@ other = "Legal & Privacy"
 [menuLegalIntro]
 other = "All data collected by <i>SmartRoadSense</i> is anonymous and respects the strict limitations of our privacy policy."
 
-[menuLegalPrivacy]
-other = "Privacy policy"
+[menuLegalEuFunding]
+other = "This project has received funding from the European&nbsp;Union’s Horizon&nbsp;2020 research and innovation programme under grant agreement &#8470;&nbsp;687959."
 
 [menuNews]
 other = "News"
@@ -48,6 +48,9 @@ other = "For developers"
 
 [menuApps]
 other = "Apps"
+
+[footerOwnership]
+other = "<i>SmartRoadSense</i> has been developed at the <a href=\"http://www.uniurb.it\" target=\"_blank\">University of Urbino</a> and is part of the <a href=\"http://www.c4rs.eu\" target=\"_blank\">CROWD4ROADS</a> project."
 
 [permalink]
 other = "Permalink"

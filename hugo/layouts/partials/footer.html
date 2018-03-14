@@ -19,8 +19,8 @@
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h6>{{ i18n "menuLegalSubtitle" }}</h6>
-                        <p>{{ i18n "menuLegalIntro" | safeHTML }} {{ i18n "readMoreClean" }}:&nbsp;<a href="{{ relref . "data/privacy/index.md" | absLangURL }}">{{ i18n "menuLegalPrivacy" }}</a>.</p>
-                        <p>This project has received funding from the European&nbsp;Union’s Horizon&nbsp;2020 research and innovation programme under grant agreement No&nbsp;687959.</p>
+                        <p>{{ i18n "menuLegalIntro" | safeHTML }} <a href="{{ relref . "data/privacy/index.md" | absLangURL }}">{{ i18n "readMoreClean" }}</a>.</p>
+                        <p>{{ i18n "menuLegalEuFunding" | safeHTML }}</p>
                     </div>
                     <div class="col-sm-12 col-md-4">
                         <p class="social-links">
@@ -30,7 +30,7 @@
                             <a href="https://www.facebook.com/smartroadsense/" target="_blank"><img src="{{ "icons/facebook.svg" | absURL }}" class="icon" alt="Facebook logo" /></a>
                             <a href="https://twitter.com/smartroadsense"><img src="{{ "icons/twitter.svg" | absURL }}" class="icon" alt="Twitter logo" /></a>
                         </p>
-                        <p><i>SmartRoadSense</i> has been developed at the <a href="http://www.uniurb.it" target="_blank">University of Urbino</a> and is part of the <a href="http://www.c4rs.eu" target="_blank">CROWD4ROADS</a> project.</p>
+                        <p>{{ i18n "footerOwnership" | safeHTML }}</p>
                     </div>
                 </div>
             </div>
