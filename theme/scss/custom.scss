@@ -709,6 +709,61 @@ nav.intra-section {
     }
 }
 
+ul.pagination {
+    justify-content: center;
+
+    li {
+        background: $gray-100;
+        border: solid 1px $gray-300;
+        color: $gray-800;
+
+        padding: 0;
+        margin: 0 0.2em;
+
+        a {
+            display: block;
+            padding: 0.5em 1em;
+            color: $gray-800;
+        }
+        a:hover {
+            color: $primary;
+            text-decoration: none;
+        }
+
+        &:hover {
+            background: $gray-200;
+            border: solid 1px $gray-500;
+        }
+
+        &.active {
+            background: $gray-200;
+            border: solid 1px $primary;
+            font-weight: $font-weight-bold;
+            color: $primary;
+
+            a {
+                color: $primary;
+            }
+        }
+
+        &.disabled {
+            border: solid 1px $gray-200;
+            color: $gray-500;
+
+            &:hover {
+                background: $gray-100;
+            }
+
+            a {
+                color: $gray-500;
+            }
+            a:hover {
+                color: $gray-500;
+            }
+        }
+    }
+}
+
 // Footer
 $footer-background: $gray-200;
 $footer-text-color: $gray-600;
