@@ -598,9 +598,14 @@ nav.intra-section {
             }
         }
         .publication {
-            font-size: $small-font-size;
             font-style: italic;
 
+            &:after {
+                font-style: normal;
+                content: ", ";
+            }
+        }
+        .year {
             &:after {
                 content: ".";
             }
