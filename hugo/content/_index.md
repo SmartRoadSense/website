@@ -1,15 +1,38 @@
 +++
 date = "2017-05-29"
 cover = "index_srs_cover.jpg"
+
+css = [
+    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"
+]
+js = [
+    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+    "resources/map.js"
+]
 +++
 
-SmartRoadSense is a mobile application that uses your smartphone’s accelerometers and GPS sensor to detect and classify irregularities of the road surface while you are driving.
+<div class="row">
+<div class="col-md-6 col-lg-5 col-xl-4">
 
-Data is collected anonymously and transmitted to a centralized service that aggregates contributions from all users, thus computing a continously updated snapshot of the quality of road infrastructure.
+<p><i>SmartRoadSense</i> is a <b>mobile application</b> that uses your smartphone’s accelerometers and GPS sensor to <b>detect and classify irregularities of the road</b> surface while you are driving.</p>
 
-{{< youtube "hbHNDG4NK1s" >}}
+<p>Data is collected <b>anonymously</b> and transmitted to a centralized service that <b>aggregates contributions</b> from all users, thus computing a continously updated snapshot of the <b>quality of road infrastructure</b>.</p>
+
+<p>All collected data respects our <a href="{{< langRef "data/privacy" >}}">privacy policy</a> and is freely made available as an <a href="{{< langRef "data/map" >}}">online map</a> or as an <a href="{{< langRef "data/open-data" >}}">Open Data dataset</a>.</p>
+
+</div>
+<div class="col-md-6 col-lg-7 col-xl-8">
+
+<div id="mapdiv" class="small"></div>
+
+<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Too small? Check out the <a href="{{< langRef "data/map" >}}">bigger online map</a>.</small></p>
+
+</div>
+</div>
 
 {{< section "How does it work?" >}}
+
+{{< youtube "vW9NSJ8MlxY" >}}
 
 <div class="row cards-sequence scroll-in">
     <div class="col-sm-6 col-lg-3">
@@ -18,7 +41,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
             {{< imgset src="srs_how_1" class="card-img-top" alt="SmartRoadSense sensing" >}}
             <div class="card-body">
                 <h4 class="card-title">Sensing</h4>
-                <p>By processing the input from your smartphone’s sensors (accelerometers and GPS), the SmartRoadSense app detects the bumpiness of the road and computes its “roughness index”.</p>
+                <p>By processing the input from your smartphone’s sensors (accelerometers and GPS), the <i>SmartRoadSense</i> app detects the bumpiness of the road and computes its “roughness index”.</p>
             </div>
         </div>
     </div>
@@ -28,7 +51,7 @@ Data is collected anonymously and transmitted to a centralized service that aggr
             {{< imgset src="srs_how_2" class="card-img-top" alt="Data aggregation" >}}
             <div class="card-body">
                 <h4 class="card-title">Aggregation</h4>
-                <p>Collected data is anonymized an your device and transmitted to the SmartRoadSense service, which aggregates the data from multiple users.</p>
+                <p>Collected data is anonymized an your device and transmitted to the <i>SmartRoadSense</i> service, which aggregates the data from multiple users.</p>
             </div>
         </div>
     </div>
@@ -75,9 +98,9 @@ Data is collected anonymously and transmitted to a centralized service that aggr
 
 {{< section "Ready to hit the road?" >}}
 
-If you’re interested in the project and would like to help out monitoring road quality, click on the links below to install the SmartRoadSense application for your smartphone: you will be ready to go in a couple of minutes!
+If you’re interested in the project and would like to help out monitoring road quality, click on the links below to install the *SmartRoadSense* application for your smartphone: you will be ready to go in a couple of minutes!
 
-The SmartRoadSense service is currently available in Italy, the United Kingdom, Romania, and Greece.
+{{< i18n "srsActivationLine" >}}
 
 <div class="row align-items-center justify-content-center">
     <div class="col-6 col-lg-4 badge">
@@ -92,4 +115,4 @@ The SmartRoadSense service is currently available in Italy, the United Kingdom, 
     </div>
 </div>
 
-Questions? Check out [how the service works]({{< langRef "project/how" >}}) in detail.
+Questions? Check out [how the service works]({{< langRef "project/how" >}}) in detail!
