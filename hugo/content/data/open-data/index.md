@@ -14,7 +14,7 @@ If you do so or plan on doing so, please <a href="mailto:info@smartroadsense.it"
 
 <h3>What does the data mean?</h3>
 
-<p>The database is comprised of a single, compressed, <abbr title="Comma Separated Values">CSV</abbr> file.
+<p>The dataset is comprised of a single, compressed, <abbr title="Comma Separated Values">CSV</abbr> file.
 Road roughness data are provided as punctual data, each of them representing a 20-meters long portion of a road.
 Each data point has roughness value which is the average between all the data collected by users referring to that particular road section.</p>
 
@@ -32,7 +32,7 @@ The columns of the dataset are described below:</p>
 
 <h4>Periodic updates</h4>
 
-<p>Both maps and Open Data are updated <b>every 6 hours</b>.
+<p>Both maps and Open Data are updated <b>every 6&nbsp;hours</b>.
 Each new update differs from the previous one just by the data points associated with roads that have been travelled in the last 6 hours.
 The remaining part of the dataset stays the same.</p>
 
@@ -45,18 +45,19 @@ This procedure takes into account past informtion and makes it possible to recon
 <h3>License</h3>
 
 <p><i>SmartRoadSense</i> data are aggregated from contributions of thousands of users.
-They are release as “Open Data” under the <a href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a> (ODbL).</p>
+They are released as “Open Data” under the <a href="http://opendatacommons.org/licenses/odbl/">Open Data Commons Open Database License</a>&nbsp;(ODbL).</p>
 
-<p>Anyone is free to copy, to distribute and to adapt works from the database as long as proper attribution to <i>SmartRoadSense</i> and its contributors is given.
-In particular, data can be cited indicating “&copy; SmartRoadSense contributors” and including the license above, optionally also providing a link to this page.
-If data are modified or adapted from the original database they need to be provided under the same licence.</p>
+<p>Anyone is free to access, copy, distribute, transmit, and adapt works from the database as long as proper attribution to <i>SmartRoadSense</i> and its contributors is given.
+In particular, data can be cited indicating “&copy;&nbsp;SmartRoadSense&nbsp;contributors” and including the license above, optionally also providing a link to this page.
+If data are modified or adapted from the original database they need to be provided under the same licence.
+Check out the whole license agreement for all rights and limitations.</p>
 
 </div>
 <div class="col-md-4 ">
 
 <h3>Download</h3>
 
-<p>Get the latest aggregated <i>SmartRoadSense</i> data as a zipped CSV file.</p>
+<p>Get the latest aggregated <i>SmartRoadSense</i> data as a zipped CSV&nbsp;file.</p>
 
 <p class="text-center"><a href="/open_data.zip" class="btn btn-primary">Get Open Data</a></p>
 
