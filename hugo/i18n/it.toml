@@ -10,6 +10,12 @@ other = "Lingua"
 [menuLegalSubtitle]
 other = "Note legali & privacy"
 
+[menuLegalIntro]
+other = ""
+
+[menuLegalPrivacy]
+other = ""
+
 [menuNews]
 other = "Novità"
 
@@ -48,6 +54,9 @@ other = "Permalink"
 
 [readMore]
 other = "Leggi il resto…"
+
+[readMoreClean]
+other = "Più informazioni"
 
 [bibtexCodeHeader]
 other = "Codice BibTeX"
