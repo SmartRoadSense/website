@@ -695,6 +695,20 @@ nav.intra-section {
     }
 }
 
+#mapdiv {
+    width: 100%;
+    height: 65vh;
+    min-height: 350px;
+    margin: ($font-size-base * 2) 0;
+    border: none;
+    box-shadow: $gray-400 6px 6px 16px;
+
+    &.small {
+        height: 280px;
+        margin: 0 0 $font-size-base 0;
+    }
+}
+
 // Footer
 $footer-background: $gray-200;
 $footer-text-color: $gray-600;
