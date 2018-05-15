@@ -1,6 +1,7 @@
 'use strict';
 // OSM tiles
-const OSM_URL = 'http://www.smartroadsense.it/osm-tiles/{z}/{x}/{y}.png';
+// Using CARTO tile server, see: https://carto.com/location-data-services/basemaps/
+const OSM_URL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png';
 // SRS tiles
 const SRS_TILES_URL = 'http://www.smartroadsense.it/api/v1/tiles/{z}/{x}/{y}';
 // SRS data used for PPE visualization
@@ -16,7 +17,7 @@ let map = L.map('mapdiv', {
 
 // add osm background layer
 L.tileLayer(OSM_URL, {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors'
+  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://carto.com/attribution">CARTO</a> | Road data &copy; <a href="http://www.smartroadsense.it">SmartRoadSense</a> contributors'
 }).addTo(map);
 
 // add srs tiles layer
