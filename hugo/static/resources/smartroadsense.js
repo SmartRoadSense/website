@@ -1,15 +1,18 @@
 /* SmartRoadSense */
 
-function thousands_commas(nStr) {
-    nStr += '';
-    x = nStr.split('.');
-    x1 = x[0];
-    x2 = x.length > 1 ? '.' + x[1] : '';
-    var rgx = /(\d+)(\d{3})/;
-    while (rgx.test(x1)) {
-        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+function thousands_commas(input) {
+    let unit = '';
+    let n = input;
+    if(input >= 1000000.0) {
+        n = input / 1000000;
+        unit = 'M';
     }
-    return x1 + x2;
+    else if(input >= 1000.0) {
+        n = input / 1000;
+        unit = 'K';
+    }
+
+    return (Math.round(n * 100) / 100).toFixed(1) + unit;
 }
 
 // Taken from https://stackoverflow.com/a/33928558/3118
