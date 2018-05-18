@@ -25,7 +25,7 @@ js = [
 
 <div id="mapdiv" class="small"></div>
 
-<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Troppo piccolo? Vai alla <a href="{{< langRef "data/map" >}}">mappa più grande</a>.</small></p>
+<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Ti piace la mappa? Vai alla <a href="{{< langRef "data/map" >}}">mappa più grande</a>.</small></p>
 
 </div>
 </div>
@@ -34,65 +34,69 @@ js = [
 
 {{< youtube "hbHNDG4NK1s" >}}
 
-<div class="row cards-sequence scroll-in">
-    <div class="col-sm-6 col-lg-3">
-        <div class="card trans-offset-1">
-            <div class="card-counter">1</div>
-            {{< imgset src="srs_how_1" class="card-img-top" alt="Raccolta dati" >}}
-            <div class="card-body">
-                <h4 class="card-title">Raccolta dati</h4>
-                <p>Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app <i>SmartRoadSense</i> rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
+<div class="row process">
+    <div class="col-sm-12 col-lg-6">
+        <div class="header">
+            <div class="icon">
+                <img src="{{< absRef "icons/wheel-primary.svg" >}}" alt="Ruota" />
             </div>
+            <h4>1. Raccolta dati</h4>
+        </div>
+        <div class="description">
+            <p>Attraverso l’analisi dei sensori del tuo smartphone (gli accelerometri ed il GPS), l’app <i>SmartRoadSense</i> rileva la presenza di irregolarità e calcola un “indice di rugosità” o <i>roughness</i>.</p>
         </div>
     </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card trans-offset-2">
-            <div class="card-counter">2</div>
-            {{< imgset src="srs_how_2" class="card-img-top" alt="Aggregazione dei dati" >}}
-            <div class="card-body">
-                <h4 class="card-title">Aggregazione</h4>
-                <p>I dati raccolti ed anonimizzati vengono trasmessi al servizio <i>SmartRoadSense</i>, che li aggrega insieme a quelli degli altri utenti.</p>
+    <div class="col-sm-12 col-lg-6">
+        <div class="header">
+            <div class="icon">
+                <img src="{{< absRef "icons/db-primary.svg" >}}" alt="Database" />
             </div>
+            <h4>2. Aggregazione</h4>
+        </div>
+        <div class="description">
+            <p>I dati raccolti ed anonimizzati vengono trasmessi al servizio <i>SmartRoadSense</i>, che li aggrega insieme a quelli degli altri utenti.</p>
         </div>
     </div>
-    <div class="col-sm-6 col-lg-3">
-        <div class="card trans-offset-3">
-            <div class="card-counter">3</div>
-            {{< imgset src="srs_how_3" class="card-img-top" alt="Visualizzazione dei dati finali" >}}
-            <div class="card-body">
-                <h4 class="card-title">Visualizzazione</h4>
-                <p>I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map/index.md" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data/index.md" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers/index.md" >}}">API</a>.</p>
+    <div class="col-sm-12 col-lg-6">
+        <div class="header">
+            <div class="icon">
+                <img src="{{< absRef "icons/compass-primary.svg" >}}" alt="Bussola" />
             </div>
+            <h4>3. Visualizzazione</h4>
+        </div>
+        <div class="description">
+            <p>I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map/index.md" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data/index.md" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers/index.md" >}}">API</a>.</p>
         </div>
     </div>
-    <div class="col-sm-6 col-lg-3 align-self-center">
-        <div class="not-card text-center trans-offset-4">
+    <div class="col-sm-12 col-lg-6">
+        <div class="header">
+            <div class="icon"></div>
             <h4>Vuoi saperne di più?</h4>
-            <a href="{{< langRef "project/about/index.md" >}}" class="btn btn-primary">Più informazioni</a>
+        </div>
+        <div class="description">
+            <p>Leggi tutto sul <a href="{{< langRef "project/how/index.md" >}}">funzionamento di SmartRoadSense</a>.</p>
         </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="col-md-6 col-lg-8">
-        {{< section "Statistiche" >}}
+{{< section >}}
 
-        <span class="data-counter">4</span> nazioni in cui il servizio è attivo,<br />
-        <span class="data-counter data-accel-values">—</span> valori di accelerazione,<br />
-        <span class="data-counter data-points">—</span> campioni ricevuti,<br />
-        <span class="data-counter data-roads">—</span>&nbsp;kms di strade monitorate… per ora!
-
-        Dai un'occhiata alla <a href="{{< langRef "data/map/index.md" >}}">mappa dei dati raccolti</a>!
+<div class="row stats">
+    <div class="col-6 col-lg-3">
+        <div class="stat-counter">4</div>
+        <div class="stat-description">paesi</div>
     </div>
-    <div class="col-md-6 col-lg-4">
-        <div class="note">
-            <h2>Ultime notizie</h2>
-            <div class="content">
-                {{< newsLatest >}}
-
-                <p><a href="{{< langRef "news" >}}">Altre notizie…</a></p>
-            </div>
-        </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-counter"><span class="data-counter data-accel-values">&mdash;</span></div>
+        <div class="stat-description">accelerazioni</div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-counter"><span class="data-counter data-points">&mdash;</span></div>
+        <div class="stat-description">campioni</div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-counter"><span class="data-counter data-roads">&mdash;</span></div>
+        <div class="stat-description">km di strade</div>
     </div>
 </div>
 
@@ -115,5 +119,3 @@ Clicca sui collegamenti qui sotto per installare l’applicazione *SmartRoadSens
         </a>
     </div>
 </div>
-
-Domande? Dai un’occhiata a [come funziona il servizio]({{< langRef "project/how" >}}) in dettaglio.

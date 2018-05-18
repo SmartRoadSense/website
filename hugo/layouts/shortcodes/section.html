@@ -1,1 +1,11 @@
-<h2 class="section-title scroll-in"><span>{{ .Get 0 }}</span></h2>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="occluder"></div>
+
+            <div class="container">
+{{ if .Get 0 }}
+                {{ partial "sectionHeader" (.Get 0) }}
+{{ end }}

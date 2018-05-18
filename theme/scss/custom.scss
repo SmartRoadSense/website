@@ -12,7 +12,9 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black:    #000 !default;
 
-$font-size-base: 1rem;
+$shadow:   rgba(8, 20, 43, 0.5);
+
+$gray-primary: #dce0ea;
 
 // Bootstrap overrides
 //
@@ -27,17 +29,23 @@ $enable-shadows:            true;
 $enable-gradients:          true;
 $enable-transitions:        true;
 
-$navbar-dark-color:             $white;
-$navbar-dark-hover-color:       lighten($primary, 30%);
-$navbar-dark-active-color:      lighten($primary, 30%);
-$navbar-dark-disabled-color:    $gray-400;
-$navbar-dark-toggler-border-color: rgba($white, .4);
+$font-size-base:            1.05rem;
+$body-color:                $gray-900;
+$link-decoration:           underline;
 
-$dropdown-link-color:           $primary;
-$dropdown-link-hover-color:     $white;
-$dropdown-link-hover-bg:        $primary;
-$dropdown-link-active-color:    $white;
-$dropdown-link-active-bg:       $primary;
+$navbar-dark-color:             $gray-300;
+$navbar-dark-hover-color:       $white;
+$navbar-dark-active-color:      $white;
+$navbar-dark-disabled-color:    $gray-500;
+$navbar-dark-toggler-border-color: rgba($white, .5);
+
+$dropdown-link-color:           $body-color;
+$dropdown-link-hover-color:     $primary;
+$dropdown-link-hover-bg:        transparent;
+$dropdown-link-active-color:    $primary;
+$dropdown-link-active-bg:       transparent;
+$dropdown-bg:                   rgba(255, 255, 255, 0.9);
+$dropdown-box-shadow:           $shadow 6px 6px 12px;
 
 // General font stuff
 $font-family-base:              'Open Sans', "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -119,17 +127,20 @@ nav.navbar {
     background: linear-gradient(to bottom, rgba($black, 0.22), rgba($black, 0.0) 90%);
     background-color: transparent;
     background-repeat: no-repeat;
+    background-position: 0 0;
 
     a.navbar-brand {
-        color: $gray-100;
-        text-shadow: 1px 1px 4px $gray-900;
+        color: $gray-300;
+        text-shadow: $shadow 1px 1px 4px;
+        text-decoration: none;
     }
     a.navbar-brand:hover {
         color: $white;
     }
 
     a.nav-link {
-        text-shadow: 1px 1px 2px $gray-900;
+        text-shadow: $shadow 1px 1px 2px;
+        text-decoration: none;
     }
 
     &.scrolled {
@@ -141,6 +152,10 @@ nav.navbar {
             background: $primary;
         }
     }
+}
+
+.dropdown-item {
+    text-decoration: none;
 }
 
 // Jumbotron
@@ -293,11 +308,38 @@ header.hero {
             box-decoration-break: clone;
         }
     }
+    ul, ol {
+        line-height: 2;
+    }
+}
+
+section {
+    &:last-of-type {
+        padding-bottom: ($font-size-base * 3);
+    }
+
+    &:nth-of-type(2n) {
+        background: $gray-primary;
+
+        > .occluder {
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(to bottom right, $body-bg 0, $body-bg 50%, $gray-primary 50%, $gray-primary 100%);
+        }
+    }
+    &:nth-of-type(2n+1) {
+
+        > .occluder {
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(to bottom right, $gray-primary 0, $gray-primary 50%, $body-bg 50%, $body-bg 100%);
+        }
+    }
 }
 
 .section-title {
-    margin-top: 1.5em;
-    margin-bottom: .3em;
+    margin-top: -30px;
+    margin-bottom: .5em;
     @include media-breakpoint-up(sm) {
         margin-left: -0.35em;
     }
@@ -367,7 +409,7 @@ header.hero {
     max-width: 800px;
     margin: 0 auto;
 
-    margin-bottom: $font-size-base;
+    margin-bottom: ($font-size-base * 2);
     &:last-child {
         margin-bottom: 0;
     }
@@ -379,7 +421,7 @@ header.hero {
         overflow: hidden;
         padding-bottom: 56.25%;
 
-        box-shadow: $gray-400 6px 6px 16px;
+        box-shadow: $shadow 6px 6px 16px;
     }
 
     iframe, object, embed {
@@ -398,10 +440,38 @@ header.hero {
     height: auto;
 }
 
-.data-counter {
-    font-family: $font-family-monospace;
-    font-weight: bold;
-    font-size: ($font-size-base * 1.2);
+// Process cards
+.process {
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        .icon {
+            width: 4em;
+            height: 4em;
+            margin-right: 1em;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        h4 {
+            color: $primary;
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+        }
+    }
+
+    .description {
+        padding-left: 5em;
+    }
 }
 
 // Cards
@@ -416,11 +486,16 @@ $card-border-radius: 0;
     }
 
     .card, .not-card {
-        height: 100%;
+        border: solid 1px $primary;
+        margin-bottom: 1em;
 
         opacity: 1;
         transform: translateY(0px);
         transition: transform 1.5s ease-out, opacity 0.6s linear;
+
+        .card-title {
+            color: $primary;
+        }
     }
     &.scroll-in {
         .card, .not-card {
@@ -454,11 +529,44 @@ $card-border-radius: 0;
     }
 }
 
+// Stats cards
+.stats {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    text-align: center;
+
+    color: $primary;
+
+    transform: rotateZ(2deg);
+
+    > div {
+        border-right: solid 1px $primary;
+        &:last-of-type {
+            border-right: none;
+        }
+        @include media-breakpoint-down(md) {
+            &:nth-child(2n) {
+                border-right: none;
+            }
+
+            margin-bottom: 2em;
+        }
+    }
+
+    .stat-counter {
+        font-weight: 600;
+        font-size: $font-size-h2;
+    }
+    .stat-description {
+        font-size: ($font-size-base * 0.9);
+    }
+}
+
 // Note
 .note {
     margin-top: 3em;
     transform: rotateZ(1deg);
-    box-shadow: $gray-400 6px 6px 16px;
+    box-shadow: $shadow 6px 6px 16px;
     border: solid 1px $primary;
 
     h2 {
@@ -553,7 +661,7 @@ article {
             img {
                 width: 100%;
                 height: auto;
-                box-shadow: $gray-300 4px 4px 8px;
+                box-shadow: $shadow 4px 4px 8px;
             }
         }
     }
@@ -701,7 +809,7 @@ nav.intra-section {
     min-height: 350px;
     margin: ($font-size-base * 2) 0;
     border: none;
-    box-shadow: $gray-400 6px 6px 16px;
+    box-shadow: $shadow 6px 6px 16px;
 
     &.small {
         height: 280px;
@@ -765,13 +873,12 @@ ul.pagination {
 }
 
 // Footer
-$footer-background: $gray-200;
-$footer-text-color: $gray-600;
-$footer-gutter-color: $gray-400;
+$footer-background: hsl(222, 20%, 20%);
+$footer-text-color: lighten($footer-background, 30%);
+$footer-gutter-color: lighten($footer-background, 15%);
 
 footer {
     background: $footer-background;
-    margin-top: ($font-size-base * 3);
     padding-top: ($font-size-base * 1.5);
     padding-bottom: ($font-size-base * 1.5);
     font-size: $small-font-size;
@@ -779,10 +886,10 @@ footer {
 
     a {
         text-decoration: underline;
-        color: $gray-700;
+        color: $footer-text-color;
     }
     a:hover {
-        color: $primary;
+        color: $gray-300;
     }
 
     h5, h6 {
@@ -808,6 +915,10 @@ footer {
 
     .social-links {
         font-size: ($font-size-base * 1.5);
+
+        a {
+            margin-right: 4px;
+        }
     }
 
     @include media-breakpoint-up(md) {
