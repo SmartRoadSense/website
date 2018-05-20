@@ -11,12 +11,30 @@
             </div>
         </header>
 
-{{ range .Paginator.Pages }}
-    {{ partial "newsSummary.html" . }}
+        <div class="main">
+
+        <section>
+            <div class="container">
+
+{{ $pageCount := len .Paginator.Pages }}
+{{ range $index, $element := .Paginator.Pages }}
+    {{ partial "newsSummary.html" $element }}
+
+    {{ if ne (add $index 1) $pageCount }}
+            </div>
+        </section>
+
+        <section>
+            <div class="occluder"></div>
+            <div class="container">
+    {{ end }}
 {{ end }}
 
-        <div class="container">
-            {{ template "_internal/pagination.html" . }}
+                {{ template "_internal/pagination.html" . }}
+
+            </div>
+        </section>
+
         </div>
 
 {{ partial "footer.html" . }}

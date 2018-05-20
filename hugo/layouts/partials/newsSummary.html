@@ -1,36 +1,32 @@
 <article id="news-{{ .UniqueID }}">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4 order-md-last metadata sidebar">
+    <div class="row">
+        <div class="col-12 col-md-3">
+            <div class="metadata">
                 {{ partial "newsThumbnail" . }}
 
-                <div class="date">
-                    <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
-                    {{ .PublishDate.Format "2 January 2006" }}
-                </div>
-
-                <div class="permalink">
-                    <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
-                    <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
+                <div class="date{{ if .Params.cover }} shade{{ end }}">
+                    <div class="day">{{ .PublishDate.Format "2" }}</div>
+                    <div class="month-year">
+                        <span class="month">{{ .PublishDate.Format "Jan" }}</span>
+                        <span class="year">{{ .PublishDate.Format "2006" }}</span>
+                    </div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <h2>{{ .Title }}</h2>
+        </div>
+        <div class="col-12 col-md-9">
+            <h2><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ .Title }}</a></h2>
 
-                <div class="content">
-                    {{ if .Params.truncate }}
-                        {{ .Summary }}
-                    {{ else }}
-                        {{ .Content }}
-                    {{ end }}
-                </div>
-
+            <div class="content">
                 {{ if .Params.truncate }}
-                <p><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ i18n "readMore" }}</a></p>
+                    {{ .Summary }}
+                {{ else }}
+                    {{ .Content }}
                 {{ end }}
             </div>
+
+            {{ if .Params.truncate }}
+            <p><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ i18n "readMore" }}</a></p>
+            {{ end }}
         </div>
     </div>
 </article>
-
-<div class="divider"></div>

@@ -131,7 +131,7 @@ nav.navbar {
 
     a.navbar-brand {
         color: $gray-300;
-        text-shadow: $shadow 1px 1px 4px;
+        text-shadow: $shadow 1px 1px 3px;
         text-decoration: none;
     }
     a.navbar-brand:hover {
@@ -139,7 +139,7 @@ nav.navbar {
     }
 
     a.nav-link {
-        text-shadow: $shadow 1px 1px 2px;
+        text-shadow: $shadow 1px 1px 1px;
         text-decoration: none;
     }
 
@@ -307,6 +307,12 @@ header.hero {
             padding-right: 0.5em;
             box-decoration-break: clone;
         }
+    }
+}
+
+.main {
+    p {
+        line-height: 1.7;
     }
     ul, ol {
         line-height: 2;
@@ -612,57 +618,110 @@ $card-border-radius: 0;
 
 // News and articles
 article {
-    overflow: hidden;
+    padding-top: $font-size-base;
+    padding-bottom: $font-size-base;
 
     .metadata {
-        font-size: ($font-size-base * 0.9);
-        color: $gray-500;
+        position: relative;
+        min-height: 5em;
 
-        a {
-            color: $gray-500;
-            text-decoration: underline;
-        }
-        a:hover {
-            color: $gray-700;
-            text-decoration: underline;
-        }
+        transform: rotateZ(3deg);
 
-        .icon {
-            opacity: 0.5;
-        }
-
-        > div {
-            display: inline;
-            margin-right: $font-size-base;
-
-            &.sidebar {
-                /* Column ordering in sidebar mode */
-                @include media-breakpoint-up(md) {
-                    display: block;
-                    margin-right: 0;
-                }
-            }
-        }
-
-        margin-bottom: 1em;
+        margin-bottom: ($font-size-base * 1.5);
         @include media-breakpoint-up(md) {
+            min-height: 8em;
             margin-bottom: 0;
         }
 
         .thumbnail {
-            display: block;
-            margin-bottom: $font-size-base;
+            position: relative;
 
-            width: 50%;
+            // Force square aspect ratio
+            width: 40%;
+            height: 0;
+            padding-bottom: 40%;
+            margin-left: auto;
+            margin-right: auto;
+
             @include media-breakpoint-up(md) {
                 width: 100%;
+                padding-bottom: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .squarer {
+                position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
             }
 
             img {
                 width: 100%;
-                height: auto;
+                height: 100%;
+
+                border-radius: 50%;
                 box-shadow: $shadow 4px 4px 8px;
             }
+        }
+
+        .date {
+            position: absolute;
+            top: 0; left: 0; bottom: 0; right: 0;
+
+            text-align: center;
+            color: $black;
+
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            line-height: 1;
+
+            border-bottom: dashed 3px $gray-500;
+            @include media-breakpoint-down(sm) {
+                border-bottom: none;
+            }
+
+            .day {
+                font-size: $font-size-h1;
+                font-weight: $font-weight-bold;
+            }
+            .month-year {
+                font-size: ($font-size-base * 1.4);
+            }
+
+            &.shade {
+                @include media-breakpoint-down(sm) {
+                    width: 40%;
+                    left: 30%;
+                }
+
+                border-radius: 50%;
+                background: transparentize($black, 0.8);
+                color: $white;
+                text-shadow: $shadow 1px 1px 3px;
+                border-bottom: none;
+            }
+        }
+    }
+
+    .small-metadata {
+        font-size: ($font-size-base * 0.9);
+        color: $gray-700;
+        margin-bottom: $font-size-base;
+
+        a {
+            color: $gray-700;
+        }
+    }
+
+    h2 {
+        a {
+            color: $body-color;
+            text-decoration: none;
+        }
+        a:hover {
+            color: $body-color;
+            text-decoration: none;
         }
     }
 }
@@ -678,7 +737,9 @@ article {
 }
 
 nav.intra-section {
-    margin-top: ($font-size-base * 3);
+    font-size: ($font-size-base * 0.9);
+    margin-top: $font-size-base;
+    margin-bottom: $font-size-base;
 }
 
 .bibliography {
@@ -764,12 +825,13 @@ nav.intra-section {
 .team-roster {
     list-style: none;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(md) {
         columns: 2;
     }
 
     li {
         margin: 0 0 1rem 0;
+        line-height: 1.5;
 
         -webkit-column-break-inside: avoid;
         -moz-column-break-inside: avoid;
@@ -821,17 +883,26 @@ ul.pagination {
     justify-content: center;
 
     li {
-        background: $gray-100;
-        border: solid 1px $gray-300;
+        background: $gray-200;
+        border: solid 1px $white;
+        border-radius: 50%;
         color: $gray-800;
+        box-shadow: $shadow 2px 2px 6px;
 
         padding: 0;
         margin: 0 0.2em;
+        width: 3em;
+        height: 3em;
+
+        text-align: center;
+        line-height: 2.9em;
 
         a {
             display: block;
-            padding: 0.5em 1em;
+            width: 100%;
+            height: 100%;
             color: $gray-800;
+            text-decoration: none;
         }
         a:hover {
             color: $primary;
@@ -839,12 +910,12 @@ ul.pagination {
         }
 
         &:hover {
-            background: $gray-200;
-            border: solid 1px $gray-500;
+            background: $gray-100;
+            border-color: $primary;
         }
 
         &.active {
-            background: $gray-200;
+            background: $gray-100;
             border: solid 1px $primary;
             font-weight: $font-weight-bold;
             color: $primary;
@@ -855,11 +926,12 @@ ul.pagination {
         }
 
         &.disabled {
-            border: solid 1px $gray-200;
+            border: solid 1px $gray-300;
+            background: $gray-200;
             color: $gray-500;
 
             &:hover {
-                background: $gray-100;
+                background: $gray-200;
             }
 
             a {
