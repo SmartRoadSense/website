@@ -11,24 +11,30 @@
             </div>
         </header>
 
+        <div class="main">
+
         <article id="news-{{ .UniqueID }}">
             <div class="container">
-                <div class="metadata">
-                    <div class="date">
-                        <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
-                        {{ .PublishDate.Format "2 January 2006" }}
+                <div class="row">
+                    <div class="col-12">
+                        <h1>{{ .Title }}</h1>
+
+                        <div class="small-metadata">
+                            <div class="date">
+                                <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
+                                {{ .PublishDate.Format "Monday, 2 January 2006" }}
+                            </div>
+
+                            <div class="permalink">
+                                <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
+                                <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
+                            </div>
+                        </div>
+
+                        <div class="content">
+                            {{ .Content }}
+                        </div>
                     </div>
-
-                    <div class="permalink">
-                        <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Öink icon" />
-                        <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
-                    </div>
-                </div>
-
-                <h2>{{ .Title }}</h2>
-
-                <div class="content">
-                    {{ .Content }}
                 </div>
 
                 <nav class="intra-section">
@@ -47,5 +53,7 @@
                 </nav>
             </div>
         </article>
+
+        </div>
 
 {{ partial "footer.html" . }}
