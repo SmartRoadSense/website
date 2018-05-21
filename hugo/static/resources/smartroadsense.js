@@ -42,7 +42,7 @@ function copy_to_clipboard(text) {
 }
 
 function update_stats() {
-    $.getJSON("http://www.smartroadsense.it/ws/count.php", function(json) {
+    $.getJSON("/ws/count.php", function(json) {
         var raw = json.count_raw;
         var aggregated = json.count_aggregate;
 
