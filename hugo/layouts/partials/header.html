@@ -10,6 +10,8 @@
 
         <link rel="canonical" href="{{ .Permalink }}" />
 
+        <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
+
         {{ with .Site.GetPage "section" "news" }}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
