@@ -1,14 +1,14 @@
 /* SmartRoadSense */
 
-function thousands_commas(input) {
+function thousands_commas(input, adapt = true) {
     let unit = '';
     let n = input;
-    if(input >= 1000000.0) {
-        n = input / 1000000;
+    if(input >= 10000000 && adapt) {
+        n = input / 1000000.0;
         unit = 'M';
     }
-    else if(input >= 1000.0) {
-        n = input / 1000;
+    else if(input >= 10000 && adapt) {
+        n = input / 1000.0;
         unit = 'K';
     }
 
@@ -46,12 +46,12 @@ function update_stats() {
         var raw = json.count_raw;
         var aggregated = json.count_aggregate;
 
-        var kilometres = aggregated * 20 / 1000;
+        var kilometres = aggregated * 20 / 1000.0;
         var axis_data = raw * 300;
 
         $('.data-accel-values').text(thousands_commas(axis_data));
         $('.data-points').text(thousands_commas(raw));
-        $('.data-roads').text(thousands_commas(kilometres));
+        $('.data-roads').text(thousands_commas(kilometres, false));
     });
 }
 
