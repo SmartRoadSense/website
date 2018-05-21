@@ -65,7 +65,7 @@ js = [
             <h4>3. Display</h4>
         </div>
         <div class="description">
-            <p>Aggregated data is mapped on a geographical map and is then made available <a href="{{< langRef "data/map/index.md" >}}">online</a>, as <a href="{{< langRef "data/open-data/index.md" >}}">open data</a>, and through <a href="{{< langRef "data/developers/index.md" >}}">APIs</a>.</p>
+            <p>Aggregated data is mapped on a geographical map and is then made available <a href="{{< langRef "data/map" >}}">online</a>, as <a href="{{< langRef "data/open-data" >}}">open data</a>, and through <a href="{{< langRef "data/developers" >}}">APIs</a>.</p>
         </div>
     </div>
     <div class="col-sm-12 col-lg-6">
@@ -74,7 +74,7 @@ js = [
             <h4>Want to know more?</h4>
         </div>
         <div class="description">
-            <p>Read all about <a href="{{< langRef "project/how/index.md" >}}">how SmartRoadSense works</a>.</p>
+            <p>Read all about <a href="{{< langRef "project/how" >}}">how SmartRoadSense works</a>.</p>
         </div>
     </div>
 </div>
@@ -107,12 +107,12 @@ If you’re interested in the project and would like to help out monitoring road
 {{< i18n "srsActivationLine" >}}
 
 <div class="row align-items-center justify-content-center">
-    <div class="col-6 col-lg-4 badge">
+    <div class="col-12 col-sm-6 col-lg-5 badge">
         <a href="https://itunes.apple.com/app/id1063716780">
             {{< imgset src="badge_app_store" alt="SmartRoadSense for iOS" >}}
         </a>
     </div>
-    <div class="col-6 col-lg-4 badge">
+    <div class="col-12 col-sm-6 col-lg-5 badge">
         <a href="https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense">
             {{< imgset src="badge_google_play" alt="SmartRoadSense for Android" >}}
         </a>

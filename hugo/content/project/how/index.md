@@ -7,7 +7,7 @@ type = "page"
 
 The system makes use of simple **accelerometers** and **global positioning sensors**&nbsp;(GPS) found on any modern smartphone in order to **detect and classify the roughness of roads**.
 Data is collected and processed on device by a mobile application.
-It is then **transmitted anonymously** to the *SmartRoadSense* back-end system that maps and **aggregates information** of multiple users in order to produce an interactive, almost real-time, [map of road quality]({{< langRef "data/map" >}}).
+It is then **transmitted anonymously** to the *SmartRoadSense* back-end system that maps and **aggregates information** of multiple users in order to produce an interactive, continously updated, [map of road quality]({{< langRef "data/map" >}}).
 
 {{< section "In detail" >}}
 
@@ -27,7 +27,7 @@ As shown in the video, *SmartRoadSense*'s data collection process can be split u
                 Data collection can be performed in the background and runs at high sampling rates (it may significantly affect power consumption).
                 </p>
                 <p>
-                The gathered accelerations feed our magic <i>SmartRoadSense</i> road roughness classification algorithm&trade;, which <b>generates a numerical “roughness index”</b> (where <i>0</i> indicates a perfectly smooth road and anything over <i>1.5</i> is pretty bad).
+                The gathered accelerations feed our magic <i>road roughness classification algorithm</i>&trade;, which <b>generates a numerical “roughness index”</b> (where <code>0.3</code> or lower indicates a smooth road and anything over <code>1.5</code> is pretty bad).
                 </p>
             </div>
         </div>
@@ -71,10 +71,10 @@ As shown in the video, *SmartRoadSense*'s data collection process can be split u
             <div class="card-body">
                 <h4 class="card-title">Data publication and display</h4>
                 <p>
-                The final data set produced by <i>SmartRoadSense</i> is composed of a set of <b>aggregated road roughness points</b> associated to a geographical location (as <code>lat/long</code> coordinates) and an OpenStreetMap road.
+                The final data set produced by <i>SmartRoadSense</i> is composed of a set of <b>aggregated road roughness points</b> associated to a geographical location (in terms of <code>lat/long</code> coordinates) and an <a href="https://www.openstreetmap.org">OpenStreetMap</a> road.
                 </p>
                 <p>
-                The data set is licensed using an open license and released through this website as <a href="{{< langRef "data/open-data" >}}">Open Data</a>.
+                The data set is licensed using an open license and released through this website as <a href="{{< langRef "data/map" >}}">an interactive map</a> and as <a href="{{< langRef "data/open-data" >}}">Open Data</a>.
                 We also provide programmatical access to the same live dataset, using a set of <a href="{{< langRef "data/developers" >}}">developer APIs</a>.
                 You are welcome to make use of the data.
                 </p>
@@ -83,16 +83,9 @@ As shown in the video, *SmartRoadSense*'s data collection process can be split u
     </div>
 </div>
 
-{{< section "Setup" >}}
+{{< section "Installation" >}}
 
-1. **Install** the *SmartRoadSense* [mobile application]({{< langRef "apps" >}}) on your device (any smartphone or tablet running Android or iOS will do);
-2. Perform the **initial setup and calibration**, following the instructions provided by the app;
-3. Rigidly **attach** your smartphone to your vehicle, for instance:
-    * Using a **rigid smartphone cradle/holder**, which you can attach to your windshield or dashboard with a suction cup,
-    * Using a **magnetic smartphone holder**, which may be attached to the car's air vents,
-    * Putting the smartphone into one of the **dashboard pockets/compartments** (please ensure that the smartphone is correctly wedged into the compartment and that it cannot slide or move while driving),
-    * Using a high-friction **silicone pad** that can be installed on your dashboard and resting the smartphone on it.
-4. **Start recording** by tapping on the blue *SmartRoadSense* icon!
+*SmartRoadSense* is available for iOS and Android and can be installed on most smartphones or tablets. Check out the [mobile applications]({{< langRef "apps" >}}) and start monitoring your roads!
 
 {{< section "Scientific publications" >}}
 

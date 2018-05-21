@@ -443,6 +443,7 @@ section {
 
 .badge img {
     width: 80%;
+    max-width: 55vw;
     height: auto;
 }
 
@@ -745,12 +746,25 @@ nav.intra-section {
 .bibliography {
     ul {
         list-style-type: square;
+        line-height: 1.5;
+        padding: 0;
+
+        @include media-breakpoint-up(lg) {
+            columns: 2;
+        }
 
         li {
-            margin-bottom: ($font-size-base * 0.25);
+            margin-bottom: ($font-size-base * 0.5);
             &:last-child {
                 margin-bottom: 0;
             }
+            margin-left: $font-size-base;
+
+            -webkit-column-break-inside: avoid;
+            -moz-column-break-inside: avoid;
+            -o-column-break-inside: avoid;
+            -ms-column-break-inside: avoid;
+            column-break-inside: avoid;
         }
 
         .author {
