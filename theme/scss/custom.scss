@@ -747,6 +747,14 @@ nav.intra-section {
     font-size: ($font-size-base * 0.9);
     margin-top: $font-size-base;
     margin-bottom: $font-size-base;
+
+    .link {
+        white-space: nowrap;
+
+        a {
+            white-space: normal;
+        }
+    }
 }
 
 .bibliography {
