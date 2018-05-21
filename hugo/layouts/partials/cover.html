@@ -1,6 +1,6 @@
 {{- $root := . -}}
 
-{{- if .Params.cover -}}
+{{- if and .Params.cover (not (isset .Params "single-cover-default")) -}}
     {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
         {{- $root.Scratch.Set "resource" . -}}
     {{- end -}}
