@@ -52,6 +52,9 @@ other = "Apps"
 [footerOwnership]
 other = "<i>SmartRoadSense</i> has been developed at the <a href=\"http://www.uniurb.it\" target=\"_blank\">University of Urbino</a> and is part of the <a href=\"http://www.c4rs.eu\" target=\"_blank\">CROWD4ROADS</a> project."
 
+[footerOtherLanguages]
+other = "Other languages"
+
 [permalink]
 other = "Permalink"
 

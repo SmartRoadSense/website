@@ -963,6 +963,22 @@ $footer-background: hsl(222, 20%, 20%);
 $footer-text-color: lighten($footer-background, 30%);
 $footer-gutter-color: lighten($footer-background, 15%);
 
+.footer-language-switch {
+    background: $gray-600;
+    color: $gray-500;
+    font-size: ($font-size-base * 0.8);
+    padding: $font-size-base 0;
+
+    a {
+        color: $gray-500;
+        text-decoration: none;
+    }
+    a:hover {
+        color: $gray-400;
+        text-decoration: underline;
+    }
+}
+
 footer {
     background: $footer-background;
     padding-top: ($font-size-base * 1.5);
