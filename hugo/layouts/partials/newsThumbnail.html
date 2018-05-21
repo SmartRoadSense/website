@@ -3,14 +3,13 @@
 {{- if .Params.cover -}}
     {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
         {{- $res := . -}}
-        {{- $root.Scratch.Set "srcset" "" -}}
+        {{- $root.Scratch.Set "thsrcset" "" -}}
         {{- range (slice 512 1024 1280 1600) -}}
             {{- if lt . $res.Width -}}
-                {{- $root.Scratch.Add "srcset" ($res.Fill (printf "%dx%d q50" . .)).RelPermalink -}}
-                {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+                {{- $root.Scratch.Add "thsrcset" ($res.Fill (printf "%dx%d q50" . .)).RelPermalink -}}
+                {{- $root.Scratch.Add "thsrcset" (printf " %dw, " .) -}}
             {{- end -}}
         {{- end -}}
-        {{- $root.Scratch.Set "srcset" (substr ($root.Scratch.Get "srcset") 0 -2) -}}
 
         <div class="thumbnail">
             <div class="squarer">
@@ -18,7 +17,7 @@
                     src="{{ ($res.Fill "256x256 q50").RelPermalink }}"
                     alt=""
                     width="256" height="256"
-                    {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+                    {{ printf "srcset=\"%s\"" (substr ($root.Scratch.Get "thsrcset") 0 -2) | safeHTMLAttr }}
                     />
             </div>
         </div>
