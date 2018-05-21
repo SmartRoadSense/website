@@ -3,7 +3,7 @@ title = "Privacy policy"
 type = "page"
 +++
 
-<p class="lead">The <i>SmartRoadSense</i> mobile applications and its online services are designed to be fully anonymous and will never collect personal information from its users.</p>
+<p class="lead">The <i>SmartRoadSense</i> mobile applications and its online services are designed to be fully anonymous and will never collect personal information from their users.</p>
 
 *SmartRoadSense* mobile applications will access the following data:
 

@@ -65,7 +65,7 @@ js = [
             <h4>3. Visualizzazione</h4>
         </div>
         <div class="description">
-            <p>I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map/index.md" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data/index.md" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers/index.md" >}}">API</a>.</p>
+            <p>I dati aggregati sono poi resi disponibili come <a href="{{< langRef "data/map" >}}">mappa online</a>, come <a href="{{< langRef "data/open-data" >}}">dati aperti</a>, e tramite delle <a href="{{< langRef "data/developers" >}}">API</a>.</p>
         </div>
     </div>
     <div class="col-sm-12 col-lg-6">
@@ -74,7 +74,7 @@ js = [
             <h4>Vuoi saperne di più?</h4>
         </div>
         <div class="description">
-            <p>Leggi tutto sul <a href="{{< langRef "project/how/index.md" >}}">funzionamento di SmartRoadSense</a>.</p>
+            <p>Leggi tutto sul <a href="{{< langRef "project/how" >}}">funzionamento di SmartRoadSense</a>.</p>
         </div>
     </div>
 </div>
@@ -108,12 +108,12 @@ Clicca sui collegamenti qui sotto per installare l’applicazione *SmartRoadSens
 {{< i18n "srsActivationLine" >}}
 
 <div class="row align-items-center justify-content-center">
-    <div class="col-6 col-lg-4 badge">
+    <div class="col-12 col-sm-6 col-lg-5 badge">
         <a href="https://itunes.apple.com/app/id1063716780">
             {{< imgset src="badge_app_store" alt="SmartRoadSense per iOS" >}}
         </a>
     </div>
-    <div class="col-6 col-lg-4 badge">
+    <div class="col-12 col-sm-6 col-lg-5 badge">
         <a href="https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense">
             {{< imgset src="badge_google_play" alt="SmartRoadSense per Android" >}}
         </a>
