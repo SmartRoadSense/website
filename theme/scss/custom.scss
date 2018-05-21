@@ -74,6 +74,12 @@ code, pre {
     background-color: $code-background;
 }
 
+blockquote {
+    border-left: solid 6px $gray-300;
+    padding-left: 1em;
+    margin-left: 0;
+}
+
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Additional CSS
