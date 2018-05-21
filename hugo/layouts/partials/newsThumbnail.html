@@ -6,7 +6,7 @@
         {{- $root.Scratch.Set "thsrcset" "" -}}
         {{- range (slice 512 1024 1280 1600) -}}
             {{- if lt . $res.Width -}}
-                {{- $root.Scratch.Add "thsrcset" ($res.Fill (printf "%dx%d q50" . .)).RelPermalink -}}
+                {{- $root.Scratch.Add "thsrcset" ($res.Fill (printf "%dx%d q50 Center" . .)).RelPermalink -}}
                 {{- $root.Scratch.Add "thsrcset" (printf " %dw, " .) -}}
             {{- end -}}
         {{- end -}}
@@ -14,7 +14,7 @@
         <div class="thumbnail">
             <div class="squarer">
                 <img
-                    src="{{ ($res.Fill "256x256 q50").RelPermalink }}"
+                    src="{{ ($res.Fill "256x256 q50 Center").RelPermalink }}"
                     alt=""
                     width="256" height="256"
                     {{ printf "srcset=\"%s\"" (substr ($root.Scratch.Get "thsrcset") 0 -2) | safeHTMLAttr }}
