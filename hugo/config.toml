@@ -2,6 +2,7 @@ baseurl = "http://localhost:1313/"
 title = "SmartRoadSense"
 defaultContentLanguage = "en"
 enableMissingTranslationPlaceholders = true
+timeout = 100000
 
 [permalinks]
 news = "/:section/:year/:month/:slug/"
