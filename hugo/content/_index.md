@@ -54,7 +54,7 @@ js = [
             <h4>2. Aggregation</h4>
         </div>
         <div class="description">
-            <p>Collected data is anonymized an your device and transmitted to the <i>SmartRoadSense</i> service, which aggregates the data from multiple users.</p>
+            <p>Collected data is anonymized on your device and transmitted to the <i>SmartRoadSense</i> service, which aggregates the data from multiple users.</p>
         </div>
     </div>
     <div class="col-sm-12 col-lg-6">
