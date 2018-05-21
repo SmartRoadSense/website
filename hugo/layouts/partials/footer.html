@@ -1,7 +1,13 @@
         </div><!-- /.content -->
 
         <!-- Language selector for mobile -->
-        <div class="d-md-none d-print-none">
+        <div class="footer-language-switch d-md-none d-print-none">
+            <div class="container">
+                {{ i18n "footerOtherLanguages" }}:
+                {{ range .AllTranslations }}
+                    <a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Language.LanguageName }}</a>
+                {{ end }}
+            </div>
         </div>
 
         <footer>

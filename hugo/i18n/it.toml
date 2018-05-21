@@ -52,6 +52,9 @@ other = "Applicazioni"
 [footerOwnership]
 other = "<i>SmartRoadSense</i> è stato sviluppato presso l’<a href=\"http://www.uniurb.it\" target=\"_blank\">Università degli Studi di Urbino</a> e fa parte del progetto <a href=\"http://www.c4rs.eu\" target=\"_blank\">CROWD4ROADS</a>."
 
+[footerOtherLanguages]
+other = "Altre lingue"
+
 [permalink]
 other = "Permalink"
 
