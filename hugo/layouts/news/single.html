@@ -39,14 +39,14 @@
 
                 <nav class="intra-section">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6 link">
                             {{ if .PrevInSection }}
-                            <img src="{{ "icons/arrow-thick-left.svg" | absURL }}" class="icon" alt="" />&nbsp;<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+                            <img src="{{ "icons/arrow-thick-left.svg" | absURL }}" class="icon" alt="" /> <a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
                             {{ end }}
                         </div>
-                        <div class="col-6 text-right">
+                        <div class="col-md-6 link text-right">
                             {{ if .NextInSection }}
-                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>&nbsp;<img src="{{ "icons/arrow-thick-right.svg" | absURL }}" class="icon" alt="" />
+                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a> <img src="{{ "icons/arrow-thick-right.svg" | absURL }}" class="icon" alt="" />
                             {{ end }}
                         </div>
                     </div>
