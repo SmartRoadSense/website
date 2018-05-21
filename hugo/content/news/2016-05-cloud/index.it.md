@@ -1,6 +1,8 @@
 +++
 date = "2016-05-27"
 title = "SmartRoadSense nel cloud"
+
+cover = "cloud.jpg"
 +++
 
 Ve ne sarete già accorti: abbiamo grandi piani per il nostro progetto!
