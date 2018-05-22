@@ -20,4 +20,6 @@ The same data is also available in the form of freely accessible [Open Data]({{<
 Each data point aggregates all collected roughness data of approximately **20&nbsp;meters of road**.
 *Green* points indicate smooth roads, *red* ones indicate bumps or deteriorated surfaces.
 
+<p>
 {{< i18n "srsActivationLine" >}}
+</p>

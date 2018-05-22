@@ -20,4 +20,6 @@ Gli stessi dati sono anche disponibili come [Open Data]({{< langRef "data/open-d
 Ogni punto sulla mappa rappresenta in forma aggregata i dati relativi a circa **20&nbsp;metri di strada**.
 Punti *verdi* indicano strade di buona qualità, mentre i punti *rossi* indicano la presenza di dossi, buche o strade deteriorate.
 
+<p>
 {{< i18n "srsActivationLine" >}}
+</p>
