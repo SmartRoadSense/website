@@ -105,7 +105,9 @@ js = [
 Ti interessa il progetto e vuoi darci una mano a monitorare la qualità delle strade?
 Clicca sui collegamenti qui sotto per installare l’applicazione *SmartRoadSense* per il tuo smartphone: ci vorrà soltanto un minuto!
 
+<p>
 {{< i18n "srsActivationLine" >}}
+</p>
 
 <div class="row align-items-center justify-content-center">
     <div class="col-12 col-sm-6 col-lg-5 badge">

@@ -104,7 +104,9 @@ js = [
 
 If you’re interested in the project and would like to help out monitoring road quality, click on the links below to install the *SmartRoadSense* application for your smartphone: you will be ready to go in a couple of minutes!
 
+<p>
 {{< i18n "srsActivationLine" >}}
+</p>
 
 <div class="row align-items-center justify-content-center">
     <div class="col-12 col-sm-6 col-lg-5 badge">
