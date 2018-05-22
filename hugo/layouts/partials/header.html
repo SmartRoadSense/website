@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        {{ .Hugo.Generator }}
 
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" />
-        <link rel="stylesheet" type="text/css" href="{{ "resources/smartroadsense.min.css" | absURL }}" />
+        <link rel="stylesheet" type="text/css" href="{{ partial "asset" "resources/smartroadsense.min.css" }}" />
         <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css" />
 
         <link rel="canonical" href="{{ .Permalink }}" />
@@ -21,7 +22,7 @@
 
         {{ if .Params.css -}}
             {{- range .Params.css -}}
-        <link rel="stylesheet" type="text/css" href="{{ . | absURL }}" />
+        <link rel="stylesheet" type="text/css" href="{{ partial "asset" . }}" />
             {{- end -}}
         {{- end }}
 

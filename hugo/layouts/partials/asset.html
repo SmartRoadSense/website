@@ -1,0 +1,1 @@
+{{- if hasPrefix . "http" }}{{ . }}{{ else }}{{ . | absURL }}?cb={{ readFile (printf "static/%s" .) | md5 }}{{ end -}}
