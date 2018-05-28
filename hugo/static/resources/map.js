@@ -3,7 +3,7 @@
 // Using CARTO tile server, see: https://carto.com/location-data-services/basemaps/
 const OSM_URL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png';
 // SRS tiles
-const SRS_TILES_URL = 'http://www.smartroadsense.it/api/v1/tiles/{z}/{x}/{y}';
+const SRS_TILES_URL = '/api/v1/tiles/{z}/{x}/{y}';
 // SRS data used for PPE visualization
 const SRS_DATA_BASE_URL = '';
 // Geocoder
