@@ -25,6 +25,21 @@
         <link rel="stylesheet" type="text/css" href="{{ partial "asset" . }}" />
             {{- end -}}
         {{- end }}
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="{{ if .Page.Title }}{{ .Page.Title }}{{ else }}SmartRoadSense{{ end }}" />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="{{ .Permalink }}" />
+        <meta property="og:site_name" content="SmartRoadSense" />
+        <meta property="fb:app_id" content="674012086302277" />
+        <meta property="fb:admins" content="100000665857116,1173236424" />
+        {{ if isset .Params "cover" -}}
+            {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+            <meta property="og:image" content="{{ .Permalink }}" />
+            {{- end -}}
+        {{- else -}}
+        <meta property="og:image" content="{{ "images/share-card.png" | absURL }}" />
+        {{- end }}
     </head>
 
     <body>
