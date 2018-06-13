@@ -790,42 +790,33 @@ nav.intra-section {
             -ms-column-break-inside: avoid;
             column-break-inside: avoid;
         }
+    }
 
-        .author {
-            &:after {
-                content: ",";
-            }
+    .title {
+        &:before {
+            content: "“";
         }
-        .title {
-            &:before {
-                content: "“";
-            }
-            &:after {
-                content: "”.";
-            }
+        &:after {
+            content: "”";
         }
-        .publication {
-            font-style: italic;
+    }
+    .publication {
+        font-style: italic;
+    }
+    .year {
+        &:after {
+            content: ".";
+        }
+    }
+    .bibtex-link {
+        font-size: $small-font-size;
+        user-select: none;
 
-            &:after {
-                font-style: normal;
-                content: ", ";
-            }
+        &:before {
+            content: "(";
         }
-        .year {
-            &:after {
-                content: ".";
-            }
-        }
-        .bibtex-link {
-            font-size: $small-font-size;
-
-            &:before {
-                content: "(";
-            }
-            &:after {
-                content: ")";
-            }
+        &:after {
+            content: ")";
         }
     }
 

@@ -2,9 +2,9 @@
     <ul>
     {{ range (sort $.Site.Data.biblio "sortkey" "asc") }}
         <li>
-            <span class="author">{{ .author | safeHTML }}</span>
-            <span class="title"><a href="{{ .url }}">{{ .title | safeHTML }}</a></span>
-            <span class="publication">{{ .publication | safeHTML }}</span>
+            <span class="author">{{ .author | safeHTML }}</span>,
+            <span class="title"><a href="{{ .url }}">{{ .title | safeHTML }}</a></span>.
+            <span class="publication">{{ .publication | safeHTML }}</span>,
             <span class="year">{{ .year | safeHTML }}</span>
             <span class="bibtex-link"><a href="#bibliography-output" data-bibtex="{{ .bibtex }}">BibTeX</a></span>
         </li>
