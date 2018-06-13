@@ -69,3 +69,6 @@ other = "BibTeX code"
 
 [bibtexCodeConfirmation]
 other = "Code copied to your clipboard."
+
+[howToCiteWebsite]
+other = "How to cite this website"

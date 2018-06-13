@@ -11,6 +11,20 @@
     {{ end }}
     </ul>
 
+    <p>
+        {{ i18n "howToCiteWebsite" }}:<br />
+        <span class="author">A.&nbsp;Bogliolo et&nbsp;al.</span>,
+        <span class="title">The SmartRoadSense website</span>.
+        <span class="year">{{ dateFormat "2006" now }}</span>
+        <span class="bibtex-link"><a href="#bibliography-output" data-bibtex="@electronic{wwwSmartRoadSense,
+    title = {The {SmartRoadSense} website},
+    author={Bogliolo, Alessandro and Aldini, Alessandro and Alessandroni, Giacomo and Carini, Alberto and Delpriori, Saverio and Freschi Valerio and Klopfenstein, Lorenz Cuno and Lattanzi, Emanuele and Luchetti, Gioele and Paolini, Brendan Dominic and Seraghiti, Andrea}
+    year = {2018},
+    url = {http://smartroadsense.it},
+    organization = {University of Urbino}
+}">BibTeX</a></span>
+    </p>
+
     <div class="bibtex" id="bibliography-output">
         <h5><img src="{{ "icons/code.svg" | absURL }}" class="icon" alt="Code icon" />&nbsp;{{ i18n "bibtexCodeHeader" }}</h5>
 
