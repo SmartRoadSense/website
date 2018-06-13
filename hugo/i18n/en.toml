@@ -28,6 +28,9 @@ other = "About"
 [menuProjectHow]
 other = "How does it work?"
 
+[menuProjectPublications]
+other = "Publications"
+
 [menuProjectPeople]
 other = "People"
 

@@ -28,6 +28,9 @@ other = "Informazioni"
 [menuProjectHow]
 other = "Come funziona?"
 
+[menuProjectPublications]
+other = "Pubblicazioni"
+
 [menuProjectPeople]
 other = "Chi siamo"
 

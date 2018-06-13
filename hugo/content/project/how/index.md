@@ -86,7 +86,3 @@ As shown in the video, *SmartRoadSense*'s data collection process can be split u
 {{< section "Installation" >}}
 
 *SmartRoadSense* is available for iOS and Android and can be installed on most smartphones or tablets. Check out the [mobile applications]({{< langRef "apps" >}}) and start monitoring your roads!
-
-{{< section "Scientific publications" >}}
-
-{{< bibliography >}}

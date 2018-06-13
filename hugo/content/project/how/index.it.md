@@ -83,7 +83,3 @@ Come mostrato nel video, il processo di raccolta dati di *SmartRoadSense* può e
 {{< section "Installazione" >}}
 
 *SmartRoadSense* è disponibile per iOS e per Android ed è compatibile con la maggior parte di smartphone e tablet. [Installa l’app]({{< langRef "apps" >}}) e comincia a monitorare le strade da subito!
-
-{{< section "Pubblicazioni scientifiche" >}}
-
-{{< bibliography >}}
