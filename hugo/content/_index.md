@@ -16,7 +16,7 @@ js = [
 
 <p><i>SmartRoadSense</i> is a <b>mobile application</b> that uses your smartphone’s accelerometers and GPS sensor to <b>detect and classify irregularities of the road</b> surface while you are driving.</p>
 
-<p>Data is collected <b>anonymously</b> and transmitted to a centralized service that <b>aggregates contributions</b> from all users, thus computing a continously updated snapshot of the <b>quality of road infrastructure</b>.</p>
+<p>Data is collected <b>anonymously</b> and transmitted to a centralized service that <b>aggregates contributions</b> from all users, thus computing a continuously updated snapshot of the <b>quality of road infrastructure</b>.</p>
 
 <p>All collected data respects our <a href="{{< langRef "data/privacy" >}}">privacy policy</a> and is freely made available as an <a href="{{< langRef "data/map" >}}">online map</a> or as an <a href="{{< langRef "data/open-data" >}}">Open Data dataset</a>.</p>
 
