@@ -11,8 +11,9 @@ const GEOCODER_URL = '/search';
 
 // create map
 let map = L.map('mapdiv', {
-  center: [43.9167, 12.9000],
-  zoom: 14
+  //center: [43.9167, 12.9000],
+  center: [43.186041, 13.085661],
+  zoom: 9
 });
 
 // add osm background layer
@@ -22,6 +23,26 @@ L.tileLayer(OSM_URL, {
 
 // add srs tiles layer
 L.tileLayer(SRS_TILES_URL).addTo(map);
+
+// add #RisorgiMarche (RM) markers
+createRMMarker(L, map, 42.7899832, 13.251915, "07/01/2018", "Piero Pelu","Forca di Presta / Arquata del Tronto (AP)", "https://risorgimarche.it/eventi/piero-pelu/");
+createRMMarker(L, map, 43.1930427, 13.120854, "07/03/2018", "Angelo Branduardi","Piani di Crispiero - Monte d'Aria / Camerino - Castel Raimondo - Serrapetrona (MC)","https://risorgimarche.it/eventi/02-angelo-branduardi/");
+createRMMarker(L, map, 43.3209651, 13.227486, "07/06/2018", "Simone Cristicchi / GNU Quartet","La Roccaccia - San Lorenzo / San Severino Marche - Treia (MC)","https://risorgimarche.it/eventi/03-simone-cristicchi/");
+createRMMarker(L, map, 43.0108093, 13.232748, "07/07/2018", "Mario Biondi","Pizzo Meta / Sarnano - Bolognola (MC)","https://risorgimarche.it/eventi/04-mario-biondi/");
+createRMMarker(L, map, 42.925709,  13.126296, "07/09/2018", "Alex Britti","Monte Torrone / Ussita - Visso - Castelsantangelo sul Nera (MC)","https://risorgimarche.it/eventi/05-alex-britti/");
+createRMMarker(L, map, 43.1411718, 12.91112,  "07/14/2018", "Noa","Prati di Monte Vermenone / Sefro - Fiuminata (MC)","https://risorgimarche.it/eventi/06-noa/");
+
+
+function createRMMarker(layer,map, lat, long, date, artist, location, url){
+  var marker = layer.marker([lat, long]);
+  var when = new Date(date).toDateString();
+  marker.bindPopup("<b>" + when + " - "+ artist + "</b><br>" + location + "<br><a href=\"" + url + "\" target=\"_blank\">RisorgiMarche</a>");
+  marker.addTo(map);
+  
+  return  marker;
+}
+
+
 
 document.getElementById('geocode-btn').onclick = search;
 document.getElementById('geocode-input').onkeypress = function (e) {
