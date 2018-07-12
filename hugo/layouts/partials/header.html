@@ -6,27 +6,28 @@
         {{ .Hugo.Generator }}
 
         <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600" />
-        <link rel="stylesheet" type="text/css" href="{{ partial "asset" "resources/smartroadsense.min.css" }}" />
-        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic.min.css" integrity="sha256-CfN2r6i/dqkUHVRqpBzO3w21SnIWalwGfj5ScBPVzmI=" crossorigin="anonymous" />
+
+        {{- $mainCSS := resources.Get "css/smartroadsense.scss" | toCSS | minify | fingerprint }}
+        <link rel="stylesheet" type="text/css" href="{{ $mainCSS.Permalink }}" integrity="{{ $mainCSS.Data.Integrity }}" />
+
+        {{- if .Params.css -}}
+            {{- range .Params.css }}
+        <link rel="stylesheet" type="text/css" href="{{ partial "asset" . }}" />
+            {{- end -}}
+        {{- end }}
 
         <link rel="canonical" href="{{ .Permalink }}" />
 
         <link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}" />
 
-        {{ with .Site.GetPage "section" "news" }}
+        {{ with .Site.GetPage "section" "news" -}}
         <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
         <link href="{{ .RSSLink }}" rel="feed" type="application/rss+xml" title="{{ .Site.Title }}" />
-        {{ end }}
+        {{- end }}
 
         <title>SmartRoadSense {{- if .Page.Title }} | {{ .Page.Title }}{{ end }}</title>
 
-        {{ if .Params.css -}}
-            {{- range .Params.css -}}
-        <link rel="stylesheet" type="text/css" href="{{ partial "asset" . }}" />
-            {{- end -}}
-        {{- end }}
-
-        <!-- Open Graph -->
         <meta property="og:title" content="{{ if .Page.Title }}{{ .Page.Title }}{{ else }}SmartRoadSense{{ end }}" />
         <meta property="og:type" content="article" />
         <meta property="og:url" content="{{ .Permalink }}" />
