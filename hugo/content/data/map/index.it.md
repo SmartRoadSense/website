@@ -7,7 +7,7 @@ css = [
 ]
 js = [
     "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
-    "resources/map.js"
+    "js/map.js"
 ]
 +++
 
