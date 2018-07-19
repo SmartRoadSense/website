@@ -34,12 +34,12 @@ createRMMarker(L, map, 43.1411718, 12.911125, "07/14/2018", "Noa","Prati di Mont
 createRMMarker(L, map, 43.0709828, 12.941907, "07/15/2018", "Clementino","Monte Faeto / Serravalle di Chienti (MC)","https://risorgimarche.it/eventi/07-clementino/");
 createRMMarker(L, map, 43.0971707, 13.169547, "07/17/2018", "Luca Carboni", "Poggia della Pagnotta - Chiesa Santa Maria Maddalena / Valfornace - Caldarola (MC)","https://risorgimarche.it/eventi/08-luca-carboni/");
 
-//createRMMarker(L, map, , ,  "07/23/2018", "Irene Grandi","Piani di Cagnano / Acquasanta Terme (AP)","https://risorgimarche.it/eventi/09-irene-grandi/");
-//createRMMarker(L, map, , ,  "07/27/2018", "Andrea Miro","Monte la Torre - Quinzano / Force (AP)","https://risorgimarche.it/eventi/10-andrea-miro/");
-//createRMMarker(L, map, , ,  "07/28/2018", "Paolo Belli and Big Band","Campi di Vetice / Montefortino (FM)","https://risorgimarche.it/eventi/11-paolo-belli/");
-//createRMMarker(L, map, , ,  "07/31/2018", "Festa a Sorpresa","Casalicchio / Amandola (FM)","https://risorgimarche.it/eventi/12-festa-a-sorpresa/");
-//createRMMarker(L, map, , ,  "08/01/2018", "Toquinho","Piano della Cura di Fematre / Visso - Pievetorina - Monte Cavallo (MC)","https://risorgimarche.it/eventi/13-toquinho/");
-//createRMMarker(L, map, , ,  "08/02/2018", "Neri Marcore / GNU Quartet","San Giacomo / Ascoli Piceno (AP)","https://risorgimarche.it/eventi/14-neri-marcore/");
+createRMMarker(L, map, 42.773725, 13.415660 ,  "07/23/2018", "Irene Grandi","Piani di Cagnano / Acquasanta Terme (AP)","https://risorgimarche.it/eventi/09-irene-grandi/");
+createRMMarker(L, map, 42.933348, 13.457890 ,  "07/27/2018", "Andrea Miro","Monte la Torre - Quinzano / Force (AP)","https://risorgimarche.it/eventi/10-andrea-miro/");
+createRMMarker(L, map, 42.945327, 13.313701 ,  "07/28/2018", "Paolo Belli and Big Band","Campi di Vetice / Montefortino (FM)","https://risorgimarche.it/eventi/11-paolo-belli/");
+createRMMarker(L, map, 42.972519, 13.303138 ,  "07/31/2018", "Festa a Sorpresa","Casalicchio / Amandola (FM)","https://risorgimarche.it/eventi/12-festa-a-sorpresa/");
+createRMMarker(L, map, 42.931799, 13.011071 ,  "08/01/2018", "Toquinho","Piano della Cura di Fematre / Visso - Pievetorina - Monte Cavallo (MC)","https://risorgimarche.it/eventi/13-toquinho/");
+createRMMarker(L, map, 42.914551, 13.844127 ,  "08/02/2018", "Neri Marcore / GNU Quartet","San Giacomo / Ascoli Piceno (AP)","https://risorgimarche.it/eventi/14-neri-marcore/");
 
 
 function createRMMarker(layer,map, lat, long, date, artist, location, url){
