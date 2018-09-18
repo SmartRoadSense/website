@@ -18,7 +18,7 @@ each point on the map is computed taking into account contributions by all users
 The same data is also available in the form of freely accessible [Open Data]({{< langRef "data/open-data" >}}).
 
 Each data point aggregates all collected roughness data of approximately **20&nbsp;meters of road**.
-*Green* points indicate smooth roads, *red* ones indicate bumps or deteriorated surfaces.
+*Green* points indicate smooth roads, *red* ones indicate bumps or deteriorated surfaces ([the QGIS style can be found here](http://www.c4rs.eu/wp-content/uploads/2018/09/colour-scale.zip)).
 
 <p>
 {{< i18n "srsActivationLine" >}}
