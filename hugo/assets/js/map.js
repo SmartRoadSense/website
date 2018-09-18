@@ -11,8 +11,8 @@ const GEOCODER_URL = '/search';
 
 // create map
 let map = L.map('mapdiv', {
-  //center: [43.9167, 12.9000],
-  center: [43.186041, 13.085661],
+  center: [43.9167, 12.9000],
+  //center: [43.186041, 13.085661],
   zoom: 9
 });
 
@@ -21,10 +21,38 @@ L.tileLayer(OSM_URL, {
   attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://carto.com/attribution">CARTO</a> | Road data &copy; <a href="http://www.smartroadsense.it">SmartRoadSense</a> contributors'
 }).addTo(map);
 
+
+var info = L.control();
+
+info.onAdd = function (map) {
+    this._div = L.DomUtil.create('div', 'info-legend'); // create a div with a class "info"
+    this.update();
+    return this._div;
+};
+
+// method that we will use to update the control based on feature properties passed
+info.update = function (props) {
+    this._div.innerHTML = '<strong>Road Roughness<br>(PPE)</strong><ul>';
+
+    var labels = ["0.0 - 0.3" ,"0.3 - 0.5", "0.5 - 0.7", "0.7 - 1.0", "1.0 - 1.7", "> 1.7"];
+    var colors = ["rgb(62,138,0)" ,"rgb(224,214,20)", "rgb(238,128,18)", "rgb(252,40,17)", "rgb(179,14,11)", "rgb(59,4,3)"];
+
+    for (var i = 0; i < labels.length; i++){
+        this._div.innerHTML += '<i class="ppe-entry"><span class="circle" style="background: ' + colors[i] + '"></span>' + labels[i] + '</i>';
+    }
+
+    this._div.innerHTML += '</ul>';
+
+};
+
+info.addTo(map);
+
+
 // add srs tiles layer
 L.tileLayer(SRS_TILES_URL).addTo(map);
 
 // add #RisorgiMarche (RM) markers
+/*
 createRMMarker(L, map, 42.7899832, 13.251915, "07/01/2018", "Piero Pelu","Forca di Presta / Arquata del Tronto (AP)", "https://risorgimarche.it/eventi/piero-pelu/");
 createRMMarker(L, map, 43.1930427, 13.120854, "07/03/2018", "Angelo Branduardi","Piani di Crispiero - Monte d'Aria / Camerino - Castel Raimondo - Serrapetrona (MC)","https://risorgimarche.it/eventi/02-angelo-branduardi/");
 createRMMarker(L, map, 43.3209651, 13.227486, "07/06/2018", "Simone Cristicchi / GNU Quartet","La Roccaccia - San Lorenzo / San Severino Marche - Treia (MC)","https://risorgimarche.it/eventi/03-simone-cristicchi/");
@@ -40,7 +68,7 @@ createRMMarker(L, map, 42.945327, 13.313701 ,  "07/28/2018", "Paolo Belli and Bi
 createRMMarker(L, map, 42.972519, 13.303138 ,  "07/31/2018", "Festa a Sorpresa","Casalicchio / Amandola (FM)","https://risorgimarche.it/eventi/12-festa-a-sorpresa/");
 createRMMarker(L, map, 42.931799, 13.011071 ,  "08/01/2018", "Toquinho","Piano della Cura di Fematre / Visso - Pievetorina - Monte Cavallo (MC)","https://risorgimarche.it/eventi/13-toquinho/");
 createRMMarker(L, map, 42.914551, 13.844127 ,  "08/02/2018", "Neri Marcore / GNU Quartet","San Giacomo / Ascoli Piceno (AP)","https://risorgimarche.it/eventi/14-neri-marcore/");
-
+*/
 
 function createRMMarker(layer,map, lat, long, date, artist, location, url){
   var marker = layer.marker([lat, long]);
@@ -50,6 +78,8 @@ function createRMMarker(layer,map, lat, long, date, artist, location, url){
   
   return  marker;
 }
+
+
 
 
 
