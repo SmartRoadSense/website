@@ -1072,3 +1072,26 @@ footer {
         }
     }
 }
+
+//map
+.info-legend {
+    background: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: #00000044 2px solid;
+
+    i.ppe-entry {
+
+        margin-bottom: 10px;
+        display: block;
+
+        span.circle {
+            width: 18px;
+            height: 18px;
+            float: left;
+            margin-right: 8px;
+            opacity: 0.7;
+            border-radius: 18px;
+        }
+    }
+}
