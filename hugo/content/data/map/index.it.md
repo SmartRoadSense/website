@@ -3,10 +3,10 @@ title = "Mappa stradale"
 type = "page"
 
 css = [
-    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"
+    "http://cdn.leafletjs.com/leaflet/v1.3.4/leaflet.css"
 ]
 js = [
-    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+    "http://cdn.leafletjs.com/leaflet/v1.3.4/leaflet.js",
     "js/map.js"
 ]
 +++
