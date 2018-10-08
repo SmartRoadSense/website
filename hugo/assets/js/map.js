@@ -2,8 +2,14 @@
 // OSM tiles
 // Using CARTO tile server, see: https://carto.com/location-data-services/basemaps/
 const OSM_URL = 'https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png';
+
+var url = new URL(window.location.href);
+var mark = url.searchParams.get("mark");
+var all_data = url.searchParams.get("all");
+
+
 // SRS tiles
-const SRS_TILES_URL = '/api/v1/tiles/{z}/{x}/{y}';
+const SRS_TILES_URL = '/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
 // SRS data used for PPE visualization
 const SRS_DATA_BASE_URL = '';
 // Geocoder
