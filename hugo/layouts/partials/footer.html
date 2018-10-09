@@ -17,15 +17,15 @@
                         <h6>SmartRoadSense</h6>
                         <ul>
                             <li><a href="{{ "news" | absLangURL }}">{{ i18n "menuNews" }}</a></li>
-                            <li><a href="{{ relref . "project/about/index.md" | absLangURL }}">{{ i18n "menuProjectAbout" }}</a></li>
-                            <li><a href="{{ relref . "data/map/index.md" | absLangURL }}">{{ i18n "menuDataMap" }}</a></li>
-                            <li><a href="{{ relref . "data/open-data/index.md" | absLangURL }}">{{ i18n "menuDataOpen" }}</a></li>
-                            <li><a href="{{ relref . "data/developers/index.md" | absLangURL }}">{{ i18n "menuDataDevelopers" }}</a></li>
+                            <li><a href="{{ relref . "/project/about" | absLangURL }}">{{ i18n "menuProjectAbout" }}</a></li>
+                            <li><a href="{{ relref . "/data/map" | absLangURL }}">{{ i18n "menuDataMap" }}</a></li>
+                            <li><a href="{{ relref . "/data/open-data" | absLangURL }}">{{ i18n "menuDataOpen" }}</a></li>
+                            <li><a href="{{ relref . "/data/developers" | absLangURL }}">{{ i18n "menuDataDevelopers" }}</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-4">
                         <h6>{{ i18n "menuLegalSubtitle" }}</h6>
-                        <p>{{ i18n "menuLegalIntro" | safeHTML }} <a href="{{ relref . "data/privacy/index.md" | absLangURL }}">{{ i18n "readMoreClean" }}</a>.</p>
+                        <p>{{ i18n "menuLegalIntro" | safeHTML }} <a href="{{ relref . "/data/privacy" | absLangURL }}">{{ i18n "readMoreClean" }}</a>.</p>
                         <p>{{ i18n "menuLegalEuFunding" | safeHTML }}</p>
                     </div>
                     <div class="col-sm-12 col-md-4">
