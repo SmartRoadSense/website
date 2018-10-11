@@ -1,6 +1,9 @@
 +++
 date = "2018-08-23"
 title = "Intervista su StartupItalia!"
+
+cover = "cover.jpg"
+single-cover-default = true
 +++
 
 In un articolo pubblicato su **StartupItalia!**, Carlo Terzano intervista il prof.&nbsp;Alessandro Bogliolo dell'Università di Urbino su *SmartRoadSense*, iniziative di *crowdsensing*, cittadinanza attiva e l'importanza della manutenzione stradale, un tema tristemente attuale dopo la recente tragedia a Genova.
