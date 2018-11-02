@@ -5,23 +5,23 @@
 
 <div class="gallery row">
     {{- range $imgs -}}
-
         {{- $res := . -}}
-        {{- $root.Scratch.Set "srcset" "" -}}
+
+        {{- $srcset := "" -}}
         {{- range (slice 580 780) -}}
             {{- if lt . $res.Width -}}
-                {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
-                {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+                {{- $srcset = printf "%s%s" $srcset ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
+                {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
             {{- end -}}
         {{- end -}}
-        {{- $root.Scratch.Add "srcset" ($res.Resize "1280x q50").RelPermalink -}}
-        {{- $root.Scratch.Add "srcset" " 1280w" -}}
+        {{- $srcset = printf "%s%s" $srcset ($res.Resize "1280x q50").RelPermalink -}}
+        {{- $srcset = printf "%s%s" $srcset " 1280w" -}}
 
         <div class="col-12 col-md-6 col-lg-4">
             <div class="item">
                 <a href="{{ $res.RelPermalink }}">
                     <img src="{{ ($res.Resize "580x q50").RelPermalink }}"
-                        {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+                        {{ printf "srcset=\"%s\"" ($srcset) | safeHTMLAttr }}
                         />
                 </a>
                 {{ if .Params.didascaly }}

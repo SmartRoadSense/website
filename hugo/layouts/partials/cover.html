@@ -1,32 +1,31 @@
 {{- $root := . -}}
 
+{{- $coverlib := $.Site.GetPage "page" "library/covers" -}}
+{{- $covers := $coverlib.Resources.ByType "image" -}}
+{{- $resource := (index (shuffle $covers) 0) -}}
+
 {{- if and .Params.cover (not (isset .Params "single-cover-default")) -}}
     {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
-        {{- $root.Scratch.Set "resource" . -}}
+        {{- $resource = . -}}
     {{- end -}}
-{{- else -}}
-    {{- $coverlib := $.Site.GetPage "page" "library/covers" -}}
-    {{- $covers := $coverlib.Resources.ByType "image" -}}
-    {{- $root.Scratch.Set "resource" (index (shuffle $covers) 0) -}}
 {{- end -}}
 
-{{- $res := $root.Scratch.Get "resource" -}}
-{{- if ne $res nil -}}
-    {{- $root.Scratch.Set "srcset" "" -}}
+{{- if ne $resource nil -}}
+    {{- $srcset := "" -}}
     {{- range (slice 580 780 1280 1600 2048) -}}
-        {{- if lt . $res.Width -}}
-            {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
-            {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+        {{- if lt . $resource.Width -}}
+            {{- $srcset = printf "%s%s" $srcset ($resource.Resize (printf "%dx q50" .)).RelPermalink -}}
+            {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
         {{- end -}}
     {{- end -}}
-    {{- $root.Scratch.Add "srcset" $res.RelPermalink -}}
-    {{- $root.Scratch.Add "srcset" (printf " %dw" $res.Width) -}}
+    {{- $srcset = printf "%s%s" $srcset $resource.RelPermalink -}}
+    {{- $srcset = printf "%s%s" $srcset (printf " %dw" $resource.Width) -}}
 
     <div class="background">
         <img
-            src="{{ ($res.Resize "580x q50").RelPermalink }}"
+            src="{{ ($resource.Resize "580x q50").RelPermalink }}"
             alt=""
-            {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+            {{ printf "srcset=\"%s\"" $srcset | safeHTMLAttr }}
             />
     </div>
 {{- end -}}

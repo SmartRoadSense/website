@@ -1,30 +1,28 @@
 {{- $root := . -}}
-{{- $src := .Get "src" -}}
-{{- $bundle := .Get "bundle" -}}
 
-{{- if $bundle -}}
-    {{- $bundle := .Site.GetPage "page" $bundle -}}
-    {{- $root.Scratch.Set "res" ($bundle.Resources.GetMatch $src) -}}
-{{- else -}}
-    {{- $root.Scratch.Set "res" ($root.Page.Resources.GetMatch $src) -}}
+{{- $resources := .Page.Resources -}}
+{{- if (.Get "bundle") -}}
+    {{- $bundlePage := .Site.GetPage "page" (.Get "bundle") -}}
+    {{- $resources = $bundlePage.Resources -}}
 {{- end -}}
 
-{{- with $root.Scratch.Get "res" -}}
+{{- with $resources.GetMatch (.Get "src") -}}
     {{- $res := . -}}
-    {{- $root.Scratch.Set "srcset" "" -}}
-    {{- range (slice 580 780 1280) -}}
+    {{- $srcset := "" -}}
+
+    {{- range (slice 480 760 1280 1600) -}}
         {{- if lt . $res.Width -}}
-            {{- $root.Scratch.Add "srcset" ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
-            {{- $root.Scratch.Add "srcset" (printf " %dw, " .) -}}
+            {{- $srcset = printf "%s%s" $srcset ($res.Resize (printf "%dx q50" .)).RelPermalink -}}
+            {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
         {{- end -}}
     {{- end -}}
-    {{- $root.Scratch.Add "srcset" ($res.Resize "1600x q50").RelPermalink -}}
-    {{- $root.Scratch.Add "srcset" " 1600w" -}}
+    {{- $srcset = printf "%s%s" $srcset $res.RelPermalink -}}
+    {{- $srcset = printf "%s%s" $srcset (printf " %dw" $res.Width) -}}
 
 <div class="picture{{ if $root.Get "class" }} {{ $root.Get "class" }}{{ end }}">
     <a href="{{ $res.RelPermalink }}">
-        <img src="{{ ($res.Resize "580x q50").RelPermalink }}"
-            {{ printf "srcset=\"%s\"" ($root.Scratch.Get "srcset") | safeHTMLAttr }}
+        <img src="{{ ($res.Resize "480x q50").RelPermalink }}"
+            {{ printf "srcset=\"%s\"" $srcset | safeHTMLAttr }}
             {{ if $root.Get "class "}}class="{{ $root.Get "class" }}"{{ end -}}
             />
     </a>

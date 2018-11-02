@@ -3,11 +3,12 @@
 {{- if .Params.cover -}}
     {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
         {{- $res := . -}}
-        {{- $root.Scratch.Set "thsrcset" "" -}}
+        {{- $srcset := "" -}}
+
         {{- range (slice 512 1024 1280 1600) -}}
             {{- if lt . $res.Width -}}
-                {{- $root.Scratch.Add "thsrcset" ($res.Fill (printf "%dx%d q50 Center" . .)).RelPermalink -}}
-                {{- $root.Scratch.Add "thsrcset" (printf " %dw, " .) -}}
+                {{- $srcset = printf "%s%s" $srcset ($res.Fill (printf "%dx%d q50 Center" . .)).RelPermalink -}}
+                {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
             {{- end -}}
         {{- end -}}
 
@@ -17,7 +18,7 @@
                     src="{{ ($res.Fill "256x256 q50 Center").RelPermalink }}"
                     alt=""
                     width="256" height="256"
-                    {{ printf "srcset=\"%s\"" (substr ($root.Scratch.Get "thsrcset") 0 -2) | safeHTMLAttr }}
+                    {{ printf "srcset=\"%s\"" (substr $srcset 0 -2) | safeHTMLAttr }}
                     />
             </div>
         </div>
