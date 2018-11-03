@@ -17,3 +17,5 @@ In questa occasione, il servizio *SmartRoadSense* espanderà la sua copertura e 
 {{< image src="road-to-websummit2018-cover.jpg" >}}
 
 CROWD4ROADS lancia la campagna **“Road to Web Summit”**: se sarai in viaggio verso (o da) Web Summit la prossima settimana, se prenderai un taxi o condividerai un viaggio, oppure se ti troverai semplicemente in un veicolo in giro per il Portogallo, sfrutta questa occasione per unirti alla nostra iniziativa e [scarica l’applicazione mobile SmartRoadSense]({{< langRef "apps" >}})!
+
+(Foto di [Fernando García Redondo](https://www.flickr.com/photos/fgr1986/28084300824/).)

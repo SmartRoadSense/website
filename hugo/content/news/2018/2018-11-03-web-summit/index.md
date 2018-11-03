@@ -17,3 +17,5 @@ On that occasion, *SmartRoadSense* will expand to cover Portugal, which will thu
 {{< image src="road-to-websummit2018-cover.jpg" >}}
 
 CROWD4ROADS also launches the **“Road to Web Summit”** campaign: if you are traveling to (or from) the event next week, if you are taking a taxi ride, or if you are just traveling by car around Portugal, take this chance to join our initiative and [download the SmartRoadSense mobile app]({{< langRef "apps" >}})!
+
+(Picture by [Fernando García Redondo](https://www.flickr.com/photos/fgr1986/28084300824/).)
