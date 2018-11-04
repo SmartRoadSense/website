@@ -83,7 +83,7 @@ js = [
 
 <div class="row stats">
     <div class="col-6 col-lg-3">
-        <div class="stat-counter">4</div>
+        <div class="stat-counter">5</div>
         <div class="stat-description">countries</div>
     </div>
     <div class="col-6 col-lg-3">
