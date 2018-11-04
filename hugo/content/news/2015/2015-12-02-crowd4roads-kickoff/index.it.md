@@ -2,7 +2,7 @@
 title = "CROWD4ROADS: il progetto Europeo"
 date = "2015-12-02"
 
-cover = "c4rs-banner"
+thumbnail = "c4rs-banner"
 +++
 
 L’economia della condivisione applicata alla tutela e alla sostenibilità della rete stradale in Italia e nel mondo.

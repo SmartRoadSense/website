@@ -3,7 +3,7 @@ date = "2018-09-05"
 title = "Conclusione dell’estate marchigiana"
 slug = "eventi-c4rs-estate-marchigiana-2018"
 
-cover = "cover.jpg"
+thumbnail = "cover.jpg"
 +++
 
 Quest'anno Regione&nbsp;Marche ed il progetto [CROWD4ROADS](http://www.c4rs.eu) hanno patrocinato [una serie di eventi pubblici](http://www.regione.marche.it/News-ed-Eventi/Post/43630/OTTIMI-I-RISULTATI-DELLA-SINERGIA-TRA-IL-PROGETTO-EUROPEO-CROWD4ROADS-E-GLI-EVENTI-TURISTICI-REGIONALI) svoltisi durante gli ultimi mesi estivi.

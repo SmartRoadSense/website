@@ -2,8 +2,7 @@
 date = "2018-11-03"
 title = "La strada verso Web Summit 2018"
 
-cover = "lisbon.jpg"
-single-cover-default = true
+thumbnail = "lisbon.jpg"
 +++
 
 La più grande conferenza sulla tecnologia d’Europa, [Web&nbsp;Summit&nbsp;2018](https://websummit.com/), avrà inizio lunedì **5 novembre** a **Lisbona**: tra i giganti del Web, aziende leader di mercato, start up innovative ed entusiasti d’ogni parte del mondo, il [progetto CROWD4ROADS](http://www.c4rs.eu) sarà presente, ospitato dal **“Social Good Village”** organizzato dai nostri partner del [Social Good Accelerator](http://socialgoodaccelerator.eu/).

@@ -2,7 +2,7 @@
 title = "Due settimane dopo"
 date = "2015-03-07"
 
-cover = "map"
+thumbnail = "map"
 +++
 
 Sono passate solo due settimane dal lancio di *SmartRoadSense* in Italia.

@@ -4,28 +4,27 @@
 {{- $covers := $coverlib.Resources.ByType "image" -}}
 {{- $resource := (index (shuffle $covers) 0) -}}
 
-{{- if and .Params.cover (not (isset .Params "single-cover-default")) -}}
+{{- if .Params.cover -}}
     {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
         {{- $resource = . -}}
     {{- end -}}
 {{- end -}}
 
-{{- if ne $resource nil -}}
+{{- if $resource -}}
     {{- $srcset := "" -}}
-    {{- range (slice 580 780 1280 1600 2048) -}}
+    {{- range (slice 640 1480 2048) -}}
         {{- if lt . $resource.Width -}}
             {{- $srcset = printf "%s%s" $srcset ($resource.Resize (printf "%dx q50" .)).RelPermalink -}}
             {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
         {{- end -}}
     {{- end -}}
-    {{- $srcset = printf "%s%s" $srcset $resource.RelPermalink -}}
-    {{- $srcset = printf "%s%s" $srcset (printf " %dw" $resource.Width) -}}
 
     <div class="background">
         <img
-            src="{{ ($resource.Resize "580x q50").RelPermalink }}"
+            src="{{ ($resource.Resize "640x q50").RelPermalink }}"
             alt=""
-            {{ printf "srcset=\"%s\"" $srcset | safeHTMLAttr }}
+            aria-hidden="true"
+            {{ printf "srcset=\"%s\"" (substr $srcset 0 -2) | safeHTMLAttr }}
             />
     </div>
 {{- end -}}

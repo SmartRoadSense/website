@@ -2,7 +2,7 @@
 title = "Tre settimane dopo"
 date = "2015-03-14"
 
-cover = "map"
+thumbnail = "map"
 +++
 
 A tre settimane dal lancio di *SmartRoadSense* in Italia, lo **0,5%** delle strade italiane è già stato percorso e classificato almeno una volta dai nostri utenti.

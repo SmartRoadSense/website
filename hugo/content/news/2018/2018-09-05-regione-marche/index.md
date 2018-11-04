@@ -3,7 +3,7 @@ date = "2018-09-05"
 title = "Estate Marchigiana events come to a close"
 slug = "estate-marchigiana-events-close-summer-2018"
 
-cover = "cover.jpg"
+thumbnail = "cover.jpg"
 +++
 
 This year, Regione&nbsp;Marche and the [CROWD4ROADS](http://www.c4rs.eu) project have [partnered in a long series of public events](http://www.regione.marche.it/News-ed-Eventi/Post/43630/OTTIMI-I-RISULTATI-DELLA-SINERGIA-TRA-IL-PROGETTO-EUROPEO-CROWD4ROADS-E-GLI-EVENTI-TURISTICI-REGIONALI) that were held during the summer months.

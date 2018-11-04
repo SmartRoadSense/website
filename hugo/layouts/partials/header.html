@@ -34,8 +34,12 @@
         <meta property="og:site_name" content="SmartRoadSense" />
         <meta property="fb:app_id" content="674012086302277" />
         <meta property="fb:admins" content="100000665857116,1173236424" />
-        {{ if isset .Params "cover" -}}
+        {{ if .Params.cover -}}
             {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+            <meta property="og:image" content="{{ .Permalink }}" />
+            {{- end -}}
+        {{- else if .Params.thumbnail -}}
+            {{- with .Resources.GetMatch (printf "%s*" .Params.thumbnail) -}}
             <meta property="og:image" content="{{ .Permalink }}" />
             {{- end -}}
         {{- else -}}

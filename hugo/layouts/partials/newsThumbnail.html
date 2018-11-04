@@ -1,26 +1,23 @@
 {{- $root := . -}}
 
-{{- if .Params.cover -}}
-    {{- with .Resources.GetMatch (printf "%s*" .Params.cover) -}}
+        <div class="thumbnail">
+{{- if .Params.thumbnail -}}
+    {{- with .Resources.GetMatch (printf "%s*" .Params.thumbnail) -}}
         {{- $res := . -}}
         {{- $srcset := "" -}}
 
-        {{- range (slice 512 1024 1280 1600) -}}
+        {{- range (slice 256 512 1024) -}}
             {{- if lt . $res.Width -}}
                 {{- $srcset = printf "%s%s" $srcset ($res.Fill (printf "%dx%d q50 Center" . .)).RelPermalink -}}
                 {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
             {{- end -}}
         {{- end -}}
-
-        <div class="thumbnail">
-            <div class="squarer">
-                <img
-                    src="{{ ($res.Fill "256x256 q50 Center").RelPermalink }}"
-                    alt=""
-                    width="256" height="256"
-                    {{ printf "srcset=\"%s\"" (substr $srcset 0 -2) | safeHTMLAttr }}
-                    />
-            </div>
-        </div>
+            <img
+                src="{{ ($res.Fill "256x256 q50 Center").RelPermalink }}"
+                alt=""
+                width="256" height="256"
+                {{ printf "srcset=\"%s\"" (substr $srcset 0 -2) | safeHTMLAttr }}
+                />
     {{ end -}}
 {{- end }}
+        </div>

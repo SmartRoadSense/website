@@ -4,7 +4,7 @@
             <div class="metadata">
                 {{ partial "newsThumbnail" . }}
 
-                <div class="date{{ if .Params.cover }} shade{{ end }}">
+                <div class="date{{ if .Params.thumbnail }} shade{{ end }}">
                     <div class="day">{{ .PublishDate.Format "2" }}</div>
                     <div class="month-year">
                         <span class="month">{{ .PublishDate.Format "Jan" }}</span>

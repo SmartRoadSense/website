@@ -2,7 +2,7 @@
 title = "Si parte!"
 date = "2015-02-21"
 
-cover = "srs_pesaro_kickoff_01"
+thumbnail = "srs_pesaro_kickoff_01"
 truncate = true
 +++
 

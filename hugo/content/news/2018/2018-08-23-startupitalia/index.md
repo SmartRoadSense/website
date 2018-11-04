@@ -2,8 +2,7 @@
 date = "2018-08-23"
 title = "Interview on StartupItalia!"
 
-cover = "cover.jpg"
-single-cover-default = true
+thumbnail = "cover.jpg"
 +++
 
 In a new article published on **StartupItalia!**, Carlo Terzano interviews prof.&nbsp;Alessandro Bogliolo from the University of Urbino and talks about *SmartRoadSense*, crowdsensing initiatives, active citizenship, and the importance road infrastructure maintenance, felt by many to be especially inadequate in the wake of the recent tragedy in Genoa.

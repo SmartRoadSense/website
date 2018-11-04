@@ -3,7 +3,7 @@ date = "2015-12-13"
 title = "SmartRoadSense, reloaded!"
 +++
 
-The new and improved **SmartRoadSense&nbsp;3.0 is now ready**, right on time for the holiday season, both for [Apple iOS](https://itunes.apple.com/us/app/smartroadsense/id1063716780?l=it&ls=1&mt=8) and [Google Android](https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense)…
+The new and improved **SmartRoadSense&nbsp;3.0 is now ready**, right on time for the holiday season, both for [Apple iOS](https://itunes.apple.com/us/app/smartroadsense/id1063716780?l=it&ls=1&mt=8) and [Google Android](https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense).
 
 The original SmartRoadSense app for Android was released in February 2015 and has been on the road for months, achieving almost **25.000&nbsp;kms** of tracked roads thanks to our beta-testers and early adopters!
 

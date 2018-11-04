@@ -2,8 +2,7 @@
 date = "2017-10-14"
 title = "I sensori dello smartphone possono rendere le strade più verdi"
 
-cover = "horizon.jpg"
-single-cover-default = true
+thumbnail = "horizon.jpg"
 +++
 
 *SmartRoadSense* ed il progetto [CROWD4ROADS](http://www.c4rs.eu) sono citati in **HORIZON**: la rivista dell'Unione Europea di Ricerca &amp; Sviluppo.

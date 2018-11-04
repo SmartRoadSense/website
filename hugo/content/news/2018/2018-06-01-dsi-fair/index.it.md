@@ -2,8 +2,7 @@
 date = "2018-06-01"
 title = "Ci vediamo al DSI Fair 2018!"
 
-cover = "TweetCard-projects.jpg"
-single-cover-default = true
+thumbnail = "TweetCard-projects.jpg"
 +++
 
 Dal **6 al 7 giugno** saremo al [Digital Social Innovation Fair&nbsp;2018](https://dsifair.eu).

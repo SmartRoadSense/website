@@ -3,6 +3,7 @@ date = "2018-07-05"
 title = "Explore RisorgiMarche with CROWD4ROADS and SmartRoadSense"
 
 cover = "risorgimarche-cover.jpg"
+thumbnail = "risorgimarche-cover.jpg"
 +++
 
 Road quality is an essential factor for the social and economic development of any territory. Timely maintenance operations of the infrastructure are paramount and rely on up-to-date knowledge about road conditions. For years [University of Urbino](http://informatica.uniurb.it/) has been developing technologies that allow all drivers to contribute anonymously to the continuous collection of road quality data.

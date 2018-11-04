@@ -2,8 +2,7 @@
 date = "2017-10-14"
 title = "Sensors in your smartphone could make roads greener"
 
-cover = "horizon.jpg"
-single-cover-default = true
+thumbnail = "horizon.jpg"
 +++
 
 *SmartRoadSense* and the [CROWD4ROADS](http://www.c4rs.eu) project are cited in **HORIZON**, the EU&nbsp;Research &amp; Innovation magazine:

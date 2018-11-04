@@ -748,7 +748,7 @@ article {
 
 nav.intra-section {
     font-size: ($font-size-base * 0.9);
-    margin-top: $font-size-base;
+    margin-top: ($font-size-base * 2);
     margin-bottom: $font-size-base;
 
     .link {

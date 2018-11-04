@@ -2,7 +2,7 @@
 title = "Mappato l’1% delle strade italiane"
 date = "2015-04-08"
 
-cover = "map"
+thumbnail = "map"
 +++
 
 Da quando [è stato lanciato il 21 febbraio scorso]({{< langRef "news/2015-02-21-kick-off/index.md" >}}), *SmartRoadSense* ha già mappato più dell’**1%** delle strade italiane grazie all’attenzione dei suoi primi utenti.

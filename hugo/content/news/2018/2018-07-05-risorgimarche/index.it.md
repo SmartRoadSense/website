@@ -3,6 +3,7 @@ date = "2018-07-05"
 title = "CROWD4ROADS e RisorgiMarche insieme per i territori colpiti dal sisma"
 
 cover = "risorgimarche-cover.jpg"
+thumbnail = "risorgimarche-cover.jpg"
 +++
 
 La qualità delle strade è un fattore di sviluppo territoriale imprescindibile. La manutenzione tempestiva è indispensabile e si basa sulla conoscenza delle priorità. Da anni l'[Università di Urbino](http://informatica.uniurb.it/) è impegnata nello sviluppo di tecnologie che consentano a tutti gli automobilisti di contribuire in modo anonimo al monitoraggio continuo delle condizioni delle strade su cui viaggiano.

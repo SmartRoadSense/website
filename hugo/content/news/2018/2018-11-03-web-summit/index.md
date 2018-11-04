@@ -2,8 +2,7 @@
 date = "2018-11-03"
 title = "The Road to Web Summit 2018"
 
-cover = "lisbon.jpg"
-single-cover-default = true
+thumbnail = "lisbon.jpg"
 +++
 
 The largest tech conference in Europe, [Web&nbsp;Summit&nbsp;2018](https://websummit.com/), will start next monday **5 November** in **Lisbon**: among the giants of the Web, industry leaders, entrepreneurs, and tech enthusiasts, the [CROWD4ROADS project](http://www.c4rs.eu) will also be there and join the **“Social Innovation Village”** hosted by the [Social Good Accelerator](http://socialgoodaccelerator.eu/).

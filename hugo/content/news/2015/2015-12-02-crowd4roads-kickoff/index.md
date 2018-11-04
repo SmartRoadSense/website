@@ -2,7 +2,7 @@
 title = "CROWD4ROADS: the European project"
 date = "2015-12-02"
 
-cover = "c4rs-banner"
+thumbnail = "c4rs-banner"
 +++
 
 Ideas such as “sharing economy“ and “active citizenship” providing a sizable contribution to sustainability initiatives about road infrastructure, passenger transport, and traffic.

@@ -2,6 +2,7 @@
 date = "2016-05-27"
 title = "SmartRoadSense nel cloud"
 
+thumbnail = "cloud.jpg"
 cover = "cloud.jpg"
 +++
 

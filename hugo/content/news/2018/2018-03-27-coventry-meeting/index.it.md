@@ -2,7 +2,7 @@
 date = "2018-03-27"
 title = "Sviluppatori, salutate i game designer"
 
-cover = "artwork.jpg"
+thumbnail = "artwork.jpg"
 +++
 
 Durante l'ultimo meeting di progetto [CROWD4ROADS](http://www.c4rs.eu) a Coventry, UK, un nutrito gruppo di game designer ha consegnato la versione finale degli artwork e dei documenti di design agli sviluppatori di *SmartRoadSense*&hellip;

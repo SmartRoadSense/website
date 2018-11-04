@@ -2,7 +2,7 @@
 title = "In two weeks"
 date = "2015-03-07"
 
-cover = "map"
+thumbnail = "map"
 +++
 
 Only two weeks have passed since the launch of *SmartRoadSense* in Italy.

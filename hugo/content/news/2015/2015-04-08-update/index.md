@@ -2,7 +2,7 @@
 title = "Mapped 1% of Italian roads"
 date = "2015-04-08"
 
-cover = "map"
+thumbnail = "map"
 +++
 
 *SmartRoadSense* was [launched on 21 February]({{< langRef "news/2015-02-21-kick-off/index.md" >}}).

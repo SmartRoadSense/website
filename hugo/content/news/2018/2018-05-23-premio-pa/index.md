@@ -2,7 +2,7 @@
 date = "2018-05-23"
 title = "CROWD4ROADS gets the “Premio PA Sostenibile” award"
 
-cover = "c4rs-premio-pa-01.jpg"
+thumbnail = "c4rs-premio-pa-01.jpg"
 
 truncate = true
 +++

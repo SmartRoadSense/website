@@ -2,7 +2,7 @@
 date = "2018-09-29"
 title = "Resoconto della Summer School CROWD4ROADS"
 
-cover = "cover.jpg"
+thumbnail = "cover.jpg"
 
 [[resources]]
 src = "c4rs-summer-school-1.jpg"

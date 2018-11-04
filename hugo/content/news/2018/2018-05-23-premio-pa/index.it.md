@@ -2,7 +2,7 @@
 date = "2018-05-23"
 title = "CROWD4ROADS ottiene il “Premio PA Sostenibile”"
 
-cover = "c4rs-premio-pa-01.jpg"
+thumbnail = "c4rs-premio-pa-01.jpg"
 
 truncate = true
 +++

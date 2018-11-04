@@ -3,7 +3,7 @@ date = "2015-12-13"
 title = "SmartRoadSense, reloaded!"
 +++
 
-La nuova e migliorata app di **SmartRoadSense&nbsp;3.0 è pronta**, in tempo per accompagnarvi nelle vacanze natalizie, per [Apple iOS](https://itunes.apple.com/us/app/smartroadsense/id1063716780?l=it&ls=1&mt=8) e [Google Android](https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense)…
+La nuova e migliorata app di **SmartRoadSense&nbsp;3.0 è pronta**, in tempo per accompagnarvi nelle vacanze natalizie, per [Apple iOS](https://itunes.apple.com/us/app/smartroadsense/id1063716780?l=it&ls=1&mt=8) e [Google Android](https://play.google.com/store/apps/details?id=it.uniurb.smartroadsense).
 
 La prima versione è stata rilasciata in febbraio 2015 e grazie alla partecipazione di beta tester e pionieri ha tracciato quasi **25.000&nbsp;km** di strade, più del 3% di tutte le strade italiane.
 
