@@ -902,7 +902,9 @@ nav.intra-section {
 }
 
 ul.pagination {
+    display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 
     li {
         background: $gray-200;
@@ -915,6 +917,7 @@ ul.pagination {
         margin: 0 0.2em;
         width: 3em;
         height: 3em;
+        flex-shrink: 0;
 
         text-align: center;
         line-height: 2.9em;
