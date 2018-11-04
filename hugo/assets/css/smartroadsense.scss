@@ -645,12 +645,18 @@ article {
 
     .metadata {
         position: relative;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
         min-height: 5em;
+        margin-bottom: ($font-size-base * 1.5);
 
         transform: rotateZ(3deg);
 
-        margin-bottom: ($font-size-base * 1.5);
         @include media-breakpoint-up(md) {
+            width: 100%;
+            margin-left: inherit;
+            margin-right: inherit;
             min-height: 8em;
             margin-bottom: 0;
         }
@@ -659,30 +665,22 @@ article {
             position: relative;
 
             // Force square aspect ratio
-            width: 40%;
+            width: 100%;
             height: 0;
-            padding-bottom: 40%;
-            margin-left: auto;
-            margin-right: auto;
+            padding-bottom: 100%;
 
-            @include media-breakpoint-up(md) {
-                width: 100%;
-                padding-bottom: 100%;
-                margin-left: 0;
-                margin-right: 0;
-            }
+            border-radius: 50%;
+            box-shadow: $shadow 4px 4px 8px;
+            overflow: hidden;
 
-            .squarer {
-                position: absolute;
-                top: 0; left: 0; bottom: 0; right: 0;
-            }
+            background-color: $primary;
+            border: solid 5px white;
 
             img {
-                width: 100%;
-                height: 100%;
+                position: absolute;
+                top: 0; left: 0; bottom: 0; right: 0;
 
-                border-radius: 50%;
-                box-shadow: $shadow 4px 4px 8px;
+                object-fit: cover;
             }
         }
 
@@ -691,37 +689,27 @@ article {
             top: 0; left: 0; bottom: 0; right: 0;
 
             text-align: center;
-            color: $black;
+            color: $white;
+            text-shadow: $shadow 2px 2px 4px;
 
             display: flex;
             justify-content: center;
             flex-direction: column;
             line-height: 1;
 
-            border-bottom: dashed 3px $gray-500;
-            @include media-breakpoint-down(sm) {
-                border-bottom: none;
-            }
-
             .day {
                 font-size: $font-size-h1;
                 font-weight: $font-weight-bold;
+                margin-bottom: 2px;
             }
             .month-year {
-                font-size: ($font-size-base * 1.4);
+                font-size: ($font-size-base * 1.5);
             }
 
             &.shade {
-                @include media-breakpoint-down(sm) {
-                    width: 40%;
-                    left: 30%;
-                }
-
                 border-radius: 50%;
                 background: transparentize($black, 0.8);
-                color: $white;
-                text-shadow: $shadow 1px 1px 3px;
-                border-bottom: none;
+                margin: 5px;
             }
         }
     }

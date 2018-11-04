@@ -12,48 +12,63 @@
         </header>
 
         <div class="main">
-
-        <article id="news-{{ .UniqueID }}">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>{{ .Title }}</h1>
-
-                        <div class="small-metadata">
-                            <div class="date">
-                                <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
-                                {{ .PublishDate.Format "Monday, 2 January 2006" }}
-                            </div>
-
-                            <div class="permalink">
-                                <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
-                                <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
-                            </div>
-                        </div>
-
-                        <div class="content">
-                            {{ .Content }}
-                        </div>
-                    </div>
-                </div>
-
-                <nav class="intra-section">
+                <article id="news-{{ .UniqueID }}">
                     <div class="row">
-                        <div class="col-md-6 link">
-                            {{ if .PrevInSection }}
-                            <img src="{{ "icons/arrow-thick-left.svg" | absURL }}" class="icon" alt="" /> <a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
-                            {{ end }}
-                        </div>
-                        <div class="col-md-6 link text-right">
-                            {{ if .NextInSection }}
-                            <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a> <img src="{{ "icons/arrow-thick-right.svg" | absURL }}" class="icon" alt="" />
-                            {{ end }}
-                        </div>
-                    </div>
-                </nav>
-            </div>
-        </article>
 
-        </div>
+                        <div class="col-12 col-md-3">
+                            <div class="metadata">
+                                {{ partial "newsThumbnail" . }}
+
+                                <div class="date{{ if .Params.thumbnail }} shade{{ end }}">
+                                    <div class="day">{{ .PublishDate.Format "2" }}</div>
+                                    <div class="month-year">
+                                        <span class="month">{{ .PublishDate.Format "Jan" }}</span>
+                                        <span class="year">{{ .PublishDate.Format "2006" }}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-md-9">
+                            <h1>{{ .Title }}</h1>
+
+                            <div class="content">
+                                {{ .Content }}
+                            </div>
+
+                            <div class="small-metadata">
+                                <div class="date">
+                                    <img src="{{ "icons/calendar.svg" | absURL }}" class="icon" alt="Calendar icon" />
+                                    {{ .PublishDate.Format "Monday, 2 January 2006" }}
+                                </div>
+
+                                <div class="permalink">
+                                    <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
+                                    <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
+                                </div>
+                            </div>
+
+                            <nav class="intra-section">
+                                <div class="row">
+                                    <div class="col-md-6 link">
+                                        {{ if .PrevInSection }}
+                                        <img src="{{ "icons/arrow-thick-left.svg" | absURL }}" class="icon" alt="" />&nbsp;<a href="{{ .PrevInSection.RelPermalink }}">{{ .PrevInSection.Title }}</a>
+                                        {{ end }}
+                                    </div>
+                                    <div class="col-md-6 link text-right">
+                                        {{ if .NextInSection }}
+                                        <a href="{{ .NextInSection.RelPermalink }}">{{ .NextInSection.Title }}</a>&nbsp;<img src="{{ "icons/arrow-thick-right.svg" | absURL }}" class="icon" alt="" />
+                                        {{ end }}
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+
+                    </div><!-- /.row -->
+                </article>
+
+            </div><!-- /.container -->
+        </div><!-- /.main -->
 
 {{ partial "footer.html" . }}
