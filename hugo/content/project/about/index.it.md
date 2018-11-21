@@ -3,7 +3,7 @@ title = "Informazioni"
 type = "page"
 +++
 
-*SmartRoadSense* è un progetto della [Scuola di Scienze e Tecnologie dell’Informazione](http://www.uniurb.it) dell’Università di Urbino e dell’[Associazione Culturale NeuNet](http://www.neunet.it).
+*SmartRoadSense* è un progetto della [Scuola di Scienze e Tecnologie dell’Informazione](http://www.uniurb.it) dell’Università di Urbino.
 Il progetto è stato lanciato nel 2013 ed è stato finanziato in parte dalla Fondazione Cassa di Risparmio di Pesaro e da Autolinee Vitali, attraverso un finanziamento provinciale per azioni di affiancamento al management aziendale.
 
 Nel 2015, *SmartRoadSense* è entrato a far parte del progetto [CROWD4ROADS](http://www.c4rs.eu) come uno dei suoi componenti fondamentali.
