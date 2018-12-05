@@ -993,7 +993,7 @@ $footer-gutter-color: lighten($footer-background, 15%);
 footer {
     background: $footer-background;
     padding-top: ($font-size-base * 1.5);
-    padding-bottom: ($font-size-base * 1.5);
+    padding-bottom: ($font-size-base * 5);
     font-size: $small-font-size;
     color: $footer-text-color;
 
@@ -1069,7 +1069,27 @@ footer {
     }
 }
 
-//map
+// Announcement bar
+div.announcement {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    background: $primary;
+    color: $gray-100;
+    font-size: ($font-size-base * 1.2);
+    font-weight: $font-weight-bold;
+    padding: 1em;
+    text-align: center;
+
+    a, a:visited {
+        color: $white;
+        text-decoration: underline;
+    }
+}
+
+ // Map
 .info-legend {
     background: white;
     border-radius: 5px;
@@ -1077,7 +1097,6 @@ footer {
     border: #00000044 2px solid;
 
     i.ppe-entry {
-
         margin-bottom: 10px;
         display: block;
 

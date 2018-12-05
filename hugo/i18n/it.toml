@@ -75,3 +75,6 @@ other = "Codice copiato negli appunti."
 
 [howToCiteWebsite]
 other = "Come citare questo sito web"
+
+[footerServiceDown]
+other = "Il servizio è momentaneamente offline per un guasto. Seguici su <a href=\"https://twitter.com/smartroadsense\">Twitter</a>."

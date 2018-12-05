@@ -75,3 +75,6 @@ other = "Code copied to your clipboard."
 
 [howToCiteWebsite]
 other = "How to cite this website"
+
+[footerServiceDown]
+other = "The service is currently unavailable. Follow us on <a href=\"https://twitter.com/smartroadsense\">Twitter</a> for updates."
