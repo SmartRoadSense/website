@@ -3,6 +3,8 @@ date = "2018-11-03"
 title = "The Road to Web Summit 2018"
 
 thumbnail = "lisbon.jpg"
+
+copyright = "Picture by Fernando García Redondo on <a href=\"https://www.flickr.com/photos/fgr1986/28084300824/\">Flickr</a>."
 +++
 
 The largest tech conference in Europe, [Web&nbsp;Summit&nbsp;2018](https://websummit.com/), will start next monday **5 November** in **Lisbon**: among the giants of the Web, industry leaders, entrepreneurs, and tech enthusiasts, the [CROWD4ROADS project](http://www.c4rs.eu) will also be there and join the **“Social Innovation Village”** hosted by the [Social Good Accelerator](http://socialgoodaccelerator.eu/).
@@ -16,5 +18,3 @@ On that occasion, *SmartRoadSense* will expand to cover Portugal, which will thu
 {{< image src="road-to-websummit2018-cover.jpg" >}}
 
 CROWD4ROADS also launches the **“Road to Web Summit”** campaign: if you are traveling to (or from) the event next week, if you are taking a taxi ride, or if you are just traveling by car around Portugal, take this chance to join our initiative and [download the SmartRoadSense mobile app]({{< langRef "apps" >}})!
-
-(Picture by [Fernando García Redondo](https://www.flickr.com/photos/fgr1986/28084300824/).)

@@ -714,13 +714,17 @@ article {
         }
     }
 
-    .small-metadata {
+    .small-metadata, .copyright-note {
         font-size: ($font-size-base * 0.9);
         color: $gray-600;
         margin-bottom: $font-size-base;
 
         a {
             color: $gray-600;
+        }
+        a:hover {
+            color: $gray-800;
+            text-decoration: underline;
         }
     }
 

@@ -13,6 +13,7 @@
                 </div>
             </div>
         </div>
+
         <div class="col-12 col-md-9">
             <h2><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ .Title }}</a></h2>
 
@@ -26,6 +27,12 @@
 
             {{ if .Params.truncate }}
             <p><a href="{{ .RelPermalink }}" title ="{{ .Title }}">{{ i18n "readMore" }}</a></p>
+            {{ end }}
+
+            {{ if .Params.copyright }}
+            <div class="copyright-note">
+                {{ .Params.copyright | safeHTML }}
+            </div>
             {{ end }}
         </div>
     </div>

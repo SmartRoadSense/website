@@ -47,6 +47,12 @@
                                     <img src="{{ "icons/link-intact.svg" | absURL }}" class="icon" alt="Link icon" />
                                     <a href="{{ .Permalink }}">{{ i18n "permalink" }}</a>
                                 </div>
+
+                                {{ if .Params.copyright }}
+                                <div class="copyright-note">
+                                    {{ .Params.copyright | safeHTML }}
+                                </div>
+                                {{ end }}
                             </div>
 
                             <nav class="intra-section">
