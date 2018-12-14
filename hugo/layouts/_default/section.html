@@ -1,0 +1,30 @@
+{{ partial "header.html" . }}
+{{ partial "navbar.html" . }}
+
+        <header>
+            {{ partial "cover.html" . }}
+            <div class="occluder"></div>
+            <div class="bottom-aligner">
+                <div class="container">
+                    <h1><span>{{ .Title }}</span></h1>
+                </div>
+            </div>
+        </header>
+
+        <div class="main">
+
+        <section>
+            <div class="container">
+
+                <ul>
+{{ range $index, $element := .Paginator.Pages }}
+                    <li><a href="{{ $element.RelPermalink }}">{{ $element.Title }}</a></li>
+{{ end }}
+                </ul>
+
+            </div>
+        </section>
+
+        </div>
+
+{{ partial "footer.html" . }}

@@ -3,6 +3,7 @@ title = "SmartRoadSense"
 defaultContentLanguage = "en"
 enableMissingTranslationPlaceholders = true
 timeout = 100000
+disableKinds = ["taxonomy", "taxonomyTerm"]
 
 [permalinks]
 news = "/:section/:year/:month/:slug/"
