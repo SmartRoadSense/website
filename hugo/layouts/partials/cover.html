@@ -12,7 +12,7 @@
 
 {{- if $resource -}}
     {{- $srcset := "" -}}
-    {{- range (slice 640 1480 2048) -}}
+    {{- range (slice 640 1280 1600) -}}
         {{- if lt . $resource.Width -}}
             {{- $srcset = printf "%s%s" $srcset ($resource.Resize (printf "%dx q50" .)).RelPermalink -}}
             {{- $srcset = printf "%s%s" $srcset (printf " %dw, " .) -}}
