@@ -19,7 +19,7 @@
 
         <div class="col-12 col-md-6 col-lg-4">
             <div class="item">
-                <a href="{{ $res.RelPermalink }}">
+                <a href="{{ $res.RelPermalink }}" class="image-box">
                     <img src="{{ ($res.Resize "580x q50").RelPermalink }}"
                         {{ printf "srcset=\"%s\"" ($srcset) | safeHTMLAttr }}
                         />
