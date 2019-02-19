@@ -1012,7 +1012,7 @@ $footer-gutter-color: lighten($footer-background, 15%);
 footer {
     background: $footer-background;
     padding-top: ($font-size-base * 1.5);
-    padding-bottom: ($font-size-base * 5);
+    padding-bottom: ($font-size-base * 1.5);
     font-size: $small-font-size;
     color: $footer-text-color;
 
@@ -1045,7 +1045,7 @@ footer {
         margin: 0;
     }
 
-    .social-links {
+    .external-links {
         font-size: ($font-size-base * 1.5);
 
         a {
