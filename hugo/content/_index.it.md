@@ -25,7 +25,7 @@ js = [
 
 <div id="mapdiv" class="small"></div>
 
-<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Ti piace la mappa? Vai alla <a href="{{< langRef "data/map" >}}">mappa più grande</a>.</small></p>
+<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" />&nbsp;Ti piace la mappa? Vai alla <a href="{{< langRef "data/map" >}}">mappa più grande</a>.</small></p>
 
 </div>
 </div>
@@ -120,4 +120,16 @@ Clicca sui collegamenti qui sotto per installare l’applicazione *SmartRoadSens
             {{< imgset src="badge_google_play" alt="SmartRoadSense per Android" >}}
         </a>
     </div>
+</div>
+
+{{< section "Aggiornamenti" >}}
+
+*SmartRoadSense* non è ancora attivo nel paese dove abiti?
+Vuoi ricevere notizie o aggiornamenti sullo sviluppo del nostro sistema?
+
+<div class="big-button mailing-list-button">
+    <a href="http://eepurl.com/ghLjLL">
+        <img src="{{< absRef "icons/mail.svg" >}}" class="icon wiggle-anim" alt="Map icon" />
+        Iscriviti alla mailing list
+    </a>
 </div>

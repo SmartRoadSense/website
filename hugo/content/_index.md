@@ -25,7 +25,7 @@ js = [
 
 <div id="mapdiv" class="small"></div>
 
-<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" /> Like the map? Check out the <a href="{{< langRef "data/map" >}}">bigger online map</a>.</small></p>
+<p><small><img src="{{< absRef "icons/map.svg" >}}" class="icon" alt="Map icon" />&nbsp;Like the map? Check out the <a href="{{< langRef "data/map" >}}">bigger online map</a>.</small></p>
 
 </div>
 </div>
@@ -119,4 +119,16 @@ If you’re interested in the project and would like to help out monitoring road
             {{< imgset src="badge_google_play" alt="SmartRoadSense for Android" >}}
         </a>
     </div>
+</div>
+
+{{< section "Keep in touch" >}}
+
+Is *SmartRoadSense* not active in your country yet?
+Do you want to receive news and updates about the system?
+
+<div class="big-button mailing-list-button">
+    <a href="http://eepurl.com/ghLjLL">
+        <img src="{{< absRef "icons/mail.svg" >}}" class="icon wiggle-anim" alt="Map icon" />
+        Subscribe to our mailing list
+    </a>
 </div>
