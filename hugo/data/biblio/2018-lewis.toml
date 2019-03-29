@@ -1,0 +1,7 @@
+author = "M.&nbsp;R.&nbsp;Lewis et&nbsp;al."
+title = "Balance Trucks: Using Crowd-Sourced Data to Procedurally-Generate Gameplay within Mobile Games"
+publication = "IEEE VS-Games"
+url = "https://ieeexplore.ieee.org/document/8493412/"
+year = 2018
+sortkey = "2018-2"
+bibtex = "@inproceedings{lewis_balance_2018,\n  address = {Würzburg},\n  title = {{Balance Trucks}: Using Crowd-Sourced Data to Procedurally-Generate Gameplay within Mobile Games},\n  doi = {10.1109/VS-Games.2018.8493412},\n  booktitle = {Proceedings of the 10th {International} {Conference} on {Virtual} {Worlds} and {Games} for {Serious} {Applications} ({VS}-{Games} 2018)},\n  publisher = {IEEE},\n  author = {Lewis, Mark Russell and Arnab, Sylvester and Morini, Luca and Clarke, Samantha and Masters, Alex and Klopfenstein, Lorenz Cuno and Bogliolo, Alessandro and Delpriori, Saverio},\n  year = {2018}\n}"
