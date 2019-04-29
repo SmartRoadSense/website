@@ -7,7 +7,6 @@ var url = new URL(window.location.href);
 var mark = url.searchParams.get("mark");
 var all_data = url.searchParams.get("all");
 
-
 // SRS tiles
 const SRS_TILES_URL = '/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
 // SRS data used for PPE visualization
@@ -18,7 +17,6 @@ const GEOCODER_URL = '/search';
 // create map
 let map = L.map('mapdiv', {
   center: [43.9167, 12.9000],
-  //center: [43.186041, 13.085661],
   zoom: 9
 });
 
@@ -31,9 +29,9 @@ L.tileLayer(OSM_URL, {
 var info = L.control();
 
 info.onAdd = function (map) {
-    this._div = L.DomUtil.create('div', 'info-legend'); // create a div with a class "info"
-    this.update();
-    return this._div;
+  this._div = L.DomUtil.create('div', 'info-legend'); // create a div with a class "info"
+  this.update();
+  return this._div;
 };
 
 // method that we will use to update the control based on feature properties passed
@@ -84,16 +82,6 @@ function createRMMarker(layer,map, lat, long, date, artist, location, url){
   
   return  marker;
 }
-
-
-
-
-
-document.getElementById('geocode-btn').onclick = search;
-document.getElementById('geocode-input').onkeypress = function (e) {
-  if (e.keyCode === 13)
-    search();
-};
 
 // pythagorean theorem
 function distance(a, b) {
