@@ -1,0 +1,7 @@
+author = "L.&nbsp;C.&nbsp;Klopfenstein et&nbsp;al."
+title = "Mobile crowdsensing for road sustainability: exploitability of publicly-sourced data"
+publication = "International Review of Applied Economics"
+url = "https://www.tandfonline.com/doi/full/10.1080/02692171.2019.1646223"
+year = 2019
+sortkey = "2019-1"
+bibtex = "@article{klopfenstein_mobile_2019,\n  title = {Mobile crowdsensing for road sustainability: exploitability of publicly-sourced data},\n  issn = {0269-2171},\n  url = {https://doi.org/10.1080/02692171.2019.1646223},\n  doi = {10.1080/02692171.2019.1646223},\n  journal = {International Review of Applied Economics},\n  author = {Klopfenstein, Lorenz Cuno and Delpriori, Saverio and Polidori, Paolo and Sergiacomi, Andrea and Marcozzi, Marina and Boardman, Donna and Parfitt, Peter and Bogliolo, Alessandro},\n  month = jul,\n  year = {2019},\n  keywords = {Collective intelligence, data collection, data privacy, mobile crowdsensing, road quality measurement},\n  pages = {1--22}\n}"
