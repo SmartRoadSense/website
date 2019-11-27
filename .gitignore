@@ -1,6 +1,2 @@
-**/dist/*
-bootstrap/docs
-bootstrap/nuget
-hugo/public/
-**/node_modules/*
-hugo/resources/_gen/*
+public/
+resources/_gen/*

@@ -1,7 +1,0 @@
-author = "G.&nbsp;Alessandroni et&nbsp;al."
-title = "SmartRoadSense: Collaborative Road Surface Condition Monitoring"
-publication = "UBICOMM"
-url = "http://www.thinkmind.org/index.php?view=article&articleid=ubicomm_2014_7_50_10113"
-year = 2014
-sortkey = "2014-1"
-bibtex = "@inproceedings{alessandroni2014smartroadsense,\n  title={{SmartRoadSense}: Collaborative Road Surface Condition Monitoring},\n  author={Alessandroni, Giacomo and Klopfenstein, Lorenz Cuno and Delpriori, Saverio and Dromedari, Matteo and Luchetti, Gioele and Paolini, Brendan Dominic and Seraghiti, Andrea and Lattanzi, Emanuele and Freschi, Valerio and Carini, Alberto and Bogliolo, Alessandro},\n  booktitle={Proceedings of the {UBICOMM} 2014: The Eighth International Conference on Mobile Ubiquitous Computing, Systems, Services and Technologies},\n  pages={210--215},\n  year={2014},\n  organization={IARIA}\n}"
