@@ -8,7 +8,7 @@ var mark = url.searchParams.get("mark");
 var all_data = url.searchParams.get("all");
 
 // SRS tiles
-const SRS_TILES_URL = '/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
+const SRS_TILES_URL = 'http://smartroadsense.it/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
 // SRS data used for PPE visualization
 const SRS_DATA_BASE_URL = '';
 // Geocoder
@@ -22,7 +22,7 @@ let map = L.map('mapdiv', {
 
 // add osm background layer
 L.tileLayer(OSM_URL, {
-  attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://carto.com/attribution">CARTO</a> | Road data &copy; <a href="http://www.smartroadsense.it">SmartRoadSense</a> contributors'
+  attribution: 'Map data &copy; <a href="https://openstreetmap.org">OpenStreetMap</a> contributors, <a href="https://carto.com/attribution">CARTO</a> | Road data &copy; <a href="https://www.smartroadsense.it">SmartRoadSense</a> contributors'
 }).addTo(map);
 
 
@@ -54,25 +54,6 @@ info.addTo(map);
 
 // add srs tiles layer
 L.tileLayer(SRS_TILES_URL).addTo(map);
-
-// add #RisorgiMarche (RM) markers
-/*
-createRMMarker(L, map, 42.7899832, 13.251915, "07/01/2018", "Piero Pelu","Forca di Presta / Arquata del Tronto (AP)", "https://risorgimarche.it/eventi/piero-pelu/");
-createRMMarker(L, map, 43.1930427, 13.120854, "07/03/2018", "Angelo Branduardi","Piani di Crispiero - Monte d'Aria / Camerino - Castel Raimondo - Serrapetrona (MC)","https://risorgimarche.it/eventi/02-angelo-branduardi/");
-createRMMarker(L, map, 43.3209651, 13.227486, "07/06/2018", "Simone Cristicchi / GNU Quartet","La Roccaccia - San Lorenzo / San Severino Marche - Treia (MC)","https://risorgimarche.it/eventi/03-simone-cristicchi/");
-createRMMarker(L, map, 43.0108093, 13.232748, "07/07/2018", "Mario Biondi","Pizzo Meta / Sarnano - Bolognola (MC)","https://risorgimarche.it/eventi/04-mario-biondi/");
-createRMMarker(L, map, 42.9257095, 13.126296, "07/09/2018", "Alex Britti","Monte Torrone / Ussita - Visso - Castelsantangelo sul Nera (MC)","https://risorgimarche.it/eventi/05-alex-britti/");
-createRMMarker(L, map, 43.1411718, 12.911125, "07/14/2018", "Noa","Prati di Monte Vermenone / Sefro - Fiuminata (MC)","https://risorgimarche.it/eventi/06-noa/");
-createRMMarker(L, map, 43.0709828, 12.941907, "07/15/2018", "Clementino","Monte Faeto / Serravalle di Chienti (MC)","https://risorgimarche.it/eventi/07-clementino/");
-createRMMarker(L, map, 43.0971707, 13.169547, "07/17/2018", "Luca Carboni", "Poggia della Pagnotta - Chiesa Santa Maria Maddalena / Valfornace - Caldarola (MC)","https://risorgimarche.it/eventi/08-luca-carboni/");
-
-createRMMarker(L, map, 42.773725, 13.415660 ,  "07/23/2018", "Irene Grandi","Piani di Cagnano / Acquasanta Terme (AP)","https://risorgimarche.it/eventi/09-irene-grandi/");
-createRMMarker(L, map, 42.933348, 13.457890 ,  "07/27/2018", "Andrea Miro","Monte la Torre - Quinzano / Force (AP)","https://risorgimarche.it/eventi/10-andrea-miro/");
-createRMMarker(L, map, 42.945327, 13.313701 ,  "07/28/2018", "Paolo Belli and Big Band","Campi di Vetice / Montefortino (FM)","https://risorgimarche.it/eventi/11-paolo-belli/");
-createRMMarker(L, map, 42.972519, 13.303138 ,  "07/31/2018", "Festa a Sorpresa","Casalicchio / Amandola (FM)","https://risorgimarche.it/eventi/12-festa-a-sorpresa/");
-createRMMarker(L, map, 42.931799, 13.011071 ,  "08/01/2018", "Toquinho","Piano della Cura di Fematre / Visso - Pievetorina - Monte Cavallo (MC)","https://risorgimarche.it/eventi/13-toquinho/");
-createRMMarker(L, map, 42.914551, 13.844127 ,  "08/02/2018", "Neri Marcore / GNU Quartet","San Giacomo / Ascoli Piceno (AP)","https://risorgimarche.it/eventi/14-neri-marcore/");
-*/
 
 function createRMMarker(layer,map, lat, long, date, artist, location, url){
   var marker = layer.marker([lat, long]);
