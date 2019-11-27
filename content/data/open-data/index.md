@@ -59,7 +59,7 @@ Check out the whole license agreement for all rights and limitations.</p>
 
 <p>Get the latest aggregated <i>SmartRoadSense</i> data as a zipped CSV&nbsp;file.</p>
 
-<p class="text-center"><a href="/open_data.zip" class="btn btn-primary">Get Open Data</a></p>
+<p class="text-center"><a href="http://smartroadsense.it/open_data.zip" class="btn btn-primary">Get Open Data</a></p>
 
 </div>
 </div>
