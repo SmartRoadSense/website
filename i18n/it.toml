@@ -78,3 +78,6 @@ other = "Come citare questo sito web"
 
 [footerServiceDown]
 other = "Il servizio è momentaneamente offline per un guasto. Seguici su <a href=\"https://twitter.com/smartroadsense\">Twitter</a>."
+
+[maintenanceMessage]
+other = "Il servizio dati di SmartRoadSense è in manutenzione. Mappe e Open Data saranno momentaneamente non raggiungibili."

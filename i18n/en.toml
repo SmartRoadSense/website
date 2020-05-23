@@ -78,3 +78,6 @@ other = "How to cite this website"
 
 [footerServiceDown]
 other = "The service is currently unavailable. Follow us on <a href=\"https://twitter.com/smartroadsense\">Twitter</a> for updates."
+
+[maintenanceMessage]
+other = "The SmartRoadSense data service is currently undergoing maintenance. Maps and Open Data are not accessible."
