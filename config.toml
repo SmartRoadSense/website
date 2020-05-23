@@ -4,7 +4,8 @@ enableMissingTranslationPlaceholders = true
 timeout = 100000
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
-maintenanceMode = true
+[params]
+  maintenanceMode = true
 
 [permalinks]
 news = "/:section/:year/:month/:slug/"

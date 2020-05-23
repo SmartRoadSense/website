@@ -42,7 +42,7 @@
             </div>
         </footer>
 
-        {{ if .Site.maintenanceMode -}}
+        {{ if .Site.Params.maintenanceMode -}}
         <div class="announcement">{{ i18n "maintenanceMessage" | safeHTML }}</div>
         {{- end }}
 
