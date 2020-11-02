@@ -16,8 +16,8 @@ const GEOCODER_URL = '/search';
 
 // create map
 let map = L.map('mapdiv', {
-  center: [43.9167, 12.9000],
-  zoom: 9
+  center: (mark) ? [48, 18] : [43.9167, 12.9000],
+  zoom: (mark) ? 4 : 8
 });
 
 // add osm background layer
