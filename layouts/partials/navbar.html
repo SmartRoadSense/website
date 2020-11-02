@@ -43,10 +43,10 @@
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ i18n "languageTitle" }}</a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                                 <a class="dropdown-item
-                                    {{- if eq .LanguagePrefix "" }} active{{ end -}}
+                                    {{- if eq .Site.LanguagePrefix "" }} active{{ end -}}
                                     " href="{{ range where .AllTranslations "Lang" "en" | first 1 }}{{ .Permalink }}{{ end }}">English</a>
                                 <a class="dropdown-item
-                                    {{- if eq .LanguagePrefix "/it" }} active{{ end -}}
+                                    {{- if eq .Site.LanguagePrefix "/it" }} active{{ end -}}
                                     " href="{{ range where .AllTranslations "Lang" "it" | first 1 }}{{ .Permalink }}{{ end }}">Italiano</a>
                             </div>
                         </li>

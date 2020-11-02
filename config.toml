@@ -5,8 +5,11 @@ enableMissingTranslationPlaceholders = true
 timeout = 100000
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
+[markup.goldmark.renderer]
+unsafe= true
+
 [params]
-  maintenanceMode = true
+  maintenanceMode = false
 
 [permalinks]
 news = "/:section/:year/:month/:slug/"
