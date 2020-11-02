@@ -8,7 +8,7 @@ var mark = url.searchParams.get("mark");
 var all_data = url.searchParams.get("all");
 
 // SRS tiles
-const SRS_TILES_URL = 'http://smartroadsense.it/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
+const SRS_TILES_URL = 'http://api.smartroadsense.it/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
 // SRS data used for PPE visualization
 const SRS_DATA_BASE_URL = '';
 // Geocoder
@@ -16,8 +16,8 @@ const GEOCODER_URL = '/search';
 
 // create map
 let map = L.map('mapdiv', {
-  center: (mark) ? [48, 18] : [43.9167, 12.9000],
-  zoom: (mark) ? 4 : 8
+  center: [43.9167, 12.9000],
+  zoom: 9
 });
 
 // add osm background layer
