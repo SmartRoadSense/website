@@ -58,7 +58,7 @@ L’intero testo legale della licenza contiene tutti i diritti e responsabilità
 
 <p>Gli ultimi dati aggregati di <i>SmartRoadSense</i> possono essere scaricati come file&nbsp;CSV compresso in formato&nbsp;ZIP.</p>
 
-<p class="text-center"><a href="http://smartroadsense.it/open_data.zip" class="btn btn-primary">Scarica Open&nbsp;Data</a></p>
+<p class="text-center"><a href="https://data.smartroadsense.it/open_data.zip" class="btn btn-primary">Scarica Open&nbsp;Data</a></p>
 
 </div>
 </div>
