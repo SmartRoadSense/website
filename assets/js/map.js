@@ -8,7 +8,7 @@ var mark = url.searchParams.get("mark");
 var all_data = url.searchParams.get("all");
 
 // SRS tiles
-const SRS_TILES_URL = 'http://api.smartroadsense.it/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
+const SRS_TILES_URL = 'http://tiles.smartroadsense.it/api/v1/tiles/{z}/{x}/{y}/' + (mark == undefined ? "" : mark + "/") + (all_data == undefined? "" : all_data + "/");
 // SRS data used for PPE visualization
 const SRS_DATA_BASE_URL = '';
 // Geocoder
