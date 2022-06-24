@@ -3,10 +3,10 @@ date = "2017-05-29"
 cover = "index_srs_cover.jpg"
 
 css = [
-    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"
+    "css/leaflet.1.3.4.css"
 ]
 js = [
-    "http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js",
+    "js/leaflet.1.3.4.js",
     "js/map.js"
 ]
 +++
